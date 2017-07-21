@@ -118,11 +118,12 @@
 
   // 中间区域介绍内容样式
   .landing-page-mid {                                   //给图片整好形
-    height: 534px;
+    //height: 534px;
     background-size: cover;                             //确保图片完全撑开
     background-position: center center;
     background-repeat: no-repeat;
-    background-image: url(https://ooo.0o0.ooo/2017/05/12/59156f9f3b09c.jpg);
+    //background-image: url(https://ooo.0o0.ooo/2017/05/12/59156f9f3b09c.jpg);
+    background-color: #f1f1f1;
   }
   .landing-page-mid .tagline {                          //编写标题样式
     text-align: center;
@@ -140,6 +141,35 @@
     letter-spacing: 0.18em;                             //把字间距撑开，视觉感更优雅
   }
 
+// 服务特点区块介绍样式
+ .landing-page-svc {
+  //height: 534px;
+ }
+ .landing-page-svc .tagline {                          //编写标题样式
+   text-align: center;
+   color: #7f8c8d;
+   letter-spacing: 0.1em;                              //把字间距撑开，视觉感更优雅
+   font-size: 1.6em;
+   margin-top: 2em;
+   margin-bottom: 2em;
+ }
+
+ .landing-page-svc .subtits {                          //编写标题样式
+   text-align: center;
+   color: #7f8c8d;
+   letter-spacing: 0.1em;                              //把字间距撑开，视觉感更优雅
+   font-size: 1.3em;
+   margin-top: 0.2em;
+   margin-bottom: 2em;
+ }
+
+ .landing-page-svc .titspan {
+   text-align: center;
+   color: #666;
+   font-size: 24px;
+   line-height: 2.5em;                                 //行间距也要拉开大一些
+   letter-spacing: 0.18em;                             //把字间距撑开，视觉感更优雅
+ }
   // 区块分类标识样式（用于区分 商品 和 课程）
   .topspan {
     margin-top: 2em;
@@ -226,7 +256,7 @@
     background-size: cover;                             //确保图片完全撑开
     background-position: center center;
     background-repeat: no-repeat;
-    background-image: url("https://ooo.0o0.ooo/2017/06/09/593a09541981b.jpg");
+    background-image: url("https://ww1.sinaimg.cn/large/006tKfTcgy1fhqrylypu6j30rs0ijdi5.jpg");
     color: #fff;
   }
   .landing-page-adv h4{

@@ -2,7 +2,7 @@
   <div class="container">
       <!--logo-->
       <div class="navbar-header">
-        <a href="/" class="navbar-brand" style="font-size: 2.0em;">极简生活法</a>
+        <a href="/" class="navbar-brand" style="font-size: 2.0em;">移民行业的教育领导者</a>
 
           <!-- 响应式导航 -->
           <button type="button" class="navbar-toggle" data-toggle="collapse"
@@ -20,7 +20,10 @@
 
         <ul class="nav navbar-nav navbar-right">
           <li>
-            <%= link_to("课程", course_products_path) %>
+            <%= link_to("关于尚德兴", about_index_path, target: "_blank") %>
+          </li>
+          <li>
+            <%= link_to("案例分享", course_products_path) %>
           </li>
           <li>
             <%= link_to("资讯", articles_path) %>
@@ -28,9 +31,7 @@
           <li>
             <%= link_to("社群", clubs_path) %>
           </li>
-          <li>
-            <%= link_to("关于我们", about_index_path, target: "_blank") %>
-          </li>
+
           <li>
             <%= link_to carts_path do %>
               购物车 <i class="fa fa-shopping-cart"></i> ( <%= current_cart.products.count %> )
@@ -83,7 +84,7 @@
           </li> -->
 
         <!-- 搜索输入框 -->
-        <div class="navbar-form navbar-right">
+        <!-- <div class="navbar-form navbar-right">
             <div id="custom-search-input">
               <%= form_tag search_products_path, :method => :get  do %>
                 <div class="input-group col-md-12">
@@ -96,7 +97,7 @@
                 </div>
               <% end %>
             </div>
-        </div>
+        </div> -->
 
     </div>
 
