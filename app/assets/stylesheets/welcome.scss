@@ -82,8 +82,8 @@
 .btn.btn-lg {padding: 10px 40px;}
 .btn.btn-hero {
   color: #f5f5f5;
-  background-color: #7f8c8d;
-  border-color: #7f8c8d;
+  background-color: #333;
+  border-color: #333;
   margin: 20px auto;
 }
 .btn.btn-hero:hover {
@@ -103,7 +103,7 @@
 .fade-carousel .slides .slide-1,
 .fade-carousel .slides .slide-2,
 .fade-carousel .slides .slide-3 {
-  height: 616px;
+  height: 600px;
   background-size: cover;                             //确保图片完全撑开
   background-position: center center;
   background-repeat: no-repeat;
@@ -115,7 +115,7 @@
   background-image: url(https://ww2.sinaimg.cn/large/006tKfTcgy1fhqreo57adj30q40c3tbd.jpg);
 }
 .fade-carousel .slides .slide-3 {
-  background-image: url(https://ooo.0o0.ooo/2017/06/09/59398ca2ad155.jpg);
+  background-image: url(https://ww3.sinaimg.cn/large/006tNc79gy1fhrx7nucg2j30qo0am78p.jpg);
 }
 
 /*  --- 响应式设置 ---  */

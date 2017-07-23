@@ -128,30 +128,81 @@
   }
   .landing-page-mid .tagline {                          //编写标题样式
     text-align: center;
-    color: #7f8c8d;
-    letter-spacing: 0.1em;                              //把字间距撑开，视觉感更优雅
+    color: #666;
+    //letter-spacing: 0.1em;                              //把字间距撑开，视觉感更优雅
     font-size: 1.6em;
-    margin-top: 3.2em;
+    margin-top: 2.8em;
+    margin-bottom: 2em;
   }
   .landing-page-mid .tagp {                             //编写内容样式
     text-align: center;
     color: #666;
-    font-size: 1.2em;
-    margin-top: 2.5em;
+    font-size: 1.3em;
+    //margin-top: 2.5em;
     line-height: 2.5em;                                 //行间距也要拉开大一些
-    letter-spacing: 0.18em;                             //把字间距撑开，视觉感更优雅
+    letter-spacing: 0.18em;
+                                //把字间距撑开，视觉感更优雅
   }
+
+  .landing-page-mid .col-xs-6.col-sm-6.col-md-3{
+
+    position: relative;
+    min-height: 1px;
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+
+// 服务优势介绍
+.landing-page-svadg {
+ //height: 534px;
+ background-color: #f1f1f1;
+}
+.landing-page-svadg .tagline {                          //编写标题样式
+  text-align: center;
+  color: #666;
+  //letter-spacing: 0.1em;                              //把字间距撑开，视觉感更优雅
+  font-size: 1.6em;
+  margin-top: 2.8em;
+  margin-bottom: 2em;
+}
+
+.landing-page-svadg .subtits {                          //编写标题样式
+  text-align: center;
+  color: #999;
+  letter-spacing: 0.1em;                              //把字间距撑开，视觉感更优雅
+  font-size: 1.3em;
+  margin-top: 0.5em;
+
+}
+
+.landing-page-svadg .subspan {
+    text-align: center;
+    color: #7f8c8d;
+    letter-spacing: 0.1em;
+    //font-size: 1.3em;
+    //margin-top: 3.8em;
+     margin-bottom: 3.8em;
+}
+
+.landing-page-svadg .titspan {
+  text-align: center;
+  color: #666;
+  font-size: 24px;
+  line-height: 2.5em;                                 //行间距也要拉开大一些
+  letter-spacing: 0.18em;                             //把字间距撑开，视觉感更优雅
+}
 
 // 服务特点区块介绍样式
  .landing-page-svc {
   //height: 534px;
+  padding-bottom: 30px;
  }
  .landing-page-svc .tagline {                          //编写标题样式
    text-align: center;
-   color: #7f8c8d;
-   letter-spacing: 0.1em;                              //把字间距撑开，视觉感更优雅
+   color: #666;
+   //letter-spacing: 0.1em;                              //把字间距撑开，视觉感更优雅
    font-size: 1.6em;
-   margin-top: 2em;
+   margin-top: 2.8em;
    margin-bottom: 2em;
  }
 
@@ -160,8 +211,17 @@
    color: #7f8c8d;
    letter-spacing: 0.1em;                              //把字间距撑开，视觉感更优雅
    font-size: 1.3em;
-   margin-top: 0.2em;
-   margin-bottom: 2em;
+   margin-top: 0.5em;
+   margin-bottom: 3.8em;
+ }
+
+ .landing-page-svc .subspan {
+     text-align: center;
+     color: #7f8c8d;
+     letter-spacing: 0.1em;
+     font-size: 1.3em;
+     margin-top: 3.8em;
+     /* margin-bottom: 3.8em; */
  }
 
  .landing-page-svc .titspan {
@@ -170,6 +230,16 @@
    font-size: 24px;
    line-height: 2.5em;                                 //行间距也要拉开大一些
    letter-spacing: 0.18em;                             //把字间距撑开，视觉感更优雅
+ }
+
+ .landing-page-svc .tagp {                             //编写内容样式
+   text-align: center;
+   color: #666;
+   font-size: 1.3em;
+   //margin-top: 2.5em;
+   line-height: 2.5em;                                 //行间距也要拉开大一些
+   letter-spacing: 0.18em;
+                               //把字间距撑开，视觉感更优雅
  }
   // 区块分类标识样式（用于区分 商品 和 课程）
   .topspan {
@@ -238,14 +308,14 @@
   }
   .landing-page-eva .tagline {                          //编写标题样式
     text-align: center;
-    color: #7f8c8d;
-    letter-spacing: 0.2em;                              //把字间距撑开，视觉感更优雅
+    color: #666;
+    //letter-spacing: 0.2em;                              //把字间距撑开，视觉感更优雅
     font-size: 1.6em;
     margin-top: 2.8em;
     margin-bottom: 2em;
   }
   .landing-page-eva-style {
-    margin-top: 2em;
+    //margin-top: 2em;
     text-align: justify;
     line-height: 2em;
   }
@@ -253,12 +323,14 @@
 
   //”彩蛋“”公告栏样式
   .landing-page-adv {
+    padding-top: 20px;
     padding-bottom: 2em;
     background-size: cover;                             //确保图片完全撑开
     background-position: center center;
     background-repeat: no-repeat;
     background-image: url("https://ww1.sinaimg.cn/large/006tKfTcgy1fhqrylypu6j30rs0ijdi5.jpg");
     color: #fff;
+    filter:alpha(opacity=80);-moz-opacity:0.8;-khtml-opacity: 0.8; opacity: 0.8;
   }
   .landing-page-adv h4{
     margin-top: 30px;
@@ -266,7 +338,7 @@
     font-size: 1.3em;
   }
   .landing-page-adv h5{
-    margin-top: 30px;
+
     text-align: center;
     font-size: 1.8em;
   }
