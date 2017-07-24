@@ -48,6 +48,8 @@ function browserRedirect() {
     if (bIsIpad || bIsIphoneOs || bIsMidp || bIsUc7 || bIsUc || bIsAndroid || bIsCE || bIsWM) {
         //phone;
         //alert("phonetest");
+        //$(".hero hgroup .h1").css("font-size","2em");
+        //$(".hero hgroup .h3").css("font-size","1.5em");
         $(".about-title-e").css("font-size","1.5em");
         $(".fade-carousel").css("height","360px");
         $(".fade-carousel .carousel-inner .item ").css("height","360px");
