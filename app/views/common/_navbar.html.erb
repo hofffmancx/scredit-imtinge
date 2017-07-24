@@ -2,7 +2,7 @@
   <div class="container">
       <!--logo-->
       <div class="navbar-header">
-        <a href="/" class="navbar-brand navbar-rwd" style="font-size: 2.0em;">移民行业的教育领导者</a>
+        <a href="/" target="_blank" class="navbar-brand navbar-rwd" style="font-size: 2.0em;">移民行业的教育领导者</a>
 
           <!-- 响应式导航 -->
           <button type="button" class="navbar-toggle" data-toggle="collapse"
@@ -23,10 +23,10 @@
             <%= link_to("关于尚德信", about_index_path, target: "_blank") %>
           </li>
           <li>
-            <%= link_to("案例分享", root_path) %>
+            <%= link_to("案例分享", root_path, target: "_blank") %>
           </li>
           <li>
-            <%= link_to("资讯", root_path) %>
+            <%= link_to("资讯", root_path, target: "_blank") %>
           </li>
           <!-- <li>
             <%= link_to("社群", clubs_path) %>
@@ -66,9 +66,9 @@
               <b class="caret"></b>
             </a>
             <ul class="dropdown-menu">
-              <li><%= link_to("美国移民", root_path,class: "li-style") %></li>
-              <li><%= link_to("欧洲移民", root_path,class: "li-style") %></li>
-              <li><%= link_to("希腊移民", root_path, class: "li-style") %></li>
+              <li><%= link_to("美国移民", about_index_path,class: "li-style") %></li>
+              <li><%= link_to("欧洲移民", about_index_path,class: "li-style") %></li>
+              <li><%= link_to("希腊移民", about_index_path, class: "li-style") %></li>
             </ul>
           </li>
         </ul>

@@ -47,6 +47,7 @@ function browserRedirect() {
 
     if (bIsIpad || bIsIphoneOs || bIsMidp || bIsUc7 || bIsUc || bIsAndroid || bIsCE || bIsWM) {
         //phone;
+        //alert("phonetest");
         $(".about-title-e").css("font-size","1.5em");
         $(".fade-carousel").css("height","360px");
         $(".fade-carousel .carousel-inner .item ").css("height","360px");
@@ -58,6 +59,7 @@ function browserRedirect() {
         $(".slide-3").css("backgroundImage","url(https://ww3.sinaimg.cn/large/006tNc79gy1fhrx7nucg2j30qo0am78p.jpg)");
     } else {
         //pc;
+        //alert("pctest");
         $(".navbar-rwd").removeClass("navbar-rwd");
         $(".fade-carousel").css("height","616px");
         $(".fade-carousel .carousel-inner .item ").css("height","616px");
@@ -69,6 +71,6 @@ function browserRedirect() {
         $(".slide-3").css("backgroundImage","url(https://ww3.sinaimg.cn/large/006tNc79gy1fhrx7nucg2j30qo0am78p.jpg)");
     }
 }
-$(function(){
+$(document).ready(function(){
   browserRedirect();
-})
+});
