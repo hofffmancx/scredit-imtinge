@@ -35,6 +35,8 @@ gem 'font-awesome-rails'
 gem 'acts_as_list'
 gem 'letter_opener', group: :development
 gem 'aasm'
+gem "rails-erd"
+
 
 # 七牛云
 gem 'carrierwave-qiniu'
