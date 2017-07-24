@@ -386,3 +386,12 @@
     margin: 30px auto;
     height: 500px;
   }
+
+
+  .navbar-rwd {
+   overflow: hidden;
+   text-overflow:ellipsis;
+   white-space: nowrap;
+   width:80%;
+   height:2.0em;
+  }

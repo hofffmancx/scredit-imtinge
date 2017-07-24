@@ -33,3 +33,42 @@
       document.images[j].width=(document.images[j].width>420)?"420":document.images[j].width;
     }
   }
+
+function browserRedirect() {
+    var sUserAgent = navigator.userAgent.toLowerCase();
+    var bIsIpad = sUserAgent.match(/ipad/i) == "ipad";
+    var bIsIphoneOs = sUserAgent.match(/iphone os/i) == "iphone os";
+    var bIsMidp = sUserAgent.match(/midp/i) == "midp";
+    var bIsUc7 = sUserAgent.match(/rv:1.2.3.4/i) == "rv:1.2.3.4";
+    var bIsUc = sUserAgent.match(/ucweb/i) == "ucweb";
+    var bIsAndroid = sUserAgent.match(/android/i) == "android";
+    var bIsCE = sUserAgent.match(/windows ce/i) == "windows ce";
+    var bIsWM = sUserAgent.match(/windows mobile/i) == "windows mobile";
+
+    if (bIsIpad || bIsIphoneOs || bIsMidp || bIsUc7 || bIsUc || bIsAndroid || bIsCE || bIsWM) {
+        //phone;
+        $(".about-title-e").css("font-size","1.5em");
+        $(".fade-carousel").css("height","360px");
+        $(".fade-carousel .carousel-inner .item ").css("height","360px");
+        $(".fade-carousel .slides .slide-1").css("height","360px");
+        $(".fade-carousel .slides .slide-2").css("height","360px");
+        $(".fade-carousel .slides .slide-3").css("height","360px");
+        $(".slide-1").css("backgroundImage","url(https://ww1.sinaimg.cn/large/006tKfTcgy1fhuxx13m39j30mf09zach.jpg)");
+        $(".slide-2").css("backgroundImage","url(https://ww1.sinaimg.cn/large/006tKfTcgy1fhuxsi8534j30lm0a00un.jpg)");
+        $(".slide-3").css("backgroundImage","url(https://ww3.sinaimg.cn/large/006tNc79gy1fhrx7nucg2j30qo0am78p.jpg)");
+    } else {
+        //pc;
+        $(".navbar-rwd").removeClass("navbar-rwd");
+        $(".fade-carousel").css("height","616px");
+        $(".fade-carousel .carousel-inner .item ").css("height","616px");
+        $(".slide-1").css("height","616px");
+        $(".slide-2").css("height","616px");
+        $(".slide-3").css("height","616px");
+        $(".slide-1").css("backgroundImage","url(https://ww3.sinaimg.cn/large/006tKfTcgy1fhqrkzul02j31hc0itahv.jpg)");
+        $(".slide-2").css("backgroundImage","url(https://ww2.sinaimg.cn/large/006tKfTcgy1fhqreo57adj30q40c3tbd.jpg)");
+        $(".slide-3").css("backgroundImage","url(https://ww3.sinaimg.cn/large/006tNc79gy1fhrx7nucg2j30qo0am78p.jpg)");
+    }
+}
+$(function(){
+  browserRedirect();
+})
