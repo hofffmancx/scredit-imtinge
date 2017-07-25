@@ -104,41 +104,47 @@
       <!-- 有侧边栏 -->
       <div class="col-md-4">
 
-        <!-- 文章作者 -->
-        <div class="article-side-author">
-          <!-- 头像 -->
-          <div class="article-avatar">
-            <% if @user.avatar.present? %>
-              <%= image_tag(@user.avatar.avatar.url, class: "img-circle img-responsive center-block" )%>
-            <% else %>
-              <%= image_tag("http://placehold.it/80x80&text=No Pic", class: "img-circle img-responsive center-block") %>
-            <% end %>
+      <!-- 热门活动 -->
+
+
+        <div class=" article-author-title-list">
+          <h5>热门活动</h5>
+          <hr>
+          <div class="">
+            <%= image_tag("https://ww4.sinaimg.cn/large/006tNc79gy1fhrp8h9ttbj30b208agm8.jpg", class: "img-responsive center-block") %>
           </div>
-          <!-- 用户名 -->
-          <div class="article-username text-center">
-            <%= @article.user.display_name %>
+          <hr>
+          <div class="">
+            <%= image_tag("https://ww3.sinaimg.cn/large/006tNc79gy1fhrp2ntmp2j30i00dg40j.jpg", class: "img-responsive center-block") %>
           </div>
-          <!-- 简介 -->
-          <div class="article-author-summary">
-            <%= simple_format(@article.user.summary) %>
-            <span>共发表文章：<%= @article.user.articles.count %> 篇</span>
+          <hr>
+        </div>
+
+        <!-- 最新文章 -->
+        <div class=" article-author-title-list">
+          <h5>最新资讯</h5>
+          <% @article_hots.each do |article_hot| %>
             <hr>
-          </div>
-
-          <!-- 最近文章 -->
-          <div class="article-author-title-list">
-            <h5>最近文章</h5>
-            <% @userarticles.each do |userarticle| %>
-              <p>· <%= link_to(userarticle.title, article_path(userarticle)) %><span class="article-author-title-list-time">(<%= userarticle.created_at.strftime("%Y-%m-%d %H:%M:%S") %>)</span></p>
-            <% end %>
-          </div>
-
+            <div class="row article-show-hot">
+              <div class="col-xs-4 all_image_css">
+                <% if article_hot.image.present? %>
+                  <%= link_to image_tag(article_hot.image.thumb.url, class: "img-rounded img-responsive center-block"), article_path(article_hot) %>
+                <% else %>
+                  <%= link_to image_tag("http://placehold.it/80x80&text=No Pic", class: "img-circle img-responsive center-block"), article_path(article_hot) %>
+                <% end %>
+              </div>
+              <div class="col-xs-8">
+                  <p><%= link_to(article_hot.title, article_path(article_hot)) %></p>
+              </div>
+            </div>
+          <% end %>
+          <hr>
         </div>
 
         <!-- 热评文章 -->
 
         <div class=" article-author-title-list">
-          <h5>热评文章</h5>
+          <h5>热评资讯</h5>
 
 
           <% @article_hots.each do |article_hot| %>
@@ -161,11 +167,10 @@
         </div>
 
         <!-- 投稿按钮 -->
-        <div class="">
-          <%= link_to("我要投稿", new_article_path, class: "btn btn-danger center-block") %>
+        <div class=" article-author-title-list">
+        <!-- <img src="<div class=" article-author-title-list">" alt=""></img> -->
+          <%= image_tag("https://ww3.sinaimg.cn/large/006tKfTcgy1fhveca97b4j30i60datc7.jpg", class: "img-responsive center-block") %>
         </div>
-
-
       </div>
 
     </div>
