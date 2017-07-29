@@ -2534,7 +2534,7 @@ img {
 /* line 81, /Users/apple/.rvm/gems/ruby-2.3.1/gems/bootstrap-sass-3.3.7/assets/stylesheets/bootstrap/_scaffolding.scss */
 .img-responsive {
   display: block;
-  max-width: 100%;
+  width: 100%;
   height: auto;
 }
 

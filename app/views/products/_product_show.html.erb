@@ -1,16 +1,16 @@
 <div class="product-show">
 
   <!-- 主图 -->
-  <div class="col-md-5">
+  <div class="col-md-7">
     <% if @product.image.present? %>
-      <%= image_tag(@product.image.medium.url, class: "thumbnail img-responsive") %>
+      <%= image_tag(@product.image.medium.url, class: "thumbnail img-width") %>
     <% else %>
-      <%= image_tag("http://placehold.it/400x400&text=No Pic", class: "thumbnail img-responsive") %>
+      <%= image_tag("http://placehold.it/00x400&text=No Pic", class: "thumbnail img-responsive") %>
     <% end %>
   </div>
 
   <!-- 商品信息 -->
-  <div class="col-md-7">
+  <div class="col-md-5">
 
     <!-- 商品标题 -->
     <h2 class="product-title"><%= @product.title %></h2>
@@ -23,58 +23,58 @@
     </div>
 
     <!-- 商品价格 -->
-    <div class="product-price-bgcolor">
+    <!-- <div class="product-price-bgcolor">
       <div class="product-price">
         ￥ <%= @product.price %>
       </div>
-    </div>
+    </div> -->
 
     <div class="row">
-      <div class="col-sm-6">
+      <!-- <div class="col-sm-6"> -->
         <!-- 商品库存 -->
-        <div class="product-quantity">
+        <!-- <div class="product-quantity">
           库存量： <%= @product.quantity %>
-        </div>
+        </div> -->
 
         <!-- 商品产地 -->
-        <div class="product-quantity">
+        <!-- <div class="product-quantity">
           生产地： <%= @product.yieldly %> （正品保障）
-        </div>
-      </div>
+        </div> -->
+      <!-- </div> -->
 
-      <div class="col-sm-6">
+      <!-- <div class="col-sm-6"> -->
         <!-- 商品类别 -->
-        <div class="product-quantity">
+        <!-- <div class="product-quantity">
           类别： <%= @product.category %>
-        </div>
+        </div> -->
 
         <!-- 商品服务 -->
-        <div class="product-quantity">
+        <!-- <div class="product-quantity">
           包邮： 99元起包邮 | 7天无忧退货
-        </div>
-      </div>
+        </div> -->
+      <!-- </div> -->
     </div>
 
     <!-- 按钮区域 -->
     <div class="add-to-cart-buttom row">
       <!-- 加入购物车按钮 -->
       <div class="col-sm-6">
-        <% if @product.quantity.present? && @product.quantity > 0 %>
+        <!-- <% if @product.quantity.present? && @product.quantity > 0 %>
           <%= link_to("加入购物车", add_to_cart_product_path(@product), method: :post, class: "btn btn-danger") %>
         <% else %>
           <a href="#" class="btn btn-danger active" role="button" disabled="disabled">库存缺货ing...</a>
-        <% end %>
+        <% end %> -->
       </div>
 
       <!-- 收藏商品按钮 -->
-      <div class="col-sm-6 product-collection">
+      <!-- <div class="col-sm-6 product-collection"> -->
         <!-- <%= link_to("添加收藏 - 人气(26)", "#")%> -->
-        <% if current_user && current_user.is_member_of?(@product) %>
+        <!-- <% if current_user && current_user.is_member_of?(@product) %>
           <%= link_to("已收藏（点击取消收藏）", quit_product_path(@product), method: :post) %>
         <% else %>
           <%= link_to("收藏商品", join_product_path(@product), method: :post) %>
         <% end %>
-      </div>
+      </div> -->
     </div>
 
   </div>
@@ -89,11 +89,12 @@
         <div class="row">
           <ul class="nav nav-tabs nav-justified">
             <li class="active">
-              <a href="#tab_default_1" data-toggle="tab">商品详情</a>
+              <a href="#tab_default_1" data-toggle="tab">项目介绍</a>
             </li>
             <li>
-              <a href="#tab_default_2" data-toggle="tab">用户评价</a>
+              <a href="#tab_default_2" data-toggle="tab">项目优势</a>
             </li>
+
           </ul>
         </div>
 
@@ -147,6 +148,7 @@
             <% end %>
           </div>
 
+
         </div>
 
       </div>
@@ -155,23 +157,14 @@
       <!-- 购物指南区 -->
       <div class="col-md-3">
         <div class="product-recommend">
-          <h5>购物指南</h5>
-          <hr>
-          <h6>配送费用</h6>
-          <p>小件商品的配送费用为20.00元/单。单笔订单消费购买小件商品满99.00元，可享受免费配送服务。</p>
-          <hr>
-          <h6>支付方式</h6>
-          <p>支付宝账户余额
-            <br>
-            网银支付（通过支付宝
-            <br>
-            信用卡支付（通过支付宝）</p>
-          <hr>
-          <h6>更换商品、退货</h6>
-          <p>如您在极简生活法官网商城购买的商品未经使用，并不影响下一位消费者的权益的情况下，可在到货起14日内进行退货服务申请。当您需要申请退货服务时请联系客服中心。</p>
-          <hr>
-          <h6>关于商品颜色</h6>
-          <p>因拍摄灯光或显示器等因素，网页商品颜色可能与实物存在一定偏差，请以实物为准，敬请谅解。</p>
+          <div class="">
+
+          </div>
+
+
+
+
+
         </div>
       </div>
 
