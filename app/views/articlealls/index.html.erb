@@ -1,15 +1,19 @@
 <div class="container">
   <div class="row">
-
+    <% @article_categories.each do |category| %>
     <!---  尚德信企业资讯  --->
     <div class="">
       <div class="" style="font-size:2.0em;">
-       <%= ArticleCategory.find(@article_category_id).name %>
+        <%= category.name %>
+      </div>
+      <div class="pull-right">
+        <!-- <%=link_to "more+",articles_path(category_id: category.id)%> -->
+        <%=link_to "more+",articles_path(category: category.name),:target => "_blank"%> 
       </div>
     </div>
      <hr>
 
-    <% @articles.each do |article| %>
+    <% category.articles.each do |article| %>
       <div class="article-all col-md-6 container">
         <div class="article-box row">
 
@@ -45,5 +49,7 @@
     <% end %>
 
 
+
+    <% end %>
   </div>
 </div>

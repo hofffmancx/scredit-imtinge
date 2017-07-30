@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
 
   devise_for :users
+  resources :articlealls
 
 
   namespace :admin do
@@ -88,6 +89,7 @@ Rails.application.routes.draw do
     resources :users           #用户编辑个人信息
     resources :article_collections      #用户文章收藏
   end
+
 
   resources :articles do         #文章前台
     resources :article_reviews

@@ -6,7 +6,23 @@ class ArticlesController < ApplicationController
   # ---CRUD---
 
   def index
-    @articles = Article.where(:is_hidden => false).order("created_at DESC")
+
+    @article_categories = ArticleCategory.all
+    # @articles = Article.where(:is_hidden => false).order("created_at DESC")
+
+    # if params[:article_category_id].blank?
+    if params[:category].blank?
+        @articles = Article.where(:is_hidden => false).order("created_at DESC")
+
+    else
+
+        # @articles = Article.where(article_category_id: params[:article_category_id])
+
+         @article_category_id = ArticleCategory.find_by(name: params[:category]).id
+         @articles = Article.where(:article_category_id => @article_category_id)
+         
+    end
+
   end
 
   def show
@@ -44,6 +60,8 @@ class ArticlesController < ApplicationController
 
 
   # ---article_collection 收藏文章---
+
+
 
   def join
     @article = Article.find(params[:id])

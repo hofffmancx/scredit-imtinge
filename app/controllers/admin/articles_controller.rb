@@ -23,7 +23,6 @@ class Admin::ArticlesController < ApplicationController
     @article.user = current_user
     @article.article_category_id = params[:article_category_id]
 
-
     if @article.save
       redirect_to admin_articles_path
     else
