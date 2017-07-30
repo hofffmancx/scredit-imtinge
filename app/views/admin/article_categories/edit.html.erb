@@ -1,0 +1,18 @@
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-8">
+      <h2 class="text-center">新增资讯分类</h2>
+
+      <hr>
+      <%= simple_form_for [:admin, @article_category] do |f| %>
+        <div class="form-group">
+          <%= f.input :name, :label => "分类名称" %>
+          <hr>
+        </div>
+        <%= f.submit "提交", class: "btn btn-sm btn-default", data: {disable_with: "Submiting..."} %>
+      <% end %>
+
+    </div>
+  </div>
+</div>

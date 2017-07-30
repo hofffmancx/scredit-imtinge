@@ -25,11 +25,13 @@ class ArticlesController < ApplicationController
 
   def new
     @article = Article.new
+
   end
 
   def create
     @article = Article.new(article_params)
     @article.user = current_user
+
 
     if @article.save
       redirect_to account_article_collections_path
@@ -38,6 +40,7 @@ class ArticlesController < ApplicationController
       render :new
     end
   end
+
 
 
   # ---article_collection 收藏文章---
@@ -66,7 +69,7 @@ class ArticlesController < ApplicationController
   private
 
   def article_params
-    params.require(:article).permit(:image, :title, :description, :summary, :user_id)
+    params.require(:article).permit(:image, :title, :description, :summary, :user_id,:article_category_id)
   end
 
 end

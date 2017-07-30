@@ -4,6 +4,7 @@ Rails.application.routes.draw do
 
 
   namespace :admin do
+    resources :article_categories
     resources :products do     #后台上架网址 admin/products
       member do
         patch :move_up         #商品位置移动

@@ -15,11 +15,14 @@ class Admin::ArticlesController < ApplicationController
 
   def new
     @article = Article.new
+    @article_categories = ArticleCategory.all.map { |c| [c.name, c.id] }
   end
 
   def create
     @article = Article.new(article_params)
     @article.user = current_user
+    @article.article_category_id = params[:article_category_id]
+
 
     if @article.save
       redirect_to admin_articles_path
@@ -30,10 +33,12 @@ class Admin::ArticlesController < ApplicationController
 
   def edit
     @article = Article.find(params[:id])
+    @article_categories = ArticleCategory.all.map { |c| [c.name, c.id] }
   end
 
   def update
     @article = Article.find(params[:id])
+    @article.article_category_id = params[:article_category_id]
 
     if @article.update(article_params)
       redirect_to admin_articles_path
@@ -91,7 +96,7 @@ class Admin::ArticlesController < ApplicationController
   # ---private---
 
   def article_params
-    params.require(:article).permit(:image, :title, :description,:summary, :user_id, :is_hidden)
+    params.require(:article).permit(:image, :title, :description,:summary, :user_id, :is_hidden,:article_category_id)
   end
 
 end
