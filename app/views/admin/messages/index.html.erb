@@ -1,0 +1,55 @@
+
+
+<div class="account-box">
+
+  <h3 class="text-center">客户咨询留言（Message List）</h3>
+
+
+  <br>
+
+
+
+  <!-- 所有咨询反馈消息 -->
+  <table class="table table-hover table-bordered table-responsive">
+    <thead>
+      <tr>
+        <td>ID</td>
+        <td>客户名称</td>
+        <td>客户电话</td>
+        <td>客户邮箱</td>
+        <td>客户留言</td>
+        <td>反馈时间</td>
+        <td>操作</td>
+        <td>状态</td>
+      </tr>
+    </thead>
+    <tbody>
+      <% @messages.each do |message| %>
+        <tr>
+          <td><%= message.id %></td>
+          <td><%= message.name %></td>
+          <td><%= message.telphone %></td>
+          <td><%= message.email %></td>
+          <td><%= message.description %></td>
+          <td><%= message.created_at %></td>
+          <td>
+
+            <%= link_to("删除", admin_message_path(message), method: :delete, data: { confirm: "你确定要删除吗？"}) %>
+          </td>
+          <td>
+          
+            <% if message.is_unread %>
+              未读<%= link_to is_read_admin_message_path(message), method: :post, class: "btn btn-xs btn-success" do %>
+              <i class="fa fa-eye"></i>
+              <% end %>
+            <% else %>
+              已读<i class="fa fa-eye-slash"></i>
+            <% end %>
+          </td>
+
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+
+</div>

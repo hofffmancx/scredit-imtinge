@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170729072627) do
+ActiveRecord::Schema.define(version: 20170730092748) do
 
   create_table "article_categories", force: :cascade do |t|
     t.datetime "created_at", null: false
@@ -131,6 +131,16 @@ ActiveRecord::Schema.define(version: 20170729072627) do
     t.string   "author_img"
     t.string   "author_title"
     t.text     "author_description"
+  end
+
+  create_table "messages", force: :cascade do |t|
+    t.string   "name"
+    t.text     "description"
+    t.string   "telphone"
+    t.string   "email"
+    t.datetime "created_at",                 null: false
+    t.datetime "updated_at",                 null: false
+    t.boolean  "is_unread",   default: true
   end
 
   create_table "orders", force: :cascade do |t|

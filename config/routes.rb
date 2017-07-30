@@ -2,9 +2,15 @@ Rails.application.routes.draw do
 
   devise_for :users
   resources :articlealls
+  resources :messages
 
 
   namespace :admin do
+    resources :messages do
+      member do
+        post :is_read
+      end
+    end
     resources :article_categories
     resources :products do     #后台上架网址 admin/products
       member do

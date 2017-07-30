@@ -1,0 +1,30 @@
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-8">
+      <h2 class="text-center">联系我们</h2>
+
+      <hr>
+      <%= simple_form_for [@message] do |f| %>
+        <div class="form-group">
+          <%= f.input :name, :label => "客户名称" %>
+          <hr>
+        </div>
+        <div class="form-group">
+          <%= f.input :telphone, :label => "电话" %>
+          <hr>
+        </div>
+        <div class="form-group">
+          <%= f.input :email, :label => "邮箱" %>
+          <hr>
+        </div>
+        <div class="form-group">
+          <%= f.input :description, :label => "留言" %>
+          <hr>
+        </div>
+        <%= f.submit "提交", class: "btn btn-sm btn-default", data: {disable_with: "Submiting..."} %>
+      <% end %>
+
+    </div>
+  </div>
+</div>
