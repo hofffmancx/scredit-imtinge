@@ -8,25 +8,21 @@ class ArticlesController < ApplicationController
   def index
 
     @article_categories = ArticleCategory.all
-    # @articles = Article.where(:is_hidden => false).order("created_at DESC")
 
-    # if params[:article_category_id].blank?
     if params[:category].blank?
         @articles = Article.where(:is_hidden => false).order("created_at DESC")
 
     else
-
-        # @articles = Article.where(article_category_id: params[:article_category_id])
-
          @article_category_id = ArticleCategory.find_by(name: params[:category]).id
          @articles = Article.where(:article_category_id => @article_category_id)
-         
     end
 
   end
 
   def show
     @article = Article.find(params[:id])
+    @articles = Article.where(:is_hidden => false).order("created_at DESC")
+    @products = Product.all  # 显示所有的项目
     @user = @article.user
     @userarticles = @article.user.articles.order("created_at DESC").paginate(:page => params[:page], :per_page => 5)
     @article_reviews = ArticleReview.where(article_id: @article.id).order("created_at DESC")
@@ -41,7 +37,6 @@ class ArticlesController < ApplicationController
 
   def new
     @article = Article.new
-
   end
 
   def create
@@ -65,12 +60,12 @@ class ArticlesController < ApplicationController
 
   def join
     @article = Article.find(params[:id])
-
     if !current_user.is_article_member_of?(@article)
       current_user.join_article_collection!(@article)
     end
       redirect_to article_path(@article)
   end
+  
 
   def quit
     @article = Article.find(params[:id])

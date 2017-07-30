@@ -19,14 +19,18 @@
       <div class="navbar-collapse navbar-ex1-collapse collapse navbar-right" aria-expanded="false">
 
         <ul class="nav navbar-nav navbar-right">
+
+          <li>
+            <%= link_to("热门活动", root_path, target: "_blank") %>
+          </li>
+          <li>
+            <%= link_to("资讯", articlealls_path, target: "_blank") %>
+          </li>
           <li>
             <%= link_to("关于尚德信", about_index_path, target: "_blank") %>
           </li>
           <li>
-            <%= link_to("案例分享", root_path, target: "_blank") %>
-          </li>
-          <li>
-            <%= link_to("资讯", articlealls_path, target: "_blank") %>
+            <%= link_to("联系我们", about_index_path, target: "_blank") %>
           </li>
 
           <% if !current_user %>
@@ -60,7 +64,8 @@
             <ul class="dropdown-menu">
               <li><%= link_to("美国移民", products_path,target: "_blank",class: "li-style") %></li>
               <li><%= link_to("欧洲移民", about_index_path,target: "_blank",class: "li-style") %></li>
-              <li><%= link_to("希腊移民", about_index_path,target: "_blank",class: "li-style") %></li>
+              <li><%= link_to("护照国家", about_index_path,target: "_blank",class: "li-style") %></li>
+              <li><%= link_to("其他国家", about_index_path,target: "_blank",class: "li-style") %></li>
             </ul>
           </li>
         </ul>
