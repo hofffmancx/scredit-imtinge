@@ -5,8 +5,9 @@ class ProductsController < ApplicationController
 
   # --CRUD--
   def index
-    @products = Product.all
+    @products = Product.where(:category => ["欧洲移民", "其他国家", "护照国家"]).all.order("position ASC").paginate(:page => params[:page], :per_page => 20)
   end
+
 
   def show
     @product = Product.find(params[:id])
@@ -30,15 +31,15 @@ class ProductsController < ApplicationController
   # ---category分类---
 
   def accept
-    @products = Product.where(:category => "收纳品").all.order("position ASC").paginate(:page => params[:page], :per_page => 20)
+    @products = Product.where(:category => "欧洲移民").all.order("position ASC").paginate(:page => params[:page], :per_page => 20)
   end
 
   def decoration
-    @products = Product.where(:category => "装饰品").all.order("position ASC").paginate(:page => params[:page], :per_page => 20)
+    @products = Product.where(:category => "护照国家").all.order("position ASC").paginate(:page => params[:page], :per_page => 20)
   end
 
   def course
-    @products = Product.where(:category => "课程").all.order("position ASC").paginate(:page => params[:page], :per_page => 20)
+    @products = Product.where(:category => "其他国家").all.order("position ASC").paginate(:page => params[:page], :per_page => 20)
   end
 
 

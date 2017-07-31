@@ -93,7 +93,7 @@
         <% link_to product_project_path(@product, project) %>
             <%= link_to image_tag("http://placehold.it/300x300&text=No Pic", class: "product-list-style-img img-width  center-block all_image_css"), product_project_path(@product, project), target: "_blank" %>
         <br>
-        <%= link_to(project.title, product_project_path(@product, project), target: "_blank") %>
+        <%= link_to(project.title, product_path(1), target: "_blank") %>
         <br>
       </div>
     <% end %>
