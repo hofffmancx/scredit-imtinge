@@ -1,0 +1,140 @@
+<div class="container">
+  <div class="row">
+
+    <div class="" style="font-size:2.0em;">
+    尚德信企业资讯
+    </div>
+    <hr>
+    <% @activities.each do |activity| %>
+      <div class="article-all col-md-6 container">
+        <div class="article-box row">
+
+            <div class="">
+              <!-- 文章列表图片 -->
+              <div class="col-md-5 all_image_css">
+                <% if activity.image.present? %>
+                  <%= link_to image_tag(activity.image.activityimg.url, class: "product-list-style-img img-responsive"), activity_path(activity) %>
+                <% else %>
+                  <%= link_to image_tag("http://placehold.it/600x400&text=No Pic", class: "product-list-style-img img-responsive"), activity_path(activity)%>
+                <% end %>
+              </div>
+
+              <!-- 文章列表标题、作者、日期 -->
+              <div class="col-md-7">
+                <%= link_to(activity.title, activity_path(activity), class: "article-index-title") %>
+                <div class="article-user row">
+                  <div class="col-md-6">
+                    <span> <%= activity.user.display_name %></span>
+                  </div>
+                  <div class="col-md-6">
+                    <span> <%= activity.created_at.strftime("%Y-%m-%d %H:%M:%S") %></span>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+        </div>
+        <hr>
+      </div>
+
+    <% end %>
+
+
+    <div class="" style="font-size:2.0em;">
+    移民知识
+    </div>
+    <hr>
+    <% @activities.each do |activity| %>
+      <div class="article-all col-md-6 container">
+        <div class="article-box row">
+
+            <div class="">
+              <!-- 文章列表图片 -->
+              <div class="col-md-5 all_image_css">
+                <% if activity.image.present? %>
+                  <%= link_to image_tag(activity.image.activityimg.url, class: "product-list-style-img img-responsive"), activity_path(activity) %>
+                <% else %>
+                  <%= link_to image_tag("http://placehold.it/600x400&text=No Pic", class: "product-list-style-img img-responsive"), activity_path(activity)%>
+                <% end %>
+              </div>
+
+              <!-- 文章列表标题、作者、日期 -->
+              <div class="col-md-7">
+                <%= link_to(activity.title, activity_path(activity), class: "article-index-title") %>
+                <div class="article-user row">
+                  <div class="col-md-6">
+                    <span> <%= activity.user.display_name %></span>
+                  </div>
+                  <div class="col-md-6">
+                    <span> <%= activity.created_at.strftime("%Y-%m-%d %H:%M:%S") %></span>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+        </div>
+        <hr>
+      </div>
+
+    <% end %>
+
+
+    <div class="" style="font-size:2.0em;">
+      移民行业动态
+    </div>
+    <hr>
+    <!-- <a href="#" style="1.0em;">查看更多</a> -->
+
+    <% @activities.each do |activity| %>
+      <div class="article-all col-md-6 container">
+        <div class="article-box row">
+
+            <div class="">
+              <!-- 文章列表图片 -->
+              <div class="col-md-5 all_image_css">
+                <% if activity.image.present? %>
+                  <%= link_to image_tag(activity.image.activityimg.url, class: "product-list-style-img img-responsive"), activity_path(activity) %>
+                <% else %>
+                  <%= link_to image_tag("http://placehold.it/600x400&text=No Pic", class: "product-list-style-img img-responsive"), activity_path(activity)%>
+                <% end %>
+              </div>
+
+              <!-- 文章列表标题、作者、日期 -->
+              <div class="col-md-7">
+                <%= link_to(activity.title, activity_path(activity), class: "article-index-title") %>
+                <div class="article-user row">
+                  <div class="col-md-6">
+                    <span> <%= activity.user.display_name %></span>
+                  </div>
+                  <div class="col-md-6">
+                    <span> <%= activity.created_at.strftime("%Y-%m-%d %H:%M:%S") %></span>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+        </div>
+        <hr>
+      </div>
+
+    <% end %>
+
+
+
+  </div>
+
+
+
+</div>
+
+
+
+
+<!-- <% @activities.each do |activity| %>
+  <%= activity.title %>
+  <%= activity.user.email %>
+  <%= activity.summary %>
+<% end %> -->
