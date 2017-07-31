@@ -55,6 +55,7 @@ Rails.application.routes.draw do
       get :course             #分类 课程
     end
     resources :reviews
+    resources :projects       #国家下的具体移民项目
   end
 
   resources :courses do         #前台显示课程
