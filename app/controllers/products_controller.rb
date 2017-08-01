@@ -5,7 +5,7 @@ class ProductsController < ApplicationController
 
   # --CRUD--
   def index
-    # @products = Product.where(:category => ["欧洲移民", "其他国家", "护照国家"]).all.order("position ASC").paginate(:page => params[:page], :per_page => 20)
+
     @country_categories = CountryCategory.all
 
     if params[:category].blank?
@@ -38,19 +38,6 @@ class ProductsController < ApplicationController
   end
 
 
-  # ---category分类---
-
-  # def accept
-  #   @products = Product.where(:category => "欧洲移民").all.order("position ASC").paginate(:page => params[:page], :per_page => 20)
-  # end
-  #
-  # def decoration
-  #   @products = Product.where(:category => "护照国家").all.order("position ASC").paginate(:page => params[:page], :per_page => 20)
-  # end
-  #
-  # def course
-  #   @products = Product.where(:category => "其他国家").all.order("position ASC").paginate(:page => params[:page], :per_page => 20)
-  # end
 
 
   # ---collection 收藏商品---

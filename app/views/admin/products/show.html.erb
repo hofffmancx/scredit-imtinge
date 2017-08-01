@@ -33,6 +33,7 @@
       <thead>
         <tr>
           <td>ID</td>
+          <td width="220"></td>
           <td>项目名称</td>
           <td>项目描述</td>
           <td width="100">操作</td>
@@ -43,6 +44,15 @@
         <% @projects.each do |project| %>
           <tr>
             <td><%= project.id %></td>
+            <td>
+              <%= link_to admin_product_project_path(@product,project) do%>
+                <% if project.image.present? %>
+                  <%= image_tag(project.image.thumb.url, class: "thumbnail") %>
+                <% else %>
+                  <%= image_tag("http://placehold.it/200x200&text=No Pic", class:"thumbnail") %>
+                <% end %>
+              <% end %>
+            </td>
             <td><%= link_to(project.title, product_project_path(@product,project)) %></td>
             <td><%= simple_format(project.content)%></td>
             <td>
