@@ -10,34 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170730172808) do
 
-  create_table "activities", force: :cascade do |t|
-    t.string   "image"
-    t.string   "title"
-    t.text     "description"
-    t.integer  "user_id"
-    t.datetime "created_at",                 null: false
-    t.datetime "updated_at",                 null: false
-    t.text     "summary"
-    t.boolean  "is_hidden",   default: true
-    t.integer  "position"
-  end
-
-  create_table "activity_collections", force: :cascade do |t|
-    t.integer  "activity_id"
-    t.integer  "user_id"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
-  end
-
-  create_table "activity_reviews", force: :cascade do |t|
-    t.text     "comment"
-    t.integer  "activity_id"
-    t.integer  "user_id"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
-  end
 
   create_table "article_categories", force: :cascade do |t|
     t.string   "name"
@@ -209,6 +182,15 @@ ActiveRecord::Schema.define(version: 20170730172808) do
     t.string   "category"
     t.string   "yieldly"
     t.string   "courseimg"
+  end
+
+  create_table "projects", force: :cascade do |t|
+    t.string   "title"
+    t.text     "content"
+    t.integer  "product_id"
+    t.integer  "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "reviews", force: :cascade do |t|

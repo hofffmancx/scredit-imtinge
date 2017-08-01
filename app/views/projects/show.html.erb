@@ -1,0 +1,46 @@
+<div class="container">
+<div class="row product-show">
+
+  <!-- 主图 -->
+  <div class="col-md-7">
+      <%= image_tag("http://placehold.it/00x400&text=No Pic", class: "thumbnail img-responsive") %>
+  </div>
+
+  <!-- 商品信息 -->
+  <div class="col-md-5">
+
+    <!-- 商品标题 -->
+    <h2 class="product-title"><%= @project.title %></h2>
+
+    <!-- 商品简述 -->
+    <div class="product-description">
+      <p>
+        <%= simple_format(@project.content) %>
+      </p>
+    </div>
+
+
+
+  </div>
+
+
+
+</div>
+
+<!-- 项目列表区 -->
+<br><br><br>
+
+<div class="container">
+  <div class="row">
+    <h4>详情</h4>
+    <hr>
+
+
+  </div>
+</div>
+
+
+
+<!-- 项目列表区 结束 -->
+
+</div>
