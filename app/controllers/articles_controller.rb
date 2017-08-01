@@ -23,6 +23,7 @@ class ArticlesController < ApplicationController
     @article = Article.find(params[:id])
     @articles = Article.where(:is_hidden => false).order("created_at DESC")
     @products = Product.all  # 显示所有的项目
+    @activities = Activity.all
     @user = @article.user
     @userarticles = @article.user.articles.order("created_at DESC").paginate(:page => params[:page], :per_page => 5)
     @article_reviews = ArticleReview.where(article_id: @article.id).order("created_at DESC")
@@ -65,7 +66,7 @@ class ArticlesController < ApplicationController
     end
       redirect_to article_path(@article)
   end
-  
+
 
   def quit
     @article = Article.find(params[:id])

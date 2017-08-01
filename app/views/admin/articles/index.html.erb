@@ -27,7 +27,7 @@
       <% @articles.each do |article| %>
         <tr>
           <td><%= article.id %></td>
-          <td><%= article.article_category.name %></td>
+          <td><%= article.article_category_id %></td>
           <td><%= link_to(article.title, article_path(article)) %></td>
           <td><%= article.user.email %></td>
           <td><%= article.updated_at %></td>

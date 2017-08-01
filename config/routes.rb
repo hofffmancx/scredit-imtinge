@@ -12,9 +12,10 @@ Rails.application.routes.draw do
       end
     end
     resources :article_categories
-    resources :projects
+
     resources :products do
        #后台上架网址 admin/products
+      resources :projects
       member do
         patch :move_up         #商品位置移动
         patch :move_down       #商品位置移动

@@ -11,6 +11,8 @@ class ActivitiesController < ApplicationController
 
   def show
     @activity = Activity.find(params[:id])
+    @articles = Article.all
+    @products = Product.all
     @user = @activity.user
     @useractivities = @activity.user.activities.order("created_at DESC").paginate(:page => params[:page], :per_page => 5)
     @activity_reviews = ActivityReview.where(activity_id: @activity.id).order("created_at DESC")

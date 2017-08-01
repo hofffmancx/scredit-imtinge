@@ -21,6 +21,7 @@
         <td>价格</td>
         <td width="100">操作</td>
         <td>创建时间</td>
+        <td>查看项目</td>
       </tr>
     </thead>
     <tbody>
@@ -48,6 +49,7 @@
             <%= link_to "向下", move_down_admin_product_path(product), method: :patch %>
           </td>
           <td><%= product.created_at %></td>
+          <td><%= link_to("查看项目", admin_product_path(product))%></td>
         </tr>
       <% end %>
     </tbody>
