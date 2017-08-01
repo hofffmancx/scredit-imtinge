@@ -10,7 +10,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+ActiveRecord::Schema.define(version: 20170801040809) do
 
+  create_table "activities", force: :cascade do |t|
+    t.string   "image"
+    t.string   "title"
+    t.text     "description"
+    t.integer  "user_id"
+    t.datetime "created_at",                 null: false
+    t.datetime "updated_at",                 null: false
+    t.text     "summary"
+    t.boolean  "is_hidden",   default: true
+    t.integer  "position"
+  end
 
   create_table "article_categories", force: :cascade do |t|
     t.string   "name"
