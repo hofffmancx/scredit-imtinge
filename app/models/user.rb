@@ -7,6 +7,7 @@ class User < ApplicationRecord
 
   has_many :reviews, dependent: :destroy              #商品留言关系，dependent: :destroy表述联级删除
   has_many :article_reviews, dependent: :destroy      #文章留言关系
+  has_many :activity_reviews, dependent: :destroy      #热门活动留言关系
   has_many :club_reviews, dependent: :destroy         #社群留言关系
 
 
@@ -43,6 +44,23 @@ class User < ApplicationRecord
 
   def quit_article_collection!(article)
     participated_articles.delete(article)
+  end
+
+  # ---收藏热门活动功能三方关系代码块---
+
+  has_many :activity_collections                               #收藏商品关系
+  has_many :participated_activities, through: :activity_collections, source: :activity
+
+  def is_activity_member_of?(activity)
+    participated_activities.include?(activity)
+  end
+
+  def join_activity_collection!(activity)
+    participated_activities << activity
+  end
+
+  def quit_activity_collection!(activity)
+    participated_activities.delete(activity)
   end
 
 
@@ -87,6 +105,10 @@ class User < ApplicationRecord
   # ---与article订单关系---
 
   has_many :articles
+
+  # ---与activity订单关系---
+
+  has_many :activities
 
 
   # ---与club订单关系---
