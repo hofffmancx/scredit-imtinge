@@ -104,61 +104,64 @@
       <!-- 有侧边栏 -->
       <div class="col-md-4">
 
-      <!-- 热门活动 -->
-
-
-        <div class=" article-author-title-list">
+        <!-- 热门活动 -->
+        <div class=" ">
           <h5>热门活动</h5>
-          <hr>
-          <div class="">
-            <%= image_tag("https://ww4.sinaimg.cn/large/006tNc79gy1fhrp8h9ttbj30b208agm8.jpg", class: "img-responsive center-block") %>
-          </div>
-          <hr>
-          <div class="">
-            <%= image_tag("https://ww3.sinaimg.cn/large/006tNc79gy1fhrp2ntmp2j30i00dg40j.jpg", class: "img-responsive center-block") %>
-          </div>
+          <% @activities.each do |activity| %>
+            <hr>
+            <div class="article-author-title-list">
+              <!-- <div class="all_image_css"> -->
+                <% if activity.image.present? %>
+                  <%= link_to image_tag(activity.image.thumb.url, class: " img-responsive"), activity_path(activity) %>
+                <% else %>
+                  <%= link_to image_tag("http://placehold.it/80x80&text=No Pic", class: "img-circle img-responsive center-block"), activity_path(activity) %>
+                <% end %>
+              <!-- </div> -->
+              <!-- <div class="col-xs-8">
+                  <p><%= link_to(activity.title, activity_path(activity)) %></p>
+              </div> -->
+            </div>
+          <% end %>
           <hr>
         </div>
 
         <!-- 最新文章 -->
         <div class=" article-author-title-list">
           <h5>最新资讯</h5>
-          <% @activity_hots.each do |activity_hot| %>
+          <% @articles.each do |article_hot| %>
             <hr>
             <div class="row article-show-hot">
               <div class="col-xs-4 all_image_css">
-                <% if activity_hot.image.present? %>
-                  <%= link_to image_tag(activity_hot.image.thumb.url, class: "img-rounded img-responsive center-block"), activity_path(activity_hot) %>
+                <% if article_hot.image.present? %>
+                  <%= link_to image_tag(article_hot.image.thumb.url, class: "img-rounded img-responsive center-block"), article_path(article_hot) %>
                 <% else %>
-                  <%= link_to image_tag("http://placehold.it/80x80&text=No Pic", class: "img-circle img-responsive center-block"), activity_path(activity_hot) %>
+                  <%= link_to image_tag("http://placehold.it/80x80&text=No Pic", class: "img-circle img-responsive center-block"), article_path(article_hot) %>
                 <% end %>
               </div>
               <div class="col-xs-8">
-                  <p><%= link_to(activity_hot.title, activity_path(activity_hot)) %></p>
+                  <p><%= link_to(article_hot.title, article_path(article_hot)) %></p>
               </div>
             </div>
           <% end %>
           <hr>
         </div>
 
-        <!-- 热评文章 -->
+        <!-- 热门项目 -->
 
         <div class=" article-author-title-list">
-          <h5>热评资讯</h5>
-
-
-          <% @activity_hots.each do |activity_hot| %>
+          <h5>热门项目</h5>
+          <% @products.each do |article_hot| %>
             <hr>
             <div class="row article-show-hot">
               <div class="col-xs-4 all_image_css">
-                <% if activity_hot.image.present? %>
-                  <%= link_to image_tag(activity_hot.image.thumb.url, class: "img-rounded img-responsive center-block"), activity_path(activity_hot) %>
+                <% if article_hot.image.present? %>
+                  <%= link_to image_tag(article_hot.image.thumb.url, class: "img-rounded img-responsive center-block"), product_path(article_hot) %>
                 <% else %>
-                  <%= link_to image_tag("http://placehold.it/80x80&text=No Pic", class: "img-circle img-responsive center-block"), activity_path(activity_hot) %>
+                  <%= link_to image_tag("http://placehold.it/80x80&text=No Pic", class: "img-responsive center-block"), product_path(article_hot) %>
                 <% end %>
               </div>
               <div class="col-xs-8">
-                  <p><%= link_to(activity_hot.title, activity_path(activity_hot)) %></p>
+                  <p><%= link_to(article_hot.title, product_path(article_hot)) %></p>
               </div>
             </div>
           <% end %>
@@ -166,9 +169,8 @@
 
         </div>
 
-        <!-- 投稿按钮 -->
+        <!-- 联系尚德信 -->
         <div class=" article-author-title-list">
-        <!-- <img src="<div class=" article-author-title-list">" alt=""></img> -->
           <%= image_tag("https://ww3.sinaimg.cn/large/006tKfTcgy1fhveca97b4j30i60datc7.jpg", class: "img-responsive center-block") %>
         </div>
       </div>

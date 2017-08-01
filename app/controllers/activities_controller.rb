@@ -11,6 +11,7 @@ class ActivitiesController < ApplicationController
 
   def show
     @activity = Activity.find(params[:id])
+    @activities = Activity.all
     @articles = Article.all
     @products = Product.all
     @user = @activity.user
