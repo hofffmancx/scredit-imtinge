@@ -24,6 +24,23 @@ class ProjectsController < ApplicationController
     end
   end
 
+  def edit
+    @product = Product.find(params[:product_id])  # 通过project数据表里的product_id,找到product的ID。也就是先找到爹是谁。 project.product_id == product.id
+    @project = Project.find(params[:id]) # 把新建的数据的content传给实体变量@project
+  end
+
+  def update
+    @product = Product.find(params[:product_id])
+    @project = Project.find(params[:id])
+
+    if @project.update(project_params)
+      redirect_to admin_products_path,notice: "项目编辑成功！"
+    else
+      render :edit
+    end
+  end
+
+
   private
 
   def project_params
