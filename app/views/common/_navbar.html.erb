@@ -63,9 +63,10 @@
             </a>
             <ul class="dropdown-menu">
               <li><%= link_to("美国移民", product_path(1), target: "_blank",class: "li-style") %></li>
-              <li><%= link_to("欧洲移民", accept_products_path, target: "_blank",class: "li-style") %></li>
-              <li><%= link_to("护照国家", decoration_products_path, target: "_blank",class: "li-style") %></li>
-              <li><%= link_to("其他国家", course_products_path,target: "_blank",class: "li-style") %></li>
+              <%  CountryCategory.all.each do |category|%>
+                <li><%= link_to  category.title, products_path(category: category.title), target: "_blank",class: "li-style"  %></li>
+              <% end %>
+
             </ul>
           </li>
         </ul>

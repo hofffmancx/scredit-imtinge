@@ -15,7 +15,9 @@
       <tr>
         <td>ID</td>
         <td width="220"></td>
+        <td>所属分类</td>
         <td>商品名称</td>
+
         <td>描述</td>
         <td>库存</td>
         <td>价格</td>
@@ -37,6 +39,7 @@
               <% end %>
             <% end %>
           </td>
+          <td><%= product.country_category_id %></td>
           <td><%= link_to(product.title, product_path(product)) %></td>
           <td><%= simple_format(product.description) %></td>
           <td><%= product.quantity %></td>

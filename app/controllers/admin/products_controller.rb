@@ -16,10 +16,12 @@ class Admin::ProductsController < ApplicationController
 
   def new
     @product = Product.new
+    @country_categories = CountryCategory.all.map { |c| [c.title, c.id] }
   end
 
   def create
     @product = Product.new(product_params)
+    @product.country_category_id = params[:country_category_id]
 
     if @product.save
       redirect_to admin_products_path
@@ -30,10 +32,12 @@ class Admin::ProductsController < ApplicationController
 
   def edit
     @product = Product.find(params[:id])
+    @country_categories = CountryCategory.all.map { |c| [c.title, c.id] }
   end
 
   def update
     @product = Product.find(params[:id])
+        @product.country_category_id = params[:country_category_id]
     if @product.update(product_params)
       redirect_to admin_products_path
     else
@@ -77,7 +81,7 @@ class Admin::ProductsController < ApplicationController
   private
 
   def product_params
-    params.require(:product).permit(:title, :description, :price, :quantity, :image, :particulars, :category, :yieldly, :courseimg)
+    params.require(:product).permit(:title, :description, :price, :quantity, :image, :particulars, :category, :yieldly, :courseimg,:country_category_id)
   end
 
 end

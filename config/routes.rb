@@ -12,6 +12,7 @@ Rails.application.routes.draw do
       end
     end
     resources :article_categories
+    resources :country_categories
 
     resources :products do
        #后台上架网址 admin/products
@@ -62,9 +63,9 @@ Rails.application.routes.draw do
     end
     collection do
       get :search             #搜索功能
-      get :accept             #分类 收纳品
-      get :decoration         #分类 装饰品
-      get :course             #分类 课程
+      # get :accept             #分类 收纳品
+      # get :decoration         #分类 装饰品
+      # get :course             #分类 课程
     end
     resources :reviews
     resources :projects       #国家下的具体移民项目
