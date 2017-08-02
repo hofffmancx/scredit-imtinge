@@ -1,10 +1,33 @@
 class StoriesController < ApplicationController
   def show
     @story = Story.find(params[:id])
-    @activities = Activity.all
-    @articles = Article.all
-    @products = Product.all
     @user = @story.user
+
+    if Project.count <10
+      @projects = Project.all.order("created_at DESC")
+    else
+      @projects = Project.all.order("created_at DESC").limit(10)
+    end
+
+    if Activity.count <10
+      @activities = Activity.all.order("created_at DESC")
+    else
+      @activities = Activity.all.order("created_at DESC").limit(10)
+    end
+
+
+    if Article.count <10
+      @articles = Article.all.order("created_at DESC")
+    else
+      @articles = Article.all.order("created_at DESC").limit(10)
+    end
+
+    if Product.count <10
+      @products = Product.all.order("created_at DESC")
+    else
+      @products = Product.all.order("created_at DESC").limit(10)
+    end
+
 
 
     if @story.is_hidden

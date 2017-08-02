@@ -22,8 +22,26 @@ class ArticlesController < ApplicationController
   def show
     @article = Article.find(params[:id])
     @articles = Article.where(:is_hidden => false).order("created_at DESC")
-    @products = Product.all  # 显示所有的项目
-    @activities = Activity.all
+
+    if Project.count <10
+      @projects = Project.all.order("created_at DESC")
+    else
+      @projects = Project.all.order("created_at DESC").limit(10)
+    end
+
+    if Activity.count <10
+      @activities = Activity.all.order("created_at DESC")
+    else
+      @activities = Activity.all.order("created_at DESC").limit(10)
+    end
+
+
+    if Product.count <10
+      @products = Product.all.order("created_at DESC")
+    else
+      @products = Product.all.order("created_at DESC").limit(10)
+    end
+
     @user = @article.user
     @userarticles = @article.user.articles.order("created_at DESC").paginate(:page => params[:page], :per_page => 5)
     @article_reviews = ArticleReview.where(article_id: @article.id).order("created_at DESC")

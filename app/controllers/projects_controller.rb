@@ -9,12 +9,34 @@ class ProjectsController < ApplicationController
   def show
      @product = Product.find(params[:product_id])
      @project = Project.find(params[:id])
-     @products = Product.all  # 显示所有的项目
-     @activities = Activity.all
+
      @stories = Story.where(:product_id=>@product.id)
      if @stories.blank?
-       @stories = Story.all
+       @stories = Story.all.order("created_at DESC").limit(5)
      end
+
+     if Product.count <10
+       @products = Product.all.order("created_at DESC")
+     else
+       @products = Product.all.order("created_at DESC").limit(10)
+     end
+
+
+
+     if Activity.count <10
+       @activities = Activity.all.order("created_at DESC")
+     else
+       @activities = Activity.all.order("created_at DESC").limit(10)
+     end
+
+
+     if Article.count <10
+       @articles = Article.all.order("created_at DESC")
+     else
+       @articles = Article.all.order("created_at DESC").limit(10)
+     end
+
+
    end
 
   def create
