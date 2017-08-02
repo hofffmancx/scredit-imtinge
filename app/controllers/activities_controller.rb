@@ -13,6 +13,13 @@ class ActivitiesController < ApplicationController
     @activity = Activity.find(params[:id])
     @user = @activity.user
 
+
+    if Activity.count <5
+      @activities = Activity.where(:is_hidden => false).order("created_at DESC")
+    else
+      @activities = Activity.where(:is_hidden => false).order("created_at DESC").limit(5)
+    end
+
     if Project.count <10
       @projects = Project.all.order("created_at DESC")
     else

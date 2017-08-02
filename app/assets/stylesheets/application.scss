@@ -399,3 +399,39 @@
   .img-width {
     width: 100%;
   }
+
+  //袁龙添加的代码
+  // 热门活动列表页面装饰图
+  .decorative_picture {
+    padding-left: 0;    //左内边距
+    padding-right: 0;   //右内边距
+    margin-bottom: 30px; //底部外边距撑开30px
+
+
+  }
+
+
+  //热门活动列表页活动标题
+  .activity-index-title {
+    font-size: 3px;   //字体大小
+  }
+
+  //热门活动列表页侧边栏上面图
+  .activity-author-title-list {
+    margin-top: 15px;
+  }
+
+
+
+  //热门活动列表页侧边栏下面的两张小图
+  .activity-index-sidebar-littlepicture {
+    padding-left: 0;      //调整两张小图片位置与上面对齐
+    margin-bottom: 20px;  //撑开两张小图间的上下距离
+    margin-left: -15px;   //调整两张小图片位置与上面对齐
+    font-size: 1px;
+  }
+
+  //热门活动列表页侧边栏下面的两张小图标题
+  .little-picture-title {
+   font-size: 1px;
+  }

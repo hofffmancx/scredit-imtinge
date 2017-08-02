@@ -1,17 +1,24 @@
+<!-- 装饰图片 -->
+<div class="row">
+<div class="decorative_picture col-md-12" >
+  <%= image_tag("https://i.loli.net/2017/08/01/59800a81e044f.png", class: "img-responsive center-block") %>
+</div>
+</div>
+<!-- 装饰图片end-->
+
+<!-- 主体内容部分-->
 <div class="container">
   <div class="row">
 
-    <div class="" style="font-size:2.0em;">
-    尚德信企业资讯
-    </div>
-    <hr>
+    <div class="col-md-8" style="font-size:2.0em;">
+
     <% @activities.each do |activity| %>
-      <div class="article-all col-md-6 container">
+      <div class="activity-all col-md-12 container">
         <div class="article-box row">
 
             <div class="">
               <!-- 文章列表图片 -->
-              <div class="col-md-5 all_image_css">
+              <div class="col-md-6 all_image_css">
                 <% if activity.image.present? %>
                   <%= link_to image_tag(activity.image.activityimg.url, class: "product-list-style-img img-responsive"), activity_path(activity) %>
                 <% else %>
@@ -20,22 +27,128 @@
               </div>
 
               <!-- 文章列表标题、作者、日期 -->
-              <div class="col-md-7">
-                <%= link_to(activity.title, activity_path(activity), class: "article-index-title") %>
+              <div class="col-md-6">
+                <%= link_to(activity.title, activity_path(activity), class: "activity-index-title") %>
+
                 <div class="article-user row">
-                  <div class="col-md-6">
-                    <span> <%= activity.user.display_name %></span>
+                  <div class="col-md-12">
+                    <!-- <span> <%= activity.user.display_name %></span> -->
                   </div>
-                  <div class="col-md-6">
+                  <!-- <div class="col-md-6">
                     <span> <%= activity.created_at.strftime("%Y-%m-%d %H:%M:%S") %></span>
-                  </div>
+                  </div> -->
                 </div>
               </div>
 
             </div>
 
         </div>
-        <hr>
+
       </div>
 
+
+
+
+
     <% end %>
+
+
+
+  </div>
+
+
+  <!-- 有侧边栏 -->
+  <div class="col-md-3">
+
+  <!-- 热门活动 -->
+
+
+    <div class="activity-author-title-list">
+
+      <div class="">
+        <%= image_tag("https://i.loli.net/2017/08/01/598046f44aa8d.png", class: "img-responsive center-block") %>
+      </div>
+
+    </div>
+
+    <div>
+      <h5 id="activity-index-sidebar">热门活动</h5>
+    </div>
+
+      <div class="activity-index-sidebar-littlepicture col-md-12">
+        <div class="col-md-6">
+          <%= image_tag("https://ooo.0o0.ooo/2017/08/01/5980901ada3b4.png", class: "img-responsive center-block") %>
+        </div>
+        <div class="col-md-6">
+          <p class="little-picture-title">猎度学院|2017遇见斜杠青年大会</p>
+        </div>
+      </div>
+
+
+      <div class="activity-index-sidebar-littlepicture col-md-12">
+        <div class="col-md-6">
+          <%= image_tag("https://ooo.0o0.ooo/2017/08/01/5980908190976.png", class: "img-responsive center-block") %>
+        </div>
+        <div class="col-md-6">
+          <p class="little-picture-title">猎励 Talk Show 第十一期：AI+人工智能</p>
+        </div>
+      </div>
+    <!-- <div class="col-md-12" style="font-size:2.0em;">
+
+    <% @activities.each do |activity| %>
+      <div class="article-all col-md-12 container">
+        <div class="article-box row">
+
+            <div class=""> -->
+              <!-- 文章列表图片 -->
+              <!-- <div class="col-md-5 all_image_css">
+                <% if activity.image.present? %>
+                  <%= link_to image_tag(activity.image.activityimg.url, class: "product-list-style-img img-responsive"), activity_path(activity) %>
+                <% else %>
+                  <%= link_to image_tag("http://placehold.it/600x400&text=No Pic", class: "product-list-style-img img-responsive"), activity_path(activity)%>
+                <% end %>
+              </div> -->
+
+              <!-- 文章列表标题、作者、日期 -->
+              <!-- <div class="col-md-7">
+                <%= link_to(activity.title, activity_path(activity), class: "activity-index-title") %>
+                <div class="article-user row">
+                  <div class="col-md-12"> -->
+                    <!-- <span> <%= activity.user.display_name %></span> -->
+                  <!-- </div> -->
+                  <!-- <div class="col-md-6">
+                    <span> <%= activity.created_at.strftime("%Y-%m-%d %H:%M:%S") %></span>
+                  </div> -->
+                <!-- </div>
+              </div>
+
+            </div>
+
+        </div>
+
+      </div>
+    <% end %>
+  </div> -->
+
+  </div>
+  <!-- 侧边栏emd -->
+
+  <div class="col-md-1">
+
+  </div>
+
+  </div>
+
+
+
+</div>
+<!-- 主体内容部分end-->
+
+
+
+
+<!-- <% @activities.each do |activity| %>
+  <%= activity.title %>
+  <%= activity.user.email %>
+  <%= activity.summary %>
+<% end %> -->

@@ -21,15 +21,18 @@ class ProjimageUploader < CarrierWave::Uploader::Base
   end
 
   process resize_to_fit: [800, 800]
-  
+
   version :thumb do
-    process resize_to_fit: [180, 180]
+    process resize_to_fit: [100, 100]
   end
 
   version :medium do
     process resize_to_fit: [400, 400]
   end
 
+  version :avatar do
+    process resize_to_fit: [100, 100]
+  end
 
   # Provide a default URL as a default if there hasn't been a file uploaded:
   # def default_url(*args)

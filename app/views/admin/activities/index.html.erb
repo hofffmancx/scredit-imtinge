@@ -14,9 +14,9 @@
     <thead>
       <tr>
         <td>ID</td>
+        <td>封面</td>
         <td>标题</td>
-        <td>作者</td>
-        <td>发布时间</td>
+        <td>更新时间</td>
         <td>操作</td>
         <td>排序</td>
         <td>状态</td>
@@ -26,9 +26,19 @@
       <% @activities.each do |activity| %>
         <tr>
           <td><%= activity.id %></td>
+          <td>
+            <%= link_to activity_path(activity) do %>
+              <% if activity.image.present? %>
+                <%= image_tag(activity.image.avatar.url, class: "thumbnail") %>
+              <% else %>
+                <%= image_tag("http://placehold.it/100x100&text=No Pic", class:"thumbnail") %>
+              <% end %>
+            <% end %>
+          </td>
+
           <td><%= link_to(activity.title, activity_path(activity)) %></td>
-          <td><%= activity.user.email %></td>
-          <td><%= activity.created_at %></td>
+
+          <td><%= activity.updated_at %></td>
           <td>
             <%= link_to("Edit", edit_admin_activity_path(activity)) %> |
             <%= link_to("destroy", admin_activity_path(activity), method: :delete, data: { confirm: "你确定要删除吗？"}) %>

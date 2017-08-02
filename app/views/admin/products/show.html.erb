@@ -20,20 +20,23 @@
       </p>
     </div>
   </div>
+     <%= link_to("新增项目", new_admin_product_project_path(@product), class: "btn btn-sm btn-success") %>
+
+
 
 <!-- 项目列表区 -->
 <hr>
 
 <div class="container all-product-box">
   <div class="row">
-    <%= link_to("新增项目", new_admin_product_project_path(@product), class: "btn btn-sm btn-success") %>
+
     <hr>
 
     <table class="table table-hover table-bordered table-responsive">
       <thead>
         <tr>
           <td>ID</td>
-          <td width="220"></td>
+          <td></td>
           <td>项目名称</td>
           <td>项目描述</td>
           <td width="100">操作</td>
@@ -49,7 +52,7 @@
                 <% if project.image.present? %>
                   <%= image_tag(project.image.thumb.url, class: "thumbnail") %>
                 <% else %>
-                  <%= image_tag("http://placehold.it/200x200&text=No Pic", class:"thumbnail") %>
+                  <%= image_tag("http://placehold.it/100x100&text=No Pic", class:"thumbnail") %>
                 <% end %>
               <% end %>
             </td>

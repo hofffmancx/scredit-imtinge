@@ -1,11 +1,11 @@
 <div class="account-box">
 
-  <h3 class="text-center">商品列表（Product List）</h3>
+  <h3 class="text-center">移民国家列表（Product List）</h3>
 
   <!-- "增加商品"按钮 -->
   <br>
   <div>
-    <%= link_to("增加商品", new_admin_product_path, class: "btn btn-sm btn-default pull-right") %>
+    <%= link_to("增加国家", new_admin_product_path, class: "btn btn-sm btn-default pull-right") %>
   </div>
 
 
@@ -14,15 +14,14 @@
     <thead>
       <tr>
         <td>ID</td>
-        <td width="220"></td>
+        <td>国家图片</td>
         <td>所属分类</td>
         <td>商品名称</td>
 
-        <td>描述</td>
-        <td>库存</td>
-        <td>价格</td>
+        <!-- <td>描述</td> -->
+
         <td width="100">操作</td>
-        <td>创建时间</td>
+        <td>更新时间</td>
         <td>查看项目</td>
       </tr>
     </thead>
@@ -33,17 +32,16 @@
           <td>
             <%= link_to product_path(product) do%>
               <% if product.image.present? %>
-                <%= image_tag(product.image.thumb.url, class: "thumbnail") %>
+                <%= image_tag(product.image.avatar.url, class: "thumbnail") %>
               <% else %>
-                <%= image_tag("http://placehold.it/200x200&text=No Pic", class:"thumbnail") %>
+                <%= image_tag("http://placehold.it/80x80&text=No Pic", class:"thumbnail") %>
               <% end %>
             <% end %>
           </td>
           <td><%= product.country_category_id %></td>
           <td><%= link_to(product.title, product_path(product)) %></td>
-          <td><%= simple_format(product.description) %></td>
-          <td><%= product.quantity %></td>
-          <td><%= product.price %></td>
+          <!-- <td><%= simple_format(product.description) %></td> -->
+
           <td>
             <%= link_to("Edit", edit_admin_product_path(product)) %> |
             <%= link_to("destroy", admin_product_path(product), method: :delete, data: { confirm: "你确定要删除吗？"}) %>
@@ -51,7 +49,7 @@
             <%= link_to "向上", move_up_admin_product_path(product), method: :patch %>
             <%= link_to "向下", move_down_admin_product_path(product), method: :patch %>
           </td>
-          <td><%= product.created_at %></td>
+          <td><%= product.updated_at %></td>
           <td><%= link_to("查看项目", admin_product_path(product))%></td>
         </tr>
       <% end %>
