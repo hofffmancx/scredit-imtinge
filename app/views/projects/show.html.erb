@@ -103,10 +103,22 @@
 
           <!-- 商品详情区域 -->
           <div class="product-particulars-box row tab-pane active" id="tab_default_1">
-
+            <%= simple_format(@project.details) %>
           </div>
 
-      
+          <div class="product-particulars-box row tab-pane active" id="tab_default_2">
+            <%= simple_format(@project.advantage) %>
+          </div>
+
+          <div class="product-particulars-box row tab-pane active" id="tab_default_3">
+            <%= simple_format(@project.observe) %>
+          </div>
+
+          <div class="product-particulars-box row tab-pane active" id="tab_default_4">
+            <%= simple_format(@project.apply) %>
+          </div>
+
+
 
 
         </div>
