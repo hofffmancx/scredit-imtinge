@@ -89,11 +89,16 @@
     <hr>
 
     <% @projects.each do |project| %>
-      <div class="col-xs-6 col-md-4 text-center product-list-style">
-        <% link_to product_project_path(@product, project) %>
-            <%= link_to image_tag("http://placehold.it/300x300&text=No Pic", class: "product-list-style-img img-width  center-block all_image_css"), product_project_path(@product, project), target: "_blank" %>
+      <div class="col-xs-6 col-md-4 text-center product-list-style  center-block all_image_css">
+        <% if project.image.present? %>
+          <%=link_to image_tag(project.image.medium.url,class: "product-list-style-img img-width"),product_project_path(@product, project),target: "_blank" %>
+
+        <% else %>
+         <%= link_to image_tag("http://placehold.it/300x300&text=No Pic", class: "product-list-style-img img-width"), product_project_path(@product, project), target: "_blank"  %>
+        <% end %>
+
         <br>
-        <%= link_to(project.title, product_path(1), target: "_blank") %>
+        <%= link_to(project.title, target: "_blank") %>
         <br>
       </div>
     <% end %>
