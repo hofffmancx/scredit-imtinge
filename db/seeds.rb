@@ -128,6 +128,8 @@ Product.create!(title: "圣基茨",
   particulars: "琴叶榕是非常适合在室内种植的植物，造型优雅<br>成活率高，易于打理<br><br>应用场景<br><img alt=\"\" src=\"http://ww1.sinaimg.cn/large/006tNbRwgy1fftw5bii0cj30d5084753.jpg\">",
   )
 
+
+
 #种子样例
 # Product.create!(title: "小型琴叶榕",
 #    description: "高度约60cm（含盆）",
