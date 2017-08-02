@@ -1,6 +1,7 @@
 class Story < ApplicationRecord
   mount_uploader :image, ImageUploader
   belongs_to :user
+  belongs_to :product
 
   def publish!
     self.is_hidden = false

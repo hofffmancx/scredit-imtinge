@@ -15,14 +15,16 @@ class Admin::StoriesController < ApplicationController
 
   def new
     @story = Story.new
+    @story_categories = Product.all.map { |c| [c.title, c.id] }
   end
 
   def create
     @story = Story.new(story_params)
     @story.user = current_user
+    @story.product_id = params[:product_id]
 
     if @story.save
-      redirect_to admin_activities_path
+      redirect_to admin_stories_path
     else
       render :new
     end
@@ -30,13 +32,14 @@ class Admin::StoriesController < ApplicationController
 
   def edit
     @story = Story.find(params[:id])
+    @story_categories = Product.all.map { |c| [c.title, c.id] }
   end
 
   def update
     @story= Story.find(params[:id])
-
+    @story.product_id = params[:product_id]
     if @story.update(story_params)
-      redirect_to admin_activities_path
+      redirect_to admin_stories_path
     else
       redirect_to :edit
     end
@@ -45,7 +48,7 @@ class Admin::StoriesController < ApplicationController
   def destroy
     @story = Story.find(params[:id])
     @story.destroy
-      redirect_to admin_activities_path
+      redirect_to admin_stories_path
   end
 
 
@@ -91,6 +94,6 @@ class Admin::StoriesController < ApplicationController
   # ---private---
 
   def story_params
-    params.require(:story).permit(:image, :title, :description,:summary, :user_id, :is_hidden)
+    params.require(:story).permit(:image, :title, :description,:summary, :user_id, :is_hidden,:product_id)
   end
 end

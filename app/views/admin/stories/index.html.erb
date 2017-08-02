@@ -1,6 +1,6 @@
 <div class="account-box">
 
-  <h3 class="text-center">热门活动列表（Story List）</h3>
+  <h3 class="text-center">成功案例列表（Story List）</h3>
 
   <!-- "增加文章"按钮 -->
   <br>
@@ -14,6 +14,7 @@
     <thead>
       <tr>
         <td>ID</td>
+        <td>所属分类</td>
         <td width="220"></td>
         <td>标题</td>
         <td>作者</td>
@@ -27,6 +28,7 @@
       <% @stories.each do |story| %>
         <tr>
           <td><%= story.id %></td>
+          <td><%= story.product_id %></td>
           <td>
             <%= link_to story_path(story) do%>
               <% if story.image.present? %>

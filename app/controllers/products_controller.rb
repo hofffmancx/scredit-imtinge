@@ -24,6 +24,8 @@ class ProductsController < ApplicationController
     @reviews = Review.where(product_id: @product.id).order("created_at DESC")
     @review = Review.new
     @projects = @product.projects
+    @stories = Story.where(:product_id => @product.id)
+    
   end
 
   def add_to_cart

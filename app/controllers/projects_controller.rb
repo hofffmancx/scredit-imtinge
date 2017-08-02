@@ -6,12 +6,15 @@ class ProjectsController < ApplicationController
 
 
 
-   def show
+  def show
      @product = Product.find(params[:product_id])
      @project = Project.find(params[:id])
      @products = Product.all  # 显示所有的项目
      @activities = Activity.all
-     @stories = Story.all
+     @stories = Story.where(:product_id=>@product.id)
+     if @stories.blank?
+       @stories = Story.all
+     end
    end
 
   def create
