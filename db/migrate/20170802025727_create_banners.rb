@@ -3,7 +3,7 @@ class CreateBanners < ActiveRecord::Migration[5.0]
     create_table :banners do |t|
       t.string :name
       t.string :title
-      t.string :image
+      t.string :pic
 
       t.timestamps
     end

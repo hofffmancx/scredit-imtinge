@@ -1,6 +1,6 @@
 class Admin::BannersController < ApplicationController
   before_action :authenticate_user!, only: [:edit, :update,:index]
-  
+
   layout "admin"
 
   def index
@@ -22,8 +22,8 @@ class Admin::BannersController < ApplicationController
 
   private
 
-  def bunner_params
-    params.require(:bunner).permit(:title,:image)
+  def banner_params
+    params.require(:banner).permit(:title,:pic)
   end
 
 end

@@ -13,12 +13,9 @@
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
-//= require bootstrap/alert
-//= require bootstrap/dropdown
 //= require bootstrap-sprockets
 //= require bootstrap/collapse
-//= require bootstrap-wysihtml5
-//= require bootstrap-wysihtml5/locales/zh-CN
+//= require ckeditor/init
 //= require_tree .
 
 
