@@ -9,6 +9,8 @@ class ProjectsController < ApplicationController
    def show
      @product = Product.find(params[:product_id])
      @project = Project.find(params[:id])
+     @products = Product.all  # 显示所有的项目
+     @activities = Activity.all
    end
 
   def create
