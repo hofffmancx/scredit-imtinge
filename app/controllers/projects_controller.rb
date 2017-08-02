@@ -11,6 +11,7 @@ class ProjectsController < ApplicationController
      @project = Project.find(params[:id])
      @products = Product.all  # 显示所有的项目
      @activities = Activity.all
+     @stories = Story.all
    end
 
   def create

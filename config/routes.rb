@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   devise_for :users
   resources :articlealls  # 资讯聚合页
   resources :messages
+  resources :stories
 
 
   namespace :admin do
@@ -42,6 +43,15 @@ Rails.application.routes.draw do
       end
     end
     resources :articles do       #文章后台
+      member do
+        patch :move_up           #文章位置移动
+        patch :move_down         #文章位置移动
+        post :publish
+        post :hide
+      end
+    end
+
+    resources :stories do       #成功案例后台
       member do
         patch :move_up           #文章位置移动
         patch :move_down         #文章位置移动

@@ -133,13 +133,13 @@
       <!-- 购物指南区 -->
       <div class="col-xs-12 col-sm-12 col-md-3">
         <div class=" ">
-          <h5>热门活动</h5>
-          <% @activities.each do |activity| %>
+          <h5>成功案例</h5>
+          <% @stories.each do |activity| %>
             <hr>
             <div class="article-author-title-list">
               <!-- <div class="all_image_css"> -->
                 <% if activity.image.present? %>
-                  <%= link_to image_tag(activity.image.thumb.url, class: " img-responsive"), activity_path(activity) %>
+                  <%= link_to image_tag(activity.image.thumb.url, class: " img-responsive"), story_path(activity) %>
                 <% else %>
                   <%= link_to image_tag("http://placehold.it/80x80&text=No Pic", class: "img-circle img-responsive center-block"), activity_path(activity) %>
                 <% end %>

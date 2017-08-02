@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170802024223) do
+ActiveRecord::Schema.define(version: 20170802060255) do
 
   create_table "activities", force: :cascade do |t|
     t.string   "image"
@@ -240,6 +240,17 @@ ActiveRecord::Schema.define(version: 20170802024223) do
     t.integer  "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "stories", force: :cascade do |t|
+    t.string   "image"
+    t.string   "title"
+    t.text     "description"
+    t.integer  "user_id"
+    t.text     "summary"
+    t.boolean  "is_hidden",   default: true
+    t.datetime "created_at",                 null: false
+    t.datetime "updated_at",                 null: false
   end
 
   create_table "users", force: :cascade do |t|
