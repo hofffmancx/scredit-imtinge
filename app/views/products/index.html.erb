@@ -11,7 +11,7 @@
 
 
     <div class="" style="position:absolute;left:0;top:0;bottom:0;line-height:40px;width:84px;background-color:#178df2;font-size:14px;color:white;">
-      项目
+      移民国家
     </div>
 
     </div>
@@ -26,10 +26,10 @@
 
 
             <% if project.image.present? %>
-              <%=link_to image_tag(project.image.medium.url,class: "product-list-style-img img-width"),product_path(project),target: "_blank" %>
+              <%=link_to image_tag(project.image.medium.url,class: " img-width"),product_path(project),target: "_blank" %>
 
             <% else %>
-             <%= link_to image_tag("http://placehold.it/300x300&text=No Pic", class: "product-list-style-img img-width"), product_path(project), target: "_blank"  %>
+             <%= link_to image_tag("http://placehold.it/300x300&text=No Pic", class: "img-width"), product_path(project), target: "_blank"  %>
             <% end %>
             </div>
             <div class="" style="position:relative;background-color:white;padding:10px 14px 26px 14px;font-size:14px;line-height:20px;height:20px;overflow:hidden;display:block;">

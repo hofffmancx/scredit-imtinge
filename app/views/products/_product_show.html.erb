@@ -46,10 +46,10 @@
 
 
         <% if project.image.present? %>
-          <%=link_to image_tag(project.image.medium.url,class: "product-list-style-img img-width"),product_project_path(@product, project),target: "_blank" %>
+          <%=link_to image_tag(project.image.medium.url,class: "img-width"),product_project_path(@product, project),target: "_blank" %>
 
         <% else %>
-         <%= link_to image_tag("http://placehold.it/300x300&text=No Pic", class: "product-list-style-img img-width"), product_project_path(@product, project), target: "_blank"  %>
+         <%= link_to image_tag("http://placehold.it/300x300&text=No Pic", class: "img-width"), product_project_path(@product, project), target: "_blank"  %>
         <% end %>
         </div>
         <div class="" style="position:relative;background-color:white;padding:10px 14px 26px 14px;font-size:14px;line-height:20px;height:20px;overflow:hidden;display:block;">
