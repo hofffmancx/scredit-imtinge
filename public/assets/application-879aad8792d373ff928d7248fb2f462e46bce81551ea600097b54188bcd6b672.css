@@ -44,6 +44,10 @@
 .article-index-title {
   font-size: 1.6em;
   font-weight: normal;
+  line-height: 1.6em;
+  height: 3.2em;
+  overflow: hidden;
+  display: block;
 }
 /* line 13, /Users/apple/railsproject/sdxin/app/assets/stylesheets/articles.scss */
 .article-index-title a {

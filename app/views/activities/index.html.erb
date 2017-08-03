@@ -28,11 +28,16 @@
 
               <!-- 文章列表标题、作者、日期 -->
               <div class="col-md-6">
-                <%= link_to(activity.title, activity_path(activity), class: "activity-index-title") %>
+                <div class="">
+                  <%= link_to(activity.title, activity_path(activity), class: "activity-index-title") %>
+                </div>
 
-                <div class="article-user row">
-                  <div class="col-md-12">
-                    <!-- <span> <%= activity.user.display_name %></span> -->
+                <div class="">
+                  <div class="activity-subtitle">
+                       <i class="fa fa-user-o" style="width:20px;"></i>主办方：尚德信
+                  </div>
+                  <div class="activity-subtitle">
+                      <i class="fa fa-map-marker" style="width:20px;"></i>尚德信办公地点
                   </div>
                   <!-- <div class="col-md-6">
                     <span> <%= activity.created_at.strftime("%Y-%m-%d %H:%M:%S") %></span>
@@ -58,7 +63,7 @@
 
 
   <!-- 有侧边栏 -->
-  <div class="col-md-3">
+  <div class="col-md-4">
 
   <!-- 热门活动 -->
 
@@ -71,28 +76,29 @@
 
     </div>
 
-    <div>
-      <h5 id="activity-index-sidebar">热门活动</h5>
+    <div class=" article-author-title-list">
+      <div class="article-show-sidbar-border">
+        <h4 class="article-show-sidbar-title">热门活动</h4>
+      </div>
+      <% @articles.each do |article_hot| %>
+        <!-- <hr> -->
+        <div class="row article-show-hot">
+          <div class="col-xs-4 all_image_css">
+            <% if article_hot.image.present? %>
+              <%= link_to image_tag(article_hot.image.thumb.url, class: "img-responsive center-block"), article_path(article_hot) %>
+            <% else %>
+              <%= link_to image_tag("http://placehold.it/80x80&text=No Pic", class: "img-circle img-responsive center-block"), article_path(article_hot) %>
+            <% end %>
+          </div>
+          <div class="col-xs-8 ">
+              <p class="article-show-sidbar-text"><%= link_to(article_hot.title, article_path(article_hot)) %></p>
+              <p> 2017-7-22 已结束</p>
+          </div>
+        </div>
+        <hr>
+      <% end %>
+
     </div>
-
-      <div class="activity-index-sidebar-littlepicture col-md-12">
-        <div class="col-md-6">
-          <%= image_tag("https://ooo.0o0.ooo/2017/08/01/5980901ada3b4.png", class: "img-responsive center-block") %>
-        </div>
-        <div class="col-md-6">
-          <p class="little-picture-title">猎度学院|2017遇见斜杠青年大会</p>
-        </div>
-      </div>
-
-
-      <div class="activity-index-sidebar-littlepicture col-md-12">
-        <div class="col-md-6">
-          <%= image_tag("https://ooo.0o0.ooo/2017/08/01/5980908190976.png", class: "img-responsive center-block") %>
-        </div>
-        <div class="col-md-6">
-          <p class="little-picture-title">猎励 Talk Show 第十一期：AI+人工智能</p>
-        </div>
-      </div>
     <!-- <div class="col-md-12" style="font-size:2.0em;">
 
     <% @activities.each do |activity| %>
@@ -133,9 +139,7 @@
   </div>
   <!-- 侧边栏emd -->
 
-  <div class="col-md-1">
 
-  </div>
 
   </div>
 

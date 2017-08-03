@@ -29,10 +29,10 @@ class ArticlesController < ApplicationController
       @projects = Project.all.order("created_at DESC").limit(10)
     end
 
-    if Activity.count <10
+    if Activity.count <3
       @activities = Activity.all.order("created_at DESC")
     else
-      @activities = Activity.all.order("created_at DESC").limit(10)
+      @activities = Activity.all.order("created_at DESC").limit(3)
     end
 
 

@@ -1,3 +1,25 @@
 // Place all the styles related to the articlealls controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.articleall-block {
+  margin-bottom:10px;
+  overflow: hidden;
+}
+
+
+.articleall-block-border {
+margin-bottom: 10px;
+position: relative;
+height: 50px;
+border-bottom: 1px solid #ddd;
+
+}
+
+.articleall-block-title {
+  font-size: 2.0em;
+    position: absolute;
+    height: 50px;
+    overflow: hidden;
+    border-bottom: 2px blue solid;
+
+}

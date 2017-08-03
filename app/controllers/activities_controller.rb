@@ -7,6 +7,12 @@ class ActivitiesController < ApplicationController
 
   def index
     @activities = Activity.where(:is_hidden => false).order("created_at DESC")
+
+        if Article.count <10
+          @articles = Article.all.order("created_at DESC")
+        else
+          @articles = Article.all.order("created_at DESC").limit(10)
+        end
   end
 
   def show
@@ -14,10 +20,10 @@ class ActivitiesController < ApplicationController
     @user = @activity.user
 
 
-    if Activity.count <5
+    if Activity.count <3
       @activities = Activity.where(:is_hidden => false).order("created_at DESC")
     else
-      @activities = Activity.where(:is_hidden => false).order("created_at DESC").limit(5)
+      @activities = Activity.where(:is_hidden => false).order("created_at DESC").limit(3)
     end
 
     if Project.count <10
