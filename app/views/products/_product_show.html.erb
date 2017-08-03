@@ -1,7 +1,7 @@
-<div class="product-show">
+<div class="product-show" style="overflow:hidden;">
 
   <!-- 主图 -->
-  <div class="col-md-7">
+  <div class="col-md-4">
     <% if @product.image.present? %>
       <%= image_tag(@product.image.medium.url, class: "thumbnail img-width") %>
     <% else %>
@@ -10,104 +10,68 @@
   </div>
 
   <!-- 商品信息 -->
-  <div class="col-md-5">
+  <div class="col-md-8">
 
     <!-- 商品标题 -->
     <h2 class="product-title"><%= @product.title %></h2>
 
     <!-- 商品简述 -->
     <div class="product-description">
-      <p>
+
         <%= simple_format(@product.description) %>
-      </p>
-    </div>
 
-    <!-- 商品价格 -->
-    <!-- <div class="product-price-bgcolor">
-      <div class="product-price">
-        ￥ <%= @product.price %>
-      </div>
-    </div> -->
-
-    <div class="row">
-      <!-- <div class="col-sm-6"> -->
-        <!-- 商品库存 -->
-        <!-- <div class="product-quantity">
-          库存量： <%= @product.quantity %>
-        </div> -->
-
-        <!-- 商品产地 -->
-        <!-- <div class="product-quantity">
-          生产地： <%= @product.yieldly %> （正品保障）
-        </div> -->
-      <!-- </div> -->
-
-      <!-- <div class="col-sm-6"> -->
-        <!-- 商品类别 -->
-        <!-- <div class="product-quantity">
-          类别： <%= @product.category %>
-        </div> -->
-
-        <!-- 商品服务 -->
-        <!-- <div class="product-quantity">
-          包邮： 99元起包邮 | 7天无忧退货
-        </div> -->
-      <!-- </div> -->
-    </div>
-
-    <!-- 按钮区域 -->
-    <div class="add-to-cart-buttom row">
-      <!-- 加入购物车按钮 -->
-      <div class="col-sm-6">
-        <!-- <% if @product.quantity.present? && @product.quantity > 0 %>
-          <%= link_to("加入购物车", add_to_cart_product_path(@product), method: :post, class: "btn btn-danger") %>
-        <% else %>
-          <a href="#" class="btn btn-danger active" role="button" disabled="disabled">库存缺货ing...</a>
-        <% end %> -->
-      </div>
-
-      <!-- 收藏商品按钮 -->
-      <!-- <div class="col-sm-6 product-collection"> -->
-        <!-- <%= link_to("添加收藏 - 人气(26)", "#")%> -->
-        <!-- <% if current_user && current_user.is_member_of?(@product) %>
-          <%= link_to("已收藏（点击取消收藏）", quit_product_path(@product), method: :post) %>
-        <% else %>
-          <%= link_to("收藏商品", join_product_path(@product), method: :post) %>
-        <% end %>
-      </div> -->
     </div>
 
   </div>
+</div>
 
 <!-- 项目列表区 -->
-<br><br><br>
+<div class="text-center" style="margin:10px 0;height:40px;background-color:#ffffff;margin:0 15px;font-size:14px; position:relative;">
 
-<div class="container all-product-box">
-  <div class="row">
-    <h4>项目介绍</h4>
-    <!-- <%= link_to("新增项目", new_product_project_path(@product), class: "btn btn-sm btn-success") %> -->
-    <hr>
+
+
+<div class="" style="position:absolute;left:0;top:0;bottom:0;line-height:40px;width:84px;background-color:#178df2;font-size:14px;color:white;">
+  项目
+</div>
+
+</div>
+
+
+<div class="all-product-box">
+  <!-- <div class="row"> -->
 
     <% @projects.each do |project| %>
-      <div class="col-xs-6 col-md-4 text-center product-list-style  center-block all_image_css">
+      <div class="col-xs-12 col-md-4 product-list-style  center-block all_image_css">
+        <div class="" style="">
+
+
         <% if project.image.present? %>
           <%=link_to image_tag(project.image.medium.url,class: "product-list-style-img img-width"),product_project_path(@product, project),target: "_blank" %>
 
         <% else %>
          <%= link_to image_tag("http://placehold.it/300x300&text=No Pic", class: "product-list-style-img img-width"), product_project_path(@product, project), target: "_blank"  %>
         <% end %>
+        </div>
+        <div class="" style="position:relative;background-color:white;padding:10px 14px 26px 14px;font-size:14px;line-height:20px;height:20px;overflow:hidden;display:block;">
+          <%= project.title %>
+          <div class="" style="position:absolute;right:14px;top:10px;bottom:26px;height:20px;width:5px;background-color:#178df2;">
 
-        <br>
-        <%= link_to(project.title, target: "_blank") %>
-        <br>
+          </div>
+        </div>
+        <div class="" style="background-color:white;padding-left:14px;padding-right: 14px;padding-bottom:10px;font-size:12px;line-height:18px;height:36px;overflow:hidden;display:block;">
+          <%= project.content %>
+        </div>
+        <div class="" style="padding-left:14px;line-height:40px;background-color:#f3f7fb;font-size:14px;">
+            所属国家：<i class="fa fa-map-marker" style="width:20px;"></i>美国
+        </div>
       </div>
     <% end %>
 
-  </div>
+  <!-- </div> -->
 </div>
 
 
 
 <!-- 项目列表区 结束 -->
 
-</div>
+<!-- </div> -->

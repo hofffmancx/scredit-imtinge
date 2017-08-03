@@ -1,20 +1,56 @@
-<div class="container all-product-box">
-  <div class="row">
+<div class="row" >
+  <div class="decorative_picture col-md-12" >
+    <%= image_tag("https://i.loli.net/2017/08/01/59800a81e044f.png", class: "img-responsive center-block") %>
+  </div>
+</div>
 
-    <% @products.each do |product| %>
-      <div class="col-xs-6 col-md-4 text-center product-list-style">
-        <% link_to product_path(product) %>
-          <% if product.image.present? %>
-            <%= link_to image_tag(product.image.thumb.url, class: "product-list-style-img img-width center-block all_image_css"), product_path(product), target: "_blank" %>
-          <% else %>
-            <%= link_to image_tag("http://placehold.it/300x300&text=No Pic", class: "product-list-style-img img-width  center-block all_image_css"), product_path(product), target: "_blank" %>
-          <% end %>
-        <br>
-        <%= link_to(product.title, product_path(product), target: "_blank") %>
-        <br>
-        <!-- <strong>￥ <%= link_to(product.price, product_path(product), target: "_blank") %></strong></p> -->
-      </div>
-    <% end %>
+<div class="container all-product-box" style="background-color:#e9eaec;padding-top:20px;">
+  <div class="row">
+    <div class="text-center" style="margin:10px 0;height:40px;background-color:#ffffff;margin:0 15px;font-size:14px; position:relative;">
+
+
+
+    <div class="" style="position:absolute;left:0;top:0;bottom:0;line-height:40px;width:84px;background-color:#178df2;font-size:14px;color:white;">
+      项目
+    </div>
+
+    </div>
+
+
+    <div class="all-product-box">
+      <!-- <div class="row"> -->
+
+        <% @products.each do |project| %>
+          <div class="col-xs-12 col-md-4 product-list-style  center-block all_image_css">
+            <div class="" style="">
+
+
+            <% if project.image.present? %>
+              <%=link_to image_tag(project.image.medium.url,class: "product-list-style-img img-width"),product_path(project),target: "_blank" %>
+
+            <% else %>
+             <%= link_to image_tag("http://placehold.it/300x300&text=No Pic", class: "product-list-style-img img-width"), product_path(project), target: "_blank"  %>
+            <% end %>
+            </div>
+            <div class="" style="position:relative;background-color:white;padding:10px 14px 26px 14px;font-size:14px;line-height:20px;height:20px;overflow:hidden;display:block;">
+              <%= project.title %>
+              <div class="" style="position:absolute;right:14px;top:10px;bottom:26px;height:20px;width:5px;background-color:#178df2;">
+
+              </div>
+            </div>
+            <div class="" style="background-color:white;padding-left:14px;padding-right: 14px;padding-bottom:10px;font-size:12px;line-height:18px;height:36px;overflow:hidden;display:block;">
+              <%= project.description %>
+            </div>
+            <div class="" style="padding-left:14px;line-height:40px;background-color:#f3f7fb;font-size:14px;">
+                所属国家：<i class="fa fa-map-marker" style="width:20px;"></i>美国
+            </div>
+          </div>
+        <% end %>
+
+      <!-- </div> -->
+    </div>
+
+
 
   </div>
 </div>

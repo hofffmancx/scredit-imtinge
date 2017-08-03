@@ -6,7 +6,7 @@
 
 
   <!-- 主图 -->
-  <div class="col-xs-12 col-sm-12 col-md-7">
+  <div class="col-xs-12 col-sm-12 col-md-5">
     <% if @project.image.present? %>
       <%= image_tag(@project.image.medium.url, class: "thumbnail img-width") %>
     <% else %>
@@ -16,50 +16,42 @@
 
 
   <!-- 商品信息 -->
-  <div class="col-xs-12 col-sm-12 col-md-5">
+  <div class="col-xs-12 col-sm-12 col-md-7">
 
     <!-- 商品标题 -->
-    <h2 class="product-title"><%= @project.title %></h2>
+    <div class="product-title" style="font-size:26px;"><%= @project.title %></div>
 
     <!-- 商品简述 -->
     <div class="product-description">
-      <p>
+
         <%= simple_format(@project.content) %>
-      </p>
+
     </div>
 
 
 
-    <div class="row">
-      <!-- <div class="col-sm-6"> -->
-        <!-- 商品库存 -->
-        <!-- <div class="product-quantity">
-          库存量： <%= @product.quantity %>
-        </div> -->
+    <div class="" style="overflow:hidd;height:70px;background-color:#f3f7fb;">
+      <div class="col-sm-12" >
+        <!-- 所属国家 -->
+        <div class="product-quantity" style="font-size:18px">
+          所属国家：<i class="fa fa-map-marker" style="width:20px;"></i>美国
+        </div>
 
-        <!-- 商品产地 -->
-        <!-- <div class="product-quantity">
-          生产地： <%= @product.yieldly %> （正品保障）
-        </div> -->
-      <!-- </div> -->
+      </div>
 
-      <!-- <div class="col-sm-6"> -->
+      <!-- <div class="col-sm-6" style="background-color:#f3f7fb;">
         <!-- 商品类别 -->
         <!-- <div class="product-quantity">
-          类别： <%= @product.category %>
+          类别：
         </div> -->
 
-        <!-- 商品服务 -->
-        <!-- <div class="product-quantity">
-          包邮： 99元起包邮 | 7天无忧退货
-        </div> -->
-      <!-- </div> -->
+      <!-- </div>  -->
     </div>
 
     <!-- 按钮区域 -->
     <div class="add-to-cart-buttom row">
       <!-- 加入购物车按钮 -->
-      <div class="col-sm-6">
+      <div class="col-sm-12">
 
          <%= link_to("立即咨询", add_to_cart_product_path(@product), method: :post, class: "btn btn-danger") %>
 
@@ -130,50 +122,53 @@
       </div>
 
 
-      <!-- 购物指南区 -->
+      <!-- 相关成功案例 -->
       <div class="col-xs-12 col-sm-12 col-md-3">
-        <div class=" ">
-          <h5>成功案例</h5>
-          <% @stories.each do |activity| %>
-            <hr>
-            <div class="article-author-title-list">
-              <!-- <div class="all_image_css"> -->
-                <% if activity.image.present? %>
-                  <%= link_to image_tag(activity.image.thumb.url, class: " img-responsive"), story_path(activity) %>
+        <div class=" article-author-title-list">
+          <div class="article-show-sidbar-border">
+            <h4 class="article-show-sidbar-title">成功案例</h4>
+          </div>
+          <% @stories.each do |article_hot| %>
+            <!-- <hr> -->
+            <div class="row article-show-hot">
+              <div class="col-xs-4 all_image_css">
+                <% if article_hot.image.present? %>
+                  <%= link_to image_tag(article_hot.image.thumb.url, class: "img-responsive center-block"), story_path(article_hot) %>
                 <% else %>
-                  <%= link_to image_tag("http://placehold.it/80x80&text=No Pic", class: "img-circle img-responsive center-block"), activity_path(activity) %>
+                  <%= link_to image_tag("http://placehold.it/80x80&text=No Pic", class: "img-responsive center-block"), article_path(article_hot) %>
                 <% end %>
-              <!-- </div> -->
-              <!-- <div class="col-xs-8">
-                  <p><%= link_to(activity.title, activity_path(activity)) %></p>
-              </div> -->
+              </div>
+              <div class="col-xs-8 article-show-sidbar-text">
+                  <p><%= link_to(article_hot.title, story_path(article_hot)) %></p>
+              </div>
             </div>
+            <hr>
           <% end %>
-          <hr>
+
         </div>
-
-
 
         <!-- 热门项目 -->
 
         <div class=" article-author-title-list">
-          <h5>热门项目</h5>
+          <div class="article-show-sidbar-border">
+            <h4 class="article-show-sidbar-title">热门项目</h4>
+          </div>
           <% @products.each do |article_hot| %>
-            <hr>
+
             <div class="row article-show-hot">
               <div class="col-xs-4 all_image_css">
                 <% if article_hot.image.present? %>
-                  <%= link_to image_tag(article_hot.image.thumb.url, class: "img-rounded img-responsive center-block"), product_path(article_hot) %>
+                  <%= link_to image_tag(article_hot.image.thumb.url, class: " img-responsive center-block"), product_path(article_hot) %>
                 <% else %>
                   <%= link_to image_tag("http://placehold.it/80x80&text=No Pic", class: "img-responsive center-block"), product_path(article_hot) %>
                 <% end %>
               </div>
-              <div class="col-xs-8">
+              <div class="col-xs-8 article-show-sidbar-text">
                   <p><%= link_to(article_hot.title, product_path(article_hot)) %></p>
               </div>
             </div>
+            <hr>
           <% end %>
-          <hr>
 
         </div>
 
@@ -181,6 +176,7 @@
         <div class=" article-author-title-list">
           <%= image_tag("https://ww3.sinaimg.cn/large/006tKfTcgy1fhveca97b4j30i60datc7.jpg", class: "img-responsive center-block") %>
         </div>
+
       </div>
 
   </div>

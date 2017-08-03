@@ -1,13 +1,13 @@
 <!-- 本页面对应的CSS样式表：products.scss -->
 
 <div class="container">
-  <div class="row">
+  <div class="row" style="background-color:#e9eaec;">
 
     <% if @product.category == "课程" %>
       <%= render "course_show" %>
     <% else %>
       <%= render "product_show" %>
-    
+
     <% end %>
 
   </div>
