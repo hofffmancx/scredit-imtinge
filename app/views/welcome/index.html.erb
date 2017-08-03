@@ -14,29 +14,30 @@
     <div class="carousel-inner">
       <div class="item slides active">
         <div class="slide-1">
-          <%= raw Banner.first.pic %>
+          <%= image_tag(Banner.first.pic, class: "img-responsive img-center frontpage-img") %>
+
         </div>
         <div class="hero row">
           <hgroup>
-            <h1><%= raw Banner.first.title %></h1>
+            <%= raw Banner.first.title %>
           </hgroup>
           <!-- <button class="btn btn-hero btn-lg" role="button">测试跳转链接</button> -->
         </div>
       </div>
       <div class="item slides">
         <div class="slide-2">
-          <%= raw Banner.second.pic %>
+          <%= image_tag(Banner.second.pic, class: "img-responsive img-center frontpage-img") %>
         </div>
         <div class="hero">
           <hgroup>
-            <h1><%= raw Banner.second.title %></h1>
+            <%= raw Banner.second.title %>
           </hgroup>
           <!-- <button class="btn btn-hero btn-lg" role="button">测试跳转链接</button> -->
         </div>
       </div>
       <div class="item slides">
         <div class="slide-3">
-          <%= raw Banner.third.pic %>
+          <%= image_tag(Banner.third.pic, class: "img-responsive img-center frontpage-img") %>
         </div>
         <div class="hero">
           <hgroup>
