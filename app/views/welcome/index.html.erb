@@ -204,16 +204,23 @@
               <div class="img-rela-font">英国移民</div>
             </div>
             <div class="img-rela" style="margin-top:10px;" >
+              <%= link_to product_path(Product.fifth) do%>
               <%= image_tag("https://ww2.sinaimg.cn/large/006tNc79gy1fhtoqjxof9j30rr0dw78t.jpg", class: "img-responsive img-center frontpage-img") %>
               <div class="img-rela-bg"></div>
               <div class="img-rela-font">塞浦路斯移民</div>
+              <% end %>
             </div>
           </div>
           <div class="col-xs-6  col-sm-6 col-md-3" style="padding-bottom:5px;">
             <div class="img-rela">
-              <%= image_tag("https://ww1.sinaimg.cn/large/006tNc79gy1fhtnhwmjwtj30xc0xcqfo.jpg", class: "img-responsive img-center frontpage-img") %>
+              <%= link_to product_path(Product.second) do%>
+              <%= image_tag("https://ww1.sinaimg.cn/large/006tNc79gy1fhtnhwmjwtj30xc0xcqfo.jpg",
+              class: "img-responsive img-center frontpage-img") %>
+
+
               <div class="img-rela-bg"></div>
               <div class="img-rela-font">希腊移民</div>
+                <% end %>
             </div>
             <div class="img-rela" style="margin-top:10px;">
               <%= image_tag("https://ww2.sinaimg.cn/large/006tNc79gy1fhtnhuiyw2j30b40b5mz6.jpg", class: "img-responsive img-center frontpage-img") %>
@@ -223,9 +230,12 @@
           </div>
           <div class="col-xs-6  col-sm-6 col-md-3" style="padding-bottom:5px;">
             <div class="img-rela">
-              <%= image_tag("https://ww2.sinaimg.cn/large/006tNc79gy1fhtntougkhj30fg0aagni.jpg", class: "img-responsive img-center frontpage-img") %>
-              <div class="img-rela-bg"></div>
-              <div class="img-rela-font">西班牙移民</div>
+<%= link_to product_path(Product.third) do%>
+<%= image_tag("https://ww2.sinaimg.cn/large/006tNc79gy1fhtntougkhj30fg0aagni.jpg", class: "img-responsive img-center frontpage-img") %>
+<div class="img-rela-bg"></div>
+<div class="img-rela-font">西班牙移民</div>
+<% end %>
+
             </div>
             <div class="img-rela" style="margin-top:5px;">
               <%= image_tag("https://ww3.sinaimg.cn/large/006tKfTcgy1fhuzdils6wj30fd0aajs3.jpg", class: "img-responsive img-center frontpage-img") %>
@@ -240,9 +250,11 @@
           </div>
           <div class="col-xs-6  col-sm-6 col-md-3" style="padding-bottom:5px;">
             <div class="img-rela">
+              <%= link_to product_path(Product.fifth) do%>
               <%= image_tag("https://ww2.sinaimg.cn/large/006tNc79gy1fhtoqjxof9j30rr0dw78t.jpg", class: "img-responsive img-center frontpage-img") %>
               <div class="img-rela-bg"></div>
               <div class="img-rela-font">塞浦路斯移民</div>
+              <% end %>
             </div>
             <div class="img-rela" style="margin-top:10px;">
               <%= image_tag("https://ww3.sinaimg.cn/large/006tNc79gy1fhtol4xxbnj30m80xcqc4.jpg", class: "img-responsive img-center frontpage-img") %>
