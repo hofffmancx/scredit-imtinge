@@ -8,12 +8,12 @@
       </div>
       <div class="pull-right">
         <!-- <%=link_to "more+",articles_path(category_id: category.id)%> -->
-        <%=link_to "more+",articles_path(category: category.name),:target => "_blank"%> 
+        <%=link_to "more+",articles_path(category: category.name),:target => "_blank"%>
       </div>
     </div>
      <hr>
 
-    <% category.articles.each do |article| %>
+    <% category.articles.limit(6).each do |article| %>
       <div class="article-all col-md-6 container">
         <div class="article-box row">
 

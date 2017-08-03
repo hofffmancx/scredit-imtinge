@@ -15,7 +15,7 @@
       <tr>
         <td>ID</td>
         <td>所属分类</td>
-        <td>案例图片</td>
+        <td>案例封面</td>
         <td>标题</td>
         <td>更新时间</td>
         <td>操作</td>
@@ -27,7 +27,8 @@
       <% @stories.each do |story| %>
         <tr>
           <td><%= story.id %></td>
-          <td><%= story.product_id %></td>
+          <!-- <td><%= story.product_id %></td> -->
+          <td><%= Product.find(story.product_id).title %></td>
           <td>
             <%= link_to story_path(story) do%>
               <% if story.image.present? %>

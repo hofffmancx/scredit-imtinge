@@ -14,7 +14,7 @@
     <thead>
       <tr>
         <td>ID</td>
-        <td>国家图片</td>
+        <td>封面</td>
         <td>所属分类</td>
         <td>商品名称</td>
 
@@ -38,7 +38,8 @@
               <% end %>
             <% end %>
           </td>
-          <td><%= product.country_category_id %></td>
+          <td><%= CountryCategory.find(product.country_category_id).title %></td>
+          <!-- <td><%= product.country_category.title %></td> -->
           <td><%= link_to(product.title, product_path(product)) %></td>
           <!-- <td><%= simple_format(product.description) %></td> -->
 
