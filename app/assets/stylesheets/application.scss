@@ -116,6 +116,43 @@
       font-size: 15px;
   }
 
+  //首页主题内容样式
+  .landing-page-topic{                                   //给图片整好形
+    //height: 534px;
+    background-size: cover;                             //确保图片完全撑开
+    background-position: center center;
+    background-repeat: no-repeat;
+    //background-image: url(https://ooo.0o0.ooo/2017/05/12/59156f9f3b09c.jpg);
+    background-color: #f1f1f1;
+    padding-bottom:30px;
+  }
+  .landing-page-topic .tagline {                          //编写标题样式
+    text-align: center;
+    color: #666;
+    //letter-spacing: 0.1em;                              //把字间距撑开，视觉感更优雅
+    font-size: 1.6em;
+    margin-top: 2.8em;
+    margin-bottom: 2em;
+  }
+  .landing-page-topic .tagp {                             //编写内容样式
+    text-align: center;
+    color: #666;
+    font-size: 1.3em;
+    //margin-top: 2.5em;
+    line-height: 2.5em;                                 //行间距也要拉开大一些
+    letter-spacing: 0.18em;
+                                //把字间距撑开，视觉感更优雅
+  }
+
+  .landing-page-topic .col-xs-6.col-sm-6.col-md-3{
+
+    position: relative;
+    min-height: 1px;
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+
+
   // 中间区域介绍内容样式
   .landing-page-mid {                                   //给图片整好形
     //height: 534px;
@@ -123,7 +160,7 @@
     background-position: center center;
     background-repeat: no-repeat;
     //background-image: url(https://ooo.0o0.ooo/2017/05/12/59156f9f3b09c.jpg);
-    background-color: #f1f1f1;
+    //background-color: #f1f1f1;
     padding-bottom:30px;
   }
   .landing-page-mid .tagline {                          //编写标题样式
@@ -155,7 +192,7 @@
 // 服务优势介绍
 .landing-page-svadg {
  //height: 534px;
- background-color: #f1f1f1;
+ //background-color: #f1f1f1;
 }
 .landing-page-svadg .tagline {                          //编写标题样式
   text-align: center;
@@ -196,6 +233,7 @@
  .landing-page-svc {
   //height: 534px;
   padding-bottom: 30px;
+  background-color: #f1f1f1;
  }
  .landing-page-svc .tagline {                          //编写标题样式
    text-align: center;

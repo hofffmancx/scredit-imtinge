@@ -2,7 +2,9 @@
 <!-- ↓↓↓ 大图滚动banner 代码块↓↓↓ -->
   <div class="row">
     <div class="carousel fade-carousel slide" data-ride="carousel" data-interval="4000" id="bs-carousel">
-      <div class="overlay"></div>
+      <div class="overlay">
+
+      </div>
 
       <!-- 默认三张图列表 -->
       <div class="banner">
@@ -14,38 +16,38 @@
       </div>
 
       <!-- 文案部分 -->
-      <div class="carousel-inner">
-        <div class="item slides active">
+          <div class="carousel-inner">
+          <div class="item slides active">
           <div class="slide-1"></div>
           <div class="hero row">
-            <hgroup>
-                <h1>人生因选择而精彩！</h1>
-            </hgroup>
-            <!-- <button class="btn btn-hero btn-lg" role="button">测试跳转链接</button> -->
+          <hgroup>
+              <h1>人生因选择而精彩！</h1>
+          </hgroup>
+          <!-- <button class="btn btn-hero btn-lg" role="button">测试跳转链接</button> -->
           </div>
-        </div>
-        <div class="item slides">
+          </div>
+          <div class="item slides">
           <div class="slide-2"></div>
           <div class="hero">
-            <hgroup>
-                <h1>子要强于我，出国趁早做！</h1>
-            </hgroup>
-            <!-- <button class="btn btn-hero btn-lg" role="button">测试跳转链接</button> -->
+          <hgroup>
+              <h1>子要强于我，出国趁早做！</h1>
+          </hgroup>
+          <!-- <button class="btn btn-hero btn-lg" role="button">测试跳转链接</button> -->
           </div>
-        </div>
-        <div class="item slides">
+          </div>
+          <div class="item slides">
           <div class="slide-3"></div>
           <div class="hero">
-            <hgroup>
-                <h1>助您构建海外资产蓝图</h1>
-                <h3>180万人民币起购房享欧洲福利</h3>
-            </hgroup>
-            <!-- <button class="btn btn-hero btn-lg" role="button">测试跳转链接</button> -->
+          <hgroup>
+              <h1>助您构建海外资产蓝图</h1>
+              <h3>180万人民币起购房享欧洲福利</h3>
+          </hgroup>
+          <!-- <button class="btn btn-hero btn-lg" role="button">测试跳转链接</button> -->
           </div>
-        </div>
+          </div>
 
+          </div>
       </div>
-    </div>
   </div>
 <!-- ↑↑↑ 大图滚动banner 代码块 ↑↑↑ -->
 
@@ -53,38 +55,81 @@
 <!-- 尚德信服务特点 -->
 <div class="row">
 
-
-<div class="landing-page-svadg">
+  <!-- 公司业务特点 -->
+<div class="landing-page-topic">
   <div class="container">
   <div class="row">
       <div class="col-md-12">
-        <h3 class="tagline text-center">服务特色 / Service Features</h3>
-        <div class="col-xs-12 col-sm-6 col-md-3">
-          <%= image_tag("https://ww1.sinaimg.cn/large/006tNc79gy1fhtmm63s4nj30dc09vt8y.jpg", class: "img-responsive img-center frontpage-img") %>
-          <p class="subtits">100%绝对真实可靠项目</p>
-          <p class="subspan">仅与美国政府官方认可的区域中心合作</p>
-        </div>
-        <div class="col-xs-12 col-sm-6 col-md-3">
-          <%= image_tag("https://ww4.sinaimg.cn/large/006tNc79gy1fhrp8h9ttbj30b208agm8.jpg", class: "img-responsive img-center frontpage-img") %>
-          <p class="subtits">迅速获取美国绿卡</p>
-          <p class="subspan">立案2个月内快速递件，快速进入审核排列</p>
+        <h3 class="tagline text-center">我们重新定义移民行业</h3>
+        <p class="subtits">我们专为投资移民企业家德孩子设计人生教育规划 <br>
+          我们专为企业家移民后在海外开办企业，提供一站式服务<br>
+          我们专为企业家移民后在海外进入华人主流社圈提供平台
+        </p>
+        <div class="text-center">
+          <%= image_tag("https://ww2.sinaimg.cn/large/006tKfTcgy1fi2a8lok97j30vi05stc7.jpg", width:"80%",class: "img-center frontpage-img") %>
+
         </div>
 
-        <div class="col-xs-12 col-sm-6 col-md-3">
-          <%= image_tag("https://ww2.sinaimg.cn/large/006tNc79gy1fhtm8gaf5sj30cd099wes.jpg", class: " img-responsive img-center frontpage-img") %>
-          <p class="subtits">移民100%成功</p>
-          <p class="subspan">资深投资背景团队</p>
-        </div>
-        <div class="col-xs-12 col-sm-6 col-md-3">
-          <%= image_tag("https://ww4.sinaimg.cn/large/006tNc79gy1fhtmdmp1qwj30bw08vgm3.jpg", class: " img-responsive img-center frontpage-img") %>
-          <p class="subtits">助您构建海外资产蓝图</p>
-          <p class="subspan">180万人民币起购房享欧洲福利 </p>
-        </div>
     </div>
   </div>
 </div>
 </div>
+
+
+<div class="landing-page-svadg">
+  <div class="container">
+    <div class="row">
+        <div class="col-md-12">
+        <h3 class="tagline text-center">服务特色 / Service Features</h3>
+      </div>
+
+        <div class="col-xs-12 col-sm-12 col-md-3 text-center">
+          <div class="index-service-imag">
+            <%= image_tag("https://ww2.sinaimg.cn/large/006tNc79gy1fhrpat4c0fj309906yjs9.jpg", class: "img-responsive img-center frontpage-img") %>
+            <p class="subtits">子女人生规划的教育平台</p>
+            <p class="subspan">为客户子女量身定制出国学习计划
+              <br>规划其移民后的人生步骤
+              <br>使其能更顺利地融入国外的学习与生活
+            </p>
+          </div>
+        </div>
+
+        <div class="col-xs-12 col-sm-12 col-md-3 text-center">
+          <div class="index-service-imag">
+            <%= image_tag("https://ww3.sinaimg.cn/large/006tNc79gy1fhrp2ntmp2j30i00dg40j.jpg", class: "img-responsive img-center frontpage-img") %>
+            <p class="subtits">企业家交流平台</p>
+              <p class="subspan">为VIP客户及已成功登陆客户
+                <br> 成立旅加、旅美华人沙龙
+                <br>举办各种聚会、晚宴及参观旅游活动
+              </p>
+          </div>
+        </div>
+
+        <div class="col-xs-12 col-sm-12 col-md-3 text-center">
+          <div class="index-service-imag">
+            <%= image_tag("https://ww4.sinaimg.cn/large/006tNc79gy1fhrp8h9ttbj30b208agm8.jpg", class: " img-responsive img-center frontpage-img") %>
+            <p class="subtits">移民100%成功</p>
+            <p class="subspan">100%绝对真实可靠项目
+              <br>资深投资背景团队
+              <br>帮助您全家迅速获得身份
+            </p>
+          </div>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-3 text-center">
+          <div class="index-service-imag">
+            <%= image_tag("https://ww1.sinaimg.cn/large/006tNc79gy1fhrx1uxfhoj30vu0nwadb.jpg", class: " img-responsive img-center frontpage-img") %>
+            <p class="subtits">总裁服务</p>
+            <p class="subspan">尚德信总裁有着多年的移民经验
+              <br>秉承“客户即朋友”的服务理念
+              <br>给顾客一个VIP级专属服务
+              </p>
+          </div>
+
+        </div>
+     </div>
+  </div>
 </div>
+
 
 
 <!-- 美国精英教育-->
@@ -100,7 +145,7 @@
                 我们所服务客户的子女考上的部分名校
             </h4>
 
-            <div class="col-xs-6 col-md-2">
+            <!-- <div class="col-xs-6 col-md-2">
               <%= image_tag("https://ww1.sinaimg.cn/large/006tKfTcgy1fhqg2p24txj30jp0jpdl7.jpg", class: "img-responsive img-center frontpage-img") %>
 
             </div>
@@ -122,44 +167,94 @@
             </div>
             <div class="col-xs-6 col-md-2">
               <%= image_tag("https://ww3.sinaimg.cn/large/006tKfTcgy1fhqg2mdgzej30jp0jpdig.jpg", class: "img-responsive img-center frontpage-img") %>
+            </div> -->
+
+            <div class="col-xs-6 col-sm-6 col-md-2 text-center">
+              <div class="index-edu-imag">
+                <%= image_tag("https://i.loli.net/2017/08/04/5983e227622e4.png", class: "img-responsive img-center frontpage-img") %>
+                <p class="subtits">哥伦比亚大学</p>
+              </div>
+            </div>
+
+            <div class="col-xs-6 col-sm-6 col-md-2 text-center">
+                <div class="index-edu-imag">
+                  <%= image_tag("https://i.loli.net/2017/08/04/5983e22765cc9.png", class: "img-responsive img-center frontpage-img") %>
+                  <p class="subtits">普林斯顿大学</p>
+                </div>
+            </div>
+            <div class="col-xs-6 col-sm-6 col-md-2 text-center">
+              <div class="index-edu-imag">
+                  <%= image_tag("https://i.loli.net/2017/08/04/5983e22768c51.png", class: "img-responsive img-center frontpage-img") %>
+                  <p class="subtits">耶鲁大学</p>
+              </div>
+            </div>
+            <div class="col-xs-6 col-sm-6 col-md-2 text-center">
+              <div class="index-edu-imag">
+                <%= image_tag("https://i.loli.net/2017/08/04/5983e2276eebd.png", class: "img-responsive img-center frontpage-img") %>
+                <p class="subtits">耶鲁大学</p>
+              </div>
+            </div>
+            <div class="col-xs-6 col-sm-6 col-md-2 text-center">
+              <div class="index-edu-imag">
+                <%= image_tag("https://i.loli.net/2017/08/04/5983e22776769.png", class: "img-responsive img-center frontpage-img") %>
+                <p class="subtits">斯坦福大学</p>
+              </div>
+            </div>
+            <div class="col-xs-6 col-sm-6 col-md-2 text-center">
+              <div class="index-edu-imag">
+                <%= image_tag("https://i.loli.net/2017/08/04/5983e227777d3.png", class: "img-responsive img-center frontpage-img") %>
+                <p class="subtits">芝加哥大学</p>
+              </div>
             </div>
           </div>
 
-          <div class="container" style="margin-top:15px;">
-            <div class="col-xs-6 col-md-2">
-              <%= image_tag("https://ww2.sinaimg.cn/large/006tKfTcgy1fhqg2msb7vj30jp0jpqa9.jpg", class: "img-responsive img-center frontpage-img") %>
+          <div class="container" style="margin-top:10px;">
+            <div class="col-xs-6 col-sm-6 col-md-2 text-center">
+              <div class="index-edu-imag">
+                <%= image_tag("https://i.loli.net/2017/08/04/5983e227622e4.png", class: "img-responsive img-center frontpage-img") %>
+                <p class="subtits">哥伦比亚大学</p>
+              </div>
+            </div>
 
+            <div class="col-xs-6 col-sm-6 col-md-2 text-center">
+                <div class="index-edu-imag">
+                  <%= image_tag("https://i.loli.net/2017/08/04/5983e22765cc9.png", class: "img-responsive img-center frontpage-img") %>
+                  <p class="subtits">普林斯顿大学</p>
+                </div>
             </div>
-            <div class="col-xs-6 col-md-2">
-              <%= image_tag("https://ww4.sinaimg.cn/large/006tKfTcgy1fhqg2my76gj30jp0jpwjz.jpg", class: "img-responsive img-center frontpage-img") %>
+            <div class="col-xs-6 col-sm-6 col-md-2 text-center">
+              <div class="index-edu-imag">
+                  <%= image_tag("https://i.loli.net/2017/08/04/5983e22768c51.png", class: "img-responsive img-center frontpage-img") %>
+                  <p class="subtits">耶鲁大学</p>
+              </div>
+            </div>
+            <div class="col-xs-6 col-sm-6 col-md-2 text-center">
+              <div class="index-edu-imag">
+                <%= image_tag("https://i.loli.net/2017/08/04/5983e2276eebd.png", class: "img-responsive img-center frontpage-img") %>
+                <p class="subtits">耶鲁大学</p>
+              </div>
+            </div>
+            <div class="col-xs-6 col-sm-6 col-md-2 text-center">
+              <div class="index-edu-imag">
+                <%= image_tag("https://i.loli.net/2017/08/04/5983e22776769.png", class: "img-responsive img-center frontpage-img") %>
+                <p class="subtits">斯坦福大学</p>
+              </div>
+            </div>
+            <div class="col-xs-6 col-sm-6 col-md-2 text-center">
+              <div class="index-edu-imag">
+                <%= image_tag("https://i.loli.net/2017/08/04/5983e227777d3.png", class: "img-responsive img-center frontpage-img") %>
+                <p class="subtits">芝加哥大学</p>
+              </div>
+            </div>
 
-            </div>
-            <div class="col-xs-6 col-md-2">
-              <%= image_tag("https://ww1.sinaimg.cn/large/006tKfTcgy1fhqg2lwe1wj30jp0jp772.jpg", class: "img-responsive img-center frontpage-img") %>
-
-            </div>
-            <div class="col-xs-6 col-md-2">
-              <%= image_tag("https://ww3.sinaimg.cn/large/006tKfTcgy1fhqg2lp0k6j30jp0jp78b.jpg", class: "img-responsive img-center frontpage-img") %>
-
-            </div>
-            <div class="col-xs-6 col-md-2">
-              <%= image_tag("https://ww3.sinaimg.cn/large/006tKfTcgy1fhqg2m9vh8j30jp0jpgtg.jpg", class: "img-responsive img-center frontpage-img") %>
-
-            </div>
-            <div class="col-xs-6 col-md-2">
-              <%= image_tag("https://ww3.sinaimg.cn/large/006tKfTcgy1fhqg2mdgzej30jp0jpdig.jpg", class: "img-responsive img-center frontpage-img") %>
-            </div>
           </div>
 
-          <!-- <div class="col-xs-12 col-md-12  text-center tagp">
-              <h3>100%绝对真实可靠项目，帮助您全家迅速获得美国绿卡</h3>
-          </div>
-          <div class="col-xs-12 col-md-12  text-center tagp">
-            <p>
-              资深投资背景团队，仅与美国政府官方认可的区域中心合作
+          <!-- <div class="text-center">
+            <p class="text-center tagp" style="font-size:14px;width:450px;">
+              资深投资背景团队，仅与美国政府官方认可的区域中心合作。
               立案2个月内快速递件，最快速度进入审核排列。
             </p>
-           </div> -->
+         </div> -->
         </div>
       </div>
     </div>
@@ -182,36 +277,8 @@
           帮助您构建海外资产蓝图
         </p> -->
 
-      <!--  <div class="container">
-
-
-          <div class="col-xs-3 col-md-2">
-            <%= image_tag("https://ww1.sinaimg.cn/large/006tKfTcgy1fhqg2p24txj30jp0jpdl7.jpg", class: "img-responsive img-center frontpage-img") %>
-
-          </div>
-          <div class="col-xs-3 col-md-2">
-            <%= image_tag("https://ww4.sinaimg.cn/large/006tKfTcgy1fhqg2onvkij30jp0jptdt.jpg", class: "img-responsive img-center frontpage-img") %>
-
-          </div>
-          <div class="col-xs-3 col-md-2">
-            <%= image_tag("https://ww2.sinaimg.cn/large/006tKfTcgy1fhqg2oephyj30jp0jpwk0.jpg", class: "img-responsive img-center frontpage-img") %>
-
-          </div>
-          <div class="col-xs-3 col-md-2">
-            <%= image_tag("https://ww2.sinaimg.cn/large/006tKfTcgy1fhqg2ng0v0j30jp0jpqb9.jpg", class: "img-responsive img-center frontpage-img") %>
-
-          </div>
-          <div class="col-xs-3 col-md-2">
-            <%= image_tag("https://ww3.sinaimg.cn/large/006tKfTcgy1fhqg2m9vh8j30jp0jpgtg.jpg", class: "img-responsive img-center frontpage-img") %>
-
-          </div>
-          <div class="col-xs-3 col-md-2">
-            <%= image_tag("https://ww3.sinaimg.cn/large/006tKfTcgy1fhqg2mdgzej30jp0jpdig.jpg", class: "img-responsive img-center frontpage-img") %>
-          </div>
-        </div>
-         -->
          <h4 class="text-center tagp">
-             精选欧洲贵族教育
+             精选欧洲移民项目
          </h4>
         <div class="container">
           <div class="col-xs-6  col-sm-6 col-md-3" style="padding-bottom:5px;">
@@ -284,44 +351,22 @@
   </div>
 
 
-  <!-- 其他服务 -->
-  <div class="landing-page-svc">
-    <div class="container">
-    <div class="row">
-        <div class="col-md-12">
-          <h3 class="tagline text-center">其他服务 / other Service</h3>
-          <div class="col-xs-12 col-sm-6 col-md-3">
-            <%= image_tag("https://ww2.sinaimg.cn/large/006tNc79gy1fhrpat4c0fj309906yjs9.jpg", class: "img-responsive img-center frontpage-img") %>
-            <p class="subtits">子女人生规划的教育平台</p>
-          </div>
-          <div class="col-xs-12 col-sm-6 col-md-3">
-            <%= image_tag("https://ww3.sinaimg.cn/large/006tNc79gy1fhrp2ntmp2j30i00dg40j.jpg", class: "img-responsive img-center frontpage-img") %>
-            <p class="subtits">企业家交流平台</p>
-          </div>
-          <div class="col-xs-12 col-sm-6 col-md-3">
-            <%= image_tag("https://ww4.sinaimg.cn/large/006tNc79gy1fhrp8h9ttbj30b208agm8.jpg", class: " img-responsive img-center frontpage-img") %>
-            <p class="subtits">移民100%成功</p>
-          </div>
-          <div class="col-xs-12 col-sm-6 col-md-3">
-            <%= image_tag("https://ww1.sinaimg.cn/large/006tNc79gy1fhrx1uxfhoj30vu0nwadb.jpg", class: " img-responsive img-center frontpage-img") %>
-            <p class="subtits">总裁服务</p>
-          </div>
-      </div>
-    </div>
-  </div>
-  </div>
 
 
-<!-- 用户评价版面   -->
+
+<!-- 成功案例版面   -->
   <div class="row landing-page-eva">
     <div class="container">
       <div class="col-md-12">
         <h3 class="tagline">成功案例 / Successful Case</h1>
-          <div class="col-xs-12 col-sm-6 col-md-6 landing-page-eva-style">
-            <div class="col-xs-3">
-              <%= image_tag("https://ww3.sinaimg.cn/large/006tNc79gy1fhrmzrrrgjj315u15tb29.jpg", class: "img-circle img-responsive img-center frontpage-img") %>
+          <div class="col-xs-12 col-sm-12 col-md-6 landing-page-eva-style">
+            <div class="col-xs-12 col-sm-12 col-md-3 text-center">
+              <div class="" style="width:110px; display: inline-block;">
+                <%= image_tag("https://ww3.sinaimg.cn/large/006tNc79gy1fhrmzrrrgjj315u15tb29.jpg", class: "img-circle img-responsive img-center frontpage-img") %>
+              </div>
             </div>
-            <div class="col-xs-9" >
+
+            <div class="col-xs-12 col-sm-12 col-md-9" >
               <h5>康思斌-北加州湖北同乡会副会长 </h5>
               <h7>@SibinKang</h7>
               <p>从初中每天罚站，到考上美国名校南加州大学，
@@ -330,11 +375,13 @@
               </p>
             </div>
           </div>
-          <div class="col-xs-12 col-sm-6 col-md-6 landing-page-eva-style">
-            <div class="col-xs-3">
-              <%= image_tag("https://ww3.sinaimg.cn/large/006tNc79gy1fhronpl6n2j30cn0cn117.jpg", class: "img-circle img-responsive img-center frontpage-img") %>
+          <div class="col-xs-12 col-sm-12 col-md-6 landing-page-eva-style">
+            <div class="col-xs-12 col-sm-12 col-md-3 text-center">
+              <div class="" style="width:110px; display: inline-block;">
+              <%= image_tag("https://ww3.sinaimg.cn/large/006tKfTcgy1fi283uazt1j30bt0bttgr.jpg", class: "img-circle img-responsive img-center frontpage-img") %>
+              </div>
             </div>
-            <div class="col-xs-9">
+            <div class="col-xs-12 col-sm-12 col-md-9" >
               <h5>张瑞兰-加州武汉创新科技董事长</h5>
               <h7>@XiaoLanZhang</h7>
               <p>女儿从一个在国内每天打游戏的假小子，变成了东海岸
