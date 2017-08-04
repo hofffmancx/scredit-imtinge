@@ -372,12 +372,28 @@
     background-size: cover;                             //确保图片完全撑开
     background-position: center center;
     background-repeat: no-repeat;
-    background-image: url(https://ooo.0o0.ooo/2017/05/21/592135630adc6.jpg);
+    background-image: url(https://ws2.sinaimg.cn/large/006tNc79gy1fi7plt281aj31kw13ye85.jpg)
   }
   .log-page {
     margin-top: 60px;
+    border: 3px solid transparent;
+    padding: 0 5% 5% 5% ;
+    transition: box-shadow 0.6s;
+    box-shadow: 5px 0px 40px rgba(0,0,0,.5);
+    background-color: rgba(245,245,245,.5);
+    color : #212121
+
   }
 
+  .log-page-title{
+    margin-top: 8%;
+    margin-bottom: 8%;
+
+  }
+  .log-page-title h1{
+    font-size: 5em;
+    color : #212121
+  }
 
   // 个人中心侧边栏nav样式
   .nav-left-style {
@@ -397,4 +413,10 @@
 
   .img-width {
     width: 100%;
+  }
+
+//元素置中
+  .col-centered{
+    float: none;
+    margin: 0 auto;
   }
