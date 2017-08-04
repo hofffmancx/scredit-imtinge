@@ -43,7 +43,7 @@
         </div>
 
         <!-- 文章收藏功能 -->
-        <div class="article-collection text-center">
+        <!-- <div class="article-collection text-center">
           <% if current_user && current_user.is_activity_member_of?(@activity) %>
             <div class="article-collection-btn">
               <%= link_to quit_activity_path(@activity), method: :post, class: "btn btn-lg btn-danger" do %>
@@ -56,10 +56,10 @@
             </div>
           <% end %>
         </div>
-        <hr>
+        <hr> -->
 
         <!-- 文章评论 -->
-        <div class="article-review-box">
+        <!-- <div class="article-review-box">
           <%= simple_form_for ([@activity, @activity_review]) do |f| %>
             <div class="">
               <%= f.input :comment, :label => "发表评论" %>
@@ -103,7 +103,7 @@
 
           <% end %>
 
-        </div>
+        </div> -->
 
       </div>
 

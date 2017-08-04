@@ -4,14 +4,18 @@
   </div>
 </div>
 
-<div class="container all-product-box" style="background-color:#e9eaec;padding-top:20px;">
+<div class="container all-product-box" style="padding-top:30px;">
   <div class="row">
-    <div class="text-center" style="margin:10px 0;height:40px;background-color:#ffffff;margin:0 15px;font-size:14px; position:relative;">
+    <div class="text-center project-list-bar" >
 
 
 
-    <div class="" style="position:absolute;left:0;top:0;bottom:0;line-height:40px;width:84px;background-color:#178df2;font-size:14px;color:white;">
+    <div class="project-list-bar-title">
       移民国家
+    </div>
+
+    <div class="" style="position:absolute;left:40px;top:40px;;">
+      <img src="https://i.loli.net/2017/08/04/5984301949724.png" alt="" class="img-responsive">
     </div>
 
     </div>
@@ -32,16 +36,16 @@
              <%= link_to image_tag("http://placehold.it/300x300&text=No Pic", class: "img-width"), product_path(project), target: "_blank"  %>
             <% end %>
             </div>
-            <div class="" style="position:relative;background-color:white;padding:10px 14px 26px 14px;font-size:14px;line-height:20px;height:20px;overflow:hidden;display:block;">
+            <div class="project-list-title">
               <%= project.title %>
-              <div class="" style="position:absolute;right:14px;top:10px;bottom:26px;height:20px;width:5px;background-color:#178df2;">
+              <div class="project-list-title-ico">
 
               </div>
             </div>
-            <div class="" style="background-color:white;padding-left:14px;padding-right: 14px;padding-bottom:10px;font-size:12px;line-height:18px;height:36px;overflow:hidden;display:block;">
+            <div class="project-list-subtits" >
               <%= project.description %>
             </div>
-            <div class="" style="padding-left:14px;line-height:40px;background-color:#f3f7fb;font-size:14px;">
+            <div class="project-list-position">
                 所属国家：<i class="fa fa-map-marker" style="width:20px;"></i>美国
             </div>
           </div>

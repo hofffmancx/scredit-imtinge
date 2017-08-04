@@ -61,6 +61,18 @@
   }
 
   // navbar设置
+  .navbar-header .navbar-brand{
+    height: auto;
+  }
+
+  .navbar-header .navbar-toggle{
+    margin-top: 18px;
+  }
+
+  .navbar-style .navbar-nav > li > a {
+    line-height: 45px;
+
+  }
   .navbar-style {
     background: #f5f5f5;
     border-color: transparent;                          //边框颜色设置为 透明
@@ -69,6 +81,14 @@
     letter-spacing: 0.1em;                              //拉开一点点字间距
     font-weight:lighter;                                   //字体粗细比默认样式缩小100磅值，让logo显得精致高级
   }
+
+  .navbar-brand > img{
+     display: inline-block;	//图片和链接文字显示在同一行
+     margin-right: 10px; //图片和链接文字拉开一点距离
+    //  width: 32px; //定制图片宽度
+     height: 44px; //定制图片高度
+  }
+
   .li-style {
     color: #666;                                        // 修改全站的 字体主色
     font-size: 0.8em;
@@ -130,9 +150,18 @@
     text-align: center;
     color: #666;
     //letter-spacing: 0.1em;                              //把字间距撑开，视觉感更优雅
-    font-size: 1.6em;
+    font-size: 2em;
     margin-top: 2.8em;
-    margin-bottom: 2em;
+    //margin-bottom: 2em;
+  }
+
+  .landing-page-topic .subtits {                          //编写标题样式
+    text-align: center;
+    color: #666;
+    //letter-spacing: 0.1em;                              //把字间距撑开，视觉感更优雅
+    font-size: 16px;
+    margin-top: 25px;
+    margin-bottom: 40px;
   }
   .landing-page-topic .tagp {                             //编写内容样式
     text-align: center;
@@ -167,9 +196,9 @@
     text-align: center;
     color: #666;
     //letter-spacing: 0.1em;                              //把字间距撑开，视觉感更优雅
-    font-size: 1.6em;
+    font-size: 2em;
     margin-top: 2.8em;
-    margin-bottom: 2em;
+    margin-bottom: 1em;
   }
   .landing-page-mid .tagp {                             //编写内容样式
     text-align: center;
@@ -178,6 +207,7 @@
     //margin-top: 2.5em;
     line-height: 2.5em;                                 //行间距也要拉开大一些
     letter-spacing: 0.18em;
+    margin-bottom: 3em;
                                 //把字间距撑开，视觉感更优雅
   }
 
@@ -198,17 +228,17 @@
   text-align: center;
   color: #666;
   //letter-spacing: 0.1em;                              //把字间距撑开，视觉感更优雅
-  font-size: 1.6em;
+  font-size: 2em;
   margin-top: 2.8em;
   margin-bottom: 2em;
 }
 
 .landing-page-svadg .subtits {                          //编写标题样式
   text-align: center;
-  color: #999;
+  color: black;
   letter-spacing: 0.1em;                              //把字间距撑开，视觉感更优雅
   font-size: 1.3em;
-  margin-top: 0.5em;
+  margin-top: 1.5em;
 
 }
 
@@ -218,7 +248,7 @@
     letter-spacing: 0.1em;
     //font-size: 1.3em;
     //margin-top: 3.8em;
-     margin-bottom: 3.8em;
+    margin: 1em 0 6.8em;
 }
 
 .landing-page-svadg .titspan {
@@ -239,17 +269,17 @@
    text-align: center;
    color: #666;
    //letter-spacing: 0.1em;                              //把字间距撑开，视觉感更优雅
-   font-size: 1.6em;
+   font-size: 2em;
    margin-top: 2.8em;
-   margin-bottom: 2em;
+   //margin-bottom: 2em;
  }
 
  .landing-page-svc .subtits {                          //编写标题样式
    text-align: center;
-   color: #7f8c8d;
-   letter-spacing: 0.1em;                              //把字间距撑开，视觉感更优雅
+   color: black;
+   //letter-spacing: 0.1em;                              //把字间距撑开，视觉感更优雅
    font-size: 1.3em;
-   margin-top: 0.5em;
+   margin-top: 1.8em;
    margin-bottom: 3.8em;
  }
 
@@ -276,7 +306,8 @@
    font-size: 1.3em;
    //margin-top: 2.5em;
    line-height: 2.5em;                                 //行间距也要拉开大一些
-   letter-spacing: 0.18em;
+   //letter-spacing: 0.18em;
+   margin-bottom: 3em;
                                //把字间距撑开，视觉感更优雅
  }
   // 区块分类标识样式（用于区分 商品 和 课程）
@@ -351,9 +382,9 @@
     text-align: center;
     color: #666;
     //letter-spacing: 0.2em;                              //把字间距撑开，视觉感更优雅
-    font-size: 1.6em;
+    font-size: 2em;
     margin-top: 2.8em;
-    margin-bottom: 2em;
+    margin-bottom: 3em;
   }
   .landing-page-eva-style {
     //margin-top: 2em;
@@ -387,7 +418,9 @@
 
   //footer样式设置
   .footer-style {
-    background-color: #f5f5f5;
+    background-color: #21282c;
+    color:white;
+
   }
   .footer-style h5 {
     margin-top: 2em;
@@ -481,4 +514,8 @@
    font-size: 12px;
    color: #999;
    padding:5px 0px;
+ }
+
+ .linkcolor {
+   color:#666;
  }
