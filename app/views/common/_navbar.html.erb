@@ -2,7 +2,7 @@
   <div class="container">
       <!--logo-->
       <div class="navbar-header">
-        <a href="/" target="_blank" class="navbar-brand" style="font-size: 2.0em;">
+        <a href="/"  class="navbar-brand" style="font-size: 2.0em;">
 
           <!-- 移民行业的教育领导者 -->
           <img src="https://i.loli.net/2017/08/04/5983ecb3afdd8.png" alt="">
@@ -34,10 +34,10 @@
             <%= link_to("关于尚德信", about_index_path, target: "_blank") %>
           </li>
           <li>
-            <%= link_to("联系我们", new_message_path, target: "_blank") %>
+            <%= link_to("联系我们", root_path) %>
           </li>
 
-          <% if !current_user %>
+          <!-- <% if !current_user %>
             <li><%= link_to("注册", new_user_registration_path) %> </li>
             <li><%= link_to(content_tag(:i, " 登入", class: "fa fa-sign-in"), new_user_session_path) %></li>
           <% else %>
@@ -54,7 +54,7 @@
                 <li><%= link_to("退出", destroy_user_session_path, method: :delete, class: "li-style") %></li>
               </ul>
             </li>
-          <% end %>
+          <% end %> -->
 
 
         </ul>
