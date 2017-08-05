@@ -38,7 +38,7 @@
           <td>ID</td>
           <td></td>
           <td>项目名称</td>
-          <td>项目描述</td>
+          <!-- <td>项目描述</td> -->
           <td width="100">操作</td>
           <td>创建时间</td>
         </tr>
@@ -57,7 +57,7 @@
               <% end %>
             </td>
             <td><%= link_to(project.title, product_project_path(@product,project)) %></td>
-            <td><%= simple_format(project.content)%></td>
+            <!-- <td><%= simple_format(project.content)%></td> -->
             <td>
              <%= link_to("Edit", edit_admin_product_project_path(@product,project)) %> |
              <%= link_to("destroy", admin_product_project_path(@product,project), method: :delete, data: { confirm: "你确定要删除吗？"}) %>
