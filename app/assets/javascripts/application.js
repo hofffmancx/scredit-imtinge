@@ -53,8 +53,9 @@ function browserRedirect() {
         $(".fade-carousel .slides .slide-1").css("height","360px");
         $(".fade-carousel .slides .slide-2").css("height","360px");
         $(".fade-carousel .slides .slide-3").css("height","360px");
-
-    } else {
+        
+    }
+    else {
         //pc;
         //alert("pctest");
         $(".navbar-rwd").removeClass("navbar-rwd");

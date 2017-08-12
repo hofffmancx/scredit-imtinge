@@ -13,10 +13,10 @@
     <!-- 文案部分 -->
     <div class="carousel-inner">
       <div class="item slides active">
-        <div class="slide-1">
-          <%= image_tag(Banner.first.pic, class: "img-responsive img-center frontpage-img") %>
 
-        </div>
+          <%= image_tag(Banner.first.pic, class: "slide-1") %>
+
+
         <div class="hero row">
           <hgroup>
             <%= raw Banner.first.title %>
@@ -25,9 +25,9 @@
         </div>
       </div>
       <div class="item slides">
-        <div class="slide-2">
-          <%= image_tag(Banner.second.pic, class: "img-responsive img-center frontpage-img") %>
-        </div>
+
+          <%= image_tag(Banner.second.pic, class: "slide-2") %>
+
         <div class="hero">
           <hgroup>
             <%= raw Banner.second.title %>
@@ -36,9 +36,9 @@
         </div>
       </div>
       <div class="item slides">
-        <div class="slide-3">
-          <%= image_tag(Banner.third.pic, class: "img-responsive img-center frontpage-img") %>
-        </div>
+
+          <%= image_tag(Banner.third.pic, class: "slide-3") %>
+      
         <div class="hero">
           <hgroup>
             <%= raw Banner.third.title %>
