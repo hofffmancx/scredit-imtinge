@@ -51,6 +51,8 @@ function browserRedirect() {
         //$(".hero hgroup .h1").css("font-size","2em");
         //$(".hero hgroup .h3").css("font-size","1.5em");
         $(".footer-sitelink").hide();
+        $(".header-logo-pc").hide();
+        $(".topheader").hide();
         $(".about-title-e").css("font-size","1.5em");
         $(".fade-carousel").css("height","360px");
         $(".fade-carousel .carousel-inner .item ").css("height","360px");
@@ -64,6 +66,7 @@ function browserRedirect() {
         //pc;
         //alert("pctest");
         // $(".navbar-rwd").removeClass("navbar-rwd");
+        $(".header-logo-phone").hide();
         $(".fade-carousel").css("height","616px");
         $(".fade-carousel .carousel-inner .item ").css("height","616px");
         $(".slide-1").css("height","616px");

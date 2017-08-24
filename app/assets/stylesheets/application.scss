@@ -31,7 +31,7 @@
      display: flex;                                      // footer固定底部
      flex-direction: column;                             // footer固定底部
      font-family: 'Noto Sans SC', sans-serif;            // google思源黑简作为主字体
-     padding-top: 50px;                                  // 腾出navbar的遮挡空间
+     //padding-top: 50px;                                  // 腾出navbar的遮挡空间
      color: #666;                                        // 修改全站的 字体主色
      font-size: 1.2em;                                   // 网站所有字体缩小比例
     .content {
@@ -61,6 +61,9 @@
   }
 
   // navbar设置
+  .navbar {
+    margin-bottom: 0px;
+  }
   .navbar-header .navbar-brand{
     height: auto;
   }
@@ -70,11 +73,12 @@
   }
 
   .navbar-style .navbar-nav > li > a {
-    line-height: 45px;
+    line-height:30px;
 
   }
   .navbar-style {
-    background: #f5f5f5;
+    // background: #f5f5f5;
+    background: #323242;
     border-color: transparent;                          //边框颜色设置为 透明
   }
   .navbar-brand {
@@ -86,7 +90,7 @@
      display: inline-block;	//图片和链接文字显示在同一行
      margin-right: 10px; //图片和链接文字拉开一点距离
     //  width: 32px; //定制图片宽度
-     height: 44px; //定制图片高度
+     height: 48px; //定制图片高度
   }
 
   .li-style {
@@ -102,6 +106,44 @@
       text-decoration: none;                            // 移除下划线
     }
   }
+
+  .navbar-default .navbar-nav > li > a{
+  color: #ffffff;
+}
+
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus {
+  color: #ffffff;
+  background-color: #216efe;
+}
+.navbar-default .navbar-nav > .active > a,
+.navbar-default .navbar-nav > .active > a:hover,
+.navbar-default .navbar-nav > .active > a:focus {
+  color: #FF6F00;
+  background-color: #216efe;
+}
+
+.navbar-default .navbar-nav > .open > a,
+.navbar-default .navbar-nav > .open > a:focus,
+.navbar-default .navbar-nav > .open > a:hover {
+    background-color: #216efe;
+    color: #ffffff;
+}
+
+.navbar-default .dropdown-menu {
+  padding-top: 0px;
+  padding-bottom:0px;
+}
+.navbar-default .dropdown-menu > li > a {
+  padding: 10px 20px;
+  font-size: 14px;
+}
+
+.navbar-default .dropdown-menu > li > a:hover, .dropdown-menu > li > a:focus {
+  text-decoration: none;
+  color: #ffffff;
+  background-color: #216efe;
+}
 
   // 搜索栏设置
   #custom-search-input{
@@ -211,7 +253,7 @@
                                 //把字间距撑开，视觉感更优雅
   }
 
-  .landing-page-mid .col-xs-6.col-sm-6.col-md-3{
+  .landing-page-mid .col-xs-6.col-sm-6.col-md-3 {
 
     position: relative;
     min-height: 1px;

@@ -1,12 +1,48 @@
-<nav class="navbar navbar-default navbar-fixed-top navbar-style" role="navigation" style="border-bottom:1px solid #ccc">
-  <div class="container">
-      <!--logo-->
-      <div class="navbar-header">
+
+
+<nav class="navbar navbar-default" role="navigation" style="border-bottom:1px solid #ccc">
+  <div class="topheader" style="background-color:#ffffff;height:100px;">
+    <div class="container">
+      <div class="col-xs-6  col-md-6" >
         <a href="/"  class="navbar-brand" style="font-size: 2.0em;">
 
           <!-- 移民行业的教育领导者 -->
           <img src="https://i.loli.net/2017/08/04/5983ecb3afdd8.png" alt="">
         </a>
+      </div>
+      <div class="col-xs-6 col-md-6">
+        <div class="col-md-4" style="font-size:16px;line-height:48px;">
+          <i class="fa fa-shopping-cart"> </i>24小时专家热线
+        </div>
+
+        <div class="col-md-4" style="font-size:16px;line-height:48px;">
+          <i class="fa fa-shopping-cart"> </i>工作日一线畅通
+        </div>
+
+        <div class="col-md-4" style="font-size:16px;line-height:48px;">
+          <i class="fa fa-shopping-cart"> </i>官方微信
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="navbar-style">
+    <div class="container">
+      <!--logo-->
+      <div class="navbar-header">
+        <div class="header-logo-phone">
+          <a href="/"  class="navbar-brand" style="font-size: 2.0em;">
+
+            <!-- 移民行业的教育领导者 -->
+            <img src="https://i.loli.net/2017/08/04/5984026a8ce95.png" alt="">
+          </a>
+        </div>
+
+        <!-- <div class="header-logo-pc">
+          <a href="/"  class="navbar-brand" style="font-size: 1.5em;">
+            尚德信首页
+          </a>
+        </div> -->
+
 
           <!-- 响应式导航 -->
           <button type="button" class="navbar-toggle" data-toggle="collapse"
@@ -17,23 +53,38 @@
             <span class="icon-bar"></span>
           </button>
       </div>
-
-
       <!-- links -->
-      <div class="navbar-collapse navbar-ex1-collapse collapse navbar-right" aria-expanded="false">
+      <div class="navbar-collapse navbar-ex1-collapse collapse " aria-expanded="false">
+        <ul class="nav navbar-nav navbar-left">
+          <li style="width:100px;text-align:center;">
+            <%= link_to("首页", root_path) %>
+          </li>
+          <li class="dropdown" style="width:100px;text-align:center;">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+              移民服务
+              <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu">
+              <!-- <li><%= link_to("美国移民", product_path(1), target: "_blank",class: "li-style") %></li> -->
+              <%  CountryCategory.all.each do |category|%>
+                <li><%= link_to  category.title, products_path(category: category.title), target: "_blank",class: "li-style"  %></li>
+              <% end %>
 
-        <ul class="nav navbar-nav navbar-right">
+            </ul>
+          </li>
+        </ul>
+        <ul class="nav navbar-nav navbar-left">
 
-          <li>
+          <li style="width:100px;text-align:center;">
             <%= link_to("热门活动", activities_path, target: "_blank") %>
           </li>
-          <li>
+          <li style="width:100px;text-align:center;">
             <%= link_to("资讯", articlealls_path, target: "_blank") %>
           </li>
-          <li>
+          <li style="width:100px;text-align:center;">
             <%= link_to("关于尚德信", about_index_path, target: "_blank") %>
           </li>
-          <li>
+          <li style="width:100px;text-align:center;">
             <%= link_to("联系我们", root_path) %>
           </li>
 
@@ -59,23 +110,10 @@
 
         </ul>
 
-        <ul class="nav navbar-nav navbar-right">
-          <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-              移民服务
-              <b class="caret"></b>
-            </a>
-            <ul class="dropdown-menu">
-              <!-- <li><%= link_to("美国移民", product_path(1), target: "_blank",class: "li-style") %></li> -->
-              <%  CountryCategory.all.each do |category|%>
-                <li><%= link_to  category.title, products_path(category: category.title), target: "_blank",class: "li-style"  %></li>
-              <% end %>
 
-            </ul>
-          </li>
-        </ul>
-
-
+      </div>
     </div>
+
   </div>
+
 </nav>
