@@ -87,14 +87,33 @@
       </div>
 
         <div class="col-xs-12 col-sm-12 col-md-3 text-center">
+          <style>
+            .zoom-box{height: 210px;}
+            .img-zoom{display: block;width: 94%; margin-left: 3%; vertical-align: middle;}
+          </style>
           <div class="index-service-imag">
-            <%= image_tag("https://ww2.sinaimg.cn/large/006tNc79gy1fhrpat4c0fj309906yjs9.jpg", class: "img-responsive img-center frontpage-img") %>
+            <div class="zoom-box">
+            <%= image_tag("https://ww2.sinaimg.cn/large/006tNc79gy1fhrpat4c0fj309906yjs9.jpg", class: "img-zoom img-center frontpage-img") %>
+            </div>
             <p class="subtits">子女人生规划的教育平台</p>
             <p class="subspan">为客户子女量身定制出国学习计划
               <br>规划其移民后的人生步骤
               <br>使其能更顺利地融入国外的学习与生活
             </p>
           </div>
+          <script>
+          $(".img-zoom").hover(function(){
+            $(this).animate({
+              "width":"100%",
+              "marginLeft":"0"
+            },100);
+          },function(){
+            $(this).animate({
+              "width":"94%",
+              "marginLeft":"3%"
+            },100);
+          });
+          </script>
         </div>
 
         <div class="col-xs-12 col-sm-12 col-md-3 text-center">
@@ -172,18 +191,61 @@
           </div>
           <div class="col-xs-6  col-sm-6 col-md-3" style="padding-bottom:5px;">
             <style>
-              .img-rela {position:relative;}
-              .img-rela .img-rela-bg {position:absolute;top:0;left:0;bottom:0;right: 0;display: none;background: #333; opacity: 0.5;z-index: 1;}
-              .img-rela .img-rela-font {position:absolute;top:45%;left:0;bottom:0;right: 0;display: none;z-index: 2;text-align: center;color: white;font-size: 18px;}
-              .img-rela:hover .img-rela-bg{display: block;}
-              .img-rela:hover .img-rela-font{display: block;}
+              /*------------------------------------默认样式--------------------------------------------*/
+              .img-rela.anim1 {position:relative;}
+              .img-rela.anim1 .img-rela-bg {position:absolute;top:0;left:0;bottom:0;right: 0;background: #333; opacity: 0.5;z-index: 1;}
+              .img-rela.anim1 .img-rela-font {position:absolute;top:0;left:0;bottom:0;right: 0;z-index: 2;text-align: center;color: white;font-size: 18px;}
+              .img-rela.anim1 .img-rela-bg{display: none;}
+              .img-rela.anim1:hover .img-rela-bg{display: block;}
+              .img-rela.anim1 .img-rela-font{display: block; overflow: hidden;}
+              .img-rela.anim1 .img-rela-font .font-title { width: 92%; line-height: 50px ;text-align: left; padding: 0 4%; display: none;}
+              .img-rela.anim1 .img-rela-font .font-line { display: none;width: 0;height: 2px; background: white; margin: 0 4% 10px;}
+              .img-rela.anim1 .img-rela-font .font-content{display: none;width: 92%; padding: 4%;line-height: 24px;font-size: 12px;text-align: left;  margin-left:100%;}
+              .img-rela.anim1:hover .img-rela-font .font-line { display: block;}
+              .img-rela.anim1:hover .img-rela-font .font-content{display: block;}
+              /*------------------------------------默认样式.end--------------------------------------------*/
+
+              /*------------------------------------声东击西--------------------------------------------*/
+              .img-rela.anim1.rela2 .img-rela-bg{display: none;}
+              .img-rela.anim1.rela2 .img-rela-font{display: none; top:45%; overflow: hidden;}
+              .img-rela.anim1.rela2 .img-rela-font .font-title{display: none; }
+              .img-rela.anim1.rela2:hover .img-rela-bg{display: block;}
+              .img-rela.anim1.rela2:hover .img-rela-font{display: block; overflow: hidden;}
+              .img-rela.anim1.rela2:hover .img-rela-font .font-title{display: block; }
+              /*------------------------------------声东击西.end--------------------------------------------*/
             </style>
-            <div class="img-rela">
+            <div class="img-rela anim1 rela1">
               <%= image_tag("https://ww4.sinaimg.cn/large/006tKfTcgy1fivahpl0gvj30eo0tzq5r.jpg", class: "img-responsive img-center frontpage-img") %>
               <div class="img-rela-bg"></div>
-              <div class="img-rela-font">美国移民</div>
+              <div class="img-rela-font">
+                <div class="font-title">美国移民</div>
+                <hr class="font-line">
+                <div class="font-content">美国移民反对撒发来的急撒开发力度将阿斯科利发动机啊索科洛夫的撒酒疯快乐的撒酒疯扣篮大赛阿警方看到了撒</div>
+              </div>
+              <script>
+                //默认样式浮动事件
+                $(".img-rela.rela1").hover(function(){
+                  var obj =$(this); //保存当前对象
+                  $(obj).find(".font-title").show();  //找到当前对象下的font-title元素显示
+                  $(this).find(".font-line").animate({ //找到当前对象下的font-line元素，并将宽度以300毫秒的速度从默认样式变成92%
+                    'width':"92%"
+                  },300);
+                  $(this).find(".font-content").animate({
+                    'marginLeft':"0"
+                  },300);
+                },function(){
+                  var obj =$(this);
+                  $(this).find(".font-line").animate({
+                    'width':"0"
+                  },100);
+                  $(this).find(".font-content").animate({
+                    'marginLeft':"100%"
+                  },100,function(){ //该动画完成后，将font-title隐藏
+                    $(obj).find(".font-title").hide();
+                  });
+                })
+              </script>
             </div>
-
           </div>
 
           <div class="col-xs-6  col-sm-6 col-md-3" style="padding-bottom:5px;">
@@ -192,10 +254,34 @@
               <div class="img-rela-bg"></div>
               <div class="img-rela-font">色块</div>
             </div>
-            <div class="img-rela" style="margin-top:10px;">
+            <div class="img-rela anim1 rela2" style="margin-top:10px;">
               <%= image_tag("https://ww2.sinaimg.cn/large/006tKfTcgy1fiv8ozzz6aj30mi0txdk9.jpg", class: "img-responsive img-center frontpage-img") %>
               <div class="img-rela-bg"></div>
-              <div class="img-rela-font">加拿大移民</div>
+              <div class="img-rela-font">加拿大移民
+              </div>
+              <script>
+                //
+                $(".img-rela.rela2").hover(function(){  //指定对象的浮动事件
+                  $(".img-rela.rela3 .font-title").show();  //需要显示的对象的font-title元素显示
+                  $(".img-rela.rela3 .img-rela-bg").show();
+                  $(".img-rela.rela3").find(".font-line").show().animate({
+                    'width':"92%"
+                  },300);
+                  $(".img-rela.rela3").find(".font-content").show().animate({
+                    'marginLeft':"0"
+                  },300);
+                },function(){
+                  $(".img-rela.rela3").find(".font-line").animate({
+                    'width':"0"
+                  },100);
+                  $(".img-rela.rela3").find(".font-content").animate({
+                    'marginLeft':"100%"
+                  },100,function(){
+                    $(".img-rela.rela3 .img-rela-bg").hide();
+                    $(".img-rela.rela3 .font-title").hide();
+                  });
+                })
+              </script>
             </div>
 
 
@@ -206,10 +292,14 @@
               <div class="img-rela-bg"></div>
               <div class="img-rela-font">加拿大优势</div>
             </div>
-            <div class="img-rela" style="margin-top:5px;">
+            <div class="img-rela anim1 rela3" style="margin-top:5px;">
               <%= image_tag("https://ww1.sinaimg.cn/large/006tNc79gy1fhtnhwmjwtj30xc0xcqfo.jpg", class: "img-responsive img-center frontpage-img") %>
               <div class="img-rela-bg"></div>
-              <div class="img-rela-font">加拿大移民优势</div>
+              <div class="img-rela-font">
+                <div class="font-title">加拿大移民</div>
+                <hr class="font-line">
+                <div class="font-content">美国移民反对撒发来的急撒开发力度将阿斯科利发动机啊索科洛夫的撒酒疯快乐的撒酒疯扣篮大赛阿警方看到了撒</div>
+              </div>
             </div>
             <div class="img-rela" style="margin-top:5px;">
               <%= image_tag("https://ww2.sinaimg.cn/large/006tNc79gy1fhtoqjxof9j30rr0dw78t.jpg", class: "img-responsive img-center frontpage-img") %>
