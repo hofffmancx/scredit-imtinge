@@ -53,6 +53,7 @@ function browserRedirect() {
         $(".footer-sitelink").hide();
         $(".header-logo-pc").hide();
         $(".topheader").hide();
+        $(".customer-tel").hide();
         $(".wdt100").removeClass("wdt100");
         $(".about-title-e").css("font-size","1.5em");
         $(".fade-carousel").css("height","360px");

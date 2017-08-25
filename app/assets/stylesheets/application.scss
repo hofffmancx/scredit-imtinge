@@ -149,6 +149,16 @@
   width: 150px;
 }
 
+.topheader .col-md-6 {
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+.topheader .col-md-4 {
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
   // 搜索栏设置
   #custom-search-input{
     padding: 1px;
@@ -441,14 +451,14 @@
 
   //”彩蛋“”公告栏样式
   .landing-page-adv {
-    padding-top: 20px;
-    padding-bottom: 2em;
+    padding: 40px 0px;
+    // padding-bottom: 2em;
     background-size: cover;                             //确保图片完全撑开
     background-position: center center;
     background-repeat: no-repeat;
-    background-image: url("https://ww1.sinaimg.cn/large/006tKfTcgy1fhqrylypu6j30rs0ijdi5.jpg");
+    background-image: url("https://i.loli.net/2017/08/25/59a048aded301.png");
     color: #fff;
-    filter:alpha(opacity=80);-moz-opacity:0.8;-khtml-opacity: 0.8; opacity: 0.8;
+
   }
   .landing-page-adv h4{
     margin-top: 30px;
