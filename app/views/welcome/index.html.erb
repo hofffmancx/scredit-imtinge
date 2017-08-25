@@ -55,7 +55,7 @@
 <!-- ↑↑↑ 大图滚动banner 代码块 ↑↑↑ -->
 
 
-<!-- 尚德信服务特点 -->
+<!-- 尚德信世界地图 -->
 <div class="row">
 
   <!-- 公司业务特点 -->
@@ -63,12 +63,15 @@
         <div class="container">
           <div class="row">
               <div class="col-xs-12 col-sm-12 col-md-12">
-                <h3 class="tagline text-center">一站式全方位专业出国服务提供商</h3>
+                <div class="tagline text-center">
+                  <!-- 一站式全方位专业出国服务提供商 -->
+                  <img src="https://i.loli.net/2017/08/25/59a032b0ab329.png" alt="" width="80%">
+                </div>
                 <div class="subtits">
                   我们专为企业家移民后在海外进入华人主流社圈提供平台
                 </div>
                 <div class="text-center">
-                  <%= image_tag("https://i.loli.net/2017/08/04/598424c9ddc13.png",width:"90%",class: "img-center frontpage-img") %>
+                  <%= image_tag("https://i.loli.net/2017/08/25/59a036202e0ef.png",width:"90%",class: "img-center frontpage-img") %>
 
                 </div>
 
@@ -118,34 +121,80 @@
 
         <div class="col-xs-12 col-sm-12 col-md-3 text-center">
           <div class="index-service-imag">
-            <%= image_tag("https://ww3.sinaimg.cn/large/006tNc79gy1fhrp2ntmp2j30i00dg40j.jpg", class: "img-responsive img-center frontpage-img") %>
+            <div class="zoom-box">
+              <%= image_tag("https://ww3.sinaimg.cn/large/006tNc79gy1fhrp2ntmp2j30i00dg40j.jpg", class: "img-zoom img-center frontpage-img") %>
+            </div>
             <p class="subtits">企业家交流平台</p>
               <p class="subspan">为VIP客户及已成功登陆客户
                 <br> 成立旅加、旅美华人沙龙
                 <br>举办各种聚会、晚宴及参观旅游活动
               </p>
           </div>
+          <script>
+          $(".img-zoom").hover(function(){
+            $(this).animate({
+              "width":"100%",
+              "marginLeft":"0"
+            },100);
+          },function(){
+            $(this).animate({
+              "width":"94%",
+              "marginLeft":"3%"
+            },100);
+          });
+          </script>
         </div>
 
         <div class="col-xs-12 col-sm-12 col-md-3 text-center">
           <div class="index-service-imag">
-            <%= image_tag("https://ww4.sinaimg.cn/large/006tNc79gy1fhrp8h9ttbj30b208agm8.jpg", class: " img-responsive img-center frontpage-img") %>
+            <div class="zoom-box">
+              <%= image_tag("https://ww4.sinaimg.cn/large/006tNc79gy1fhrp8h9ttbj30b208agm8.jpg", class: " img-zoom img-center frontpage-img") %>
+            </div>
             <p class="subtits">移民100%成功</p>
             <p class="subspan">100%绝对真实可靠项目
               <br>资深投资背景团队
               <br>帮助您全家迅速获得身份
             </p>
           </div>
+          <script>
+          $(".img-zoom").hover(function(){
+            $(this).animate({
+              "width":"100%",
+              "marginLeft":"0"
+            },100);
+          },function(){
+            $(this).animate({
+              "width":"94%",
+              "marginLeft":"3%"
+            },100);
+          });
+          </script>
         </div>
         <div class="col-xs-12 col-sm-12 col-md-3 text-center">
           <div class="index-service-imag">
-            <%= image_tag("https://ww1.sinaimg.cn/large/006tNc79gy1fhrx1uxfhoj30vu0nwadb.jpg", class: " img-responsive img-center frontpage-img") %>
+            <div class="zoom-box">
+              <%= image_tag("https://ww1.sinaimg.cn/large/006tNc79gy1fhrx1uxfhoj30vu0nwadb.jpg", class: " img-zoom img-center frontpage-img") %>
+            </div>
+
             <p class="subtits">总裁服务</p>
             <p class="subspan">尚德信总裁有着多年的移民经验
               <br>秉承“客户即朋友”的服务理念
               <br>给顾客一个VIP级专属服务
               </p>
           </div>
+          <script>
+          $(".img-zoom").hover(function(){
+            $(this).animate({
+              "width":"100%",
+              "marginLeft":"0"
+            },100);
+          },function(){
+            $(this).animate({
+              "width":"94%",
+              "marginLeft":"3%"
+            },100);
+          });
+          </script>
 
         </div>
      </div>
@@ -164,7 +213,9 @@
       <div class="row">
 
         <div class="col-md-12">
-          <h3 class="tagline text-center">北美移民国家</h3>
+          <div class="tagline text-center">
+            <img src="https://i.loli.net/2017/08/25/59a033876a534.png" alt="" width="60%">
+          </div>
         </div>
 
         <!-- <p  class="titspan text-center">
@@ -324,7 +375,9 @@
       <div class="row">
 
         <div class="col-md-12">
-          <h3 class="tagline text-center">欧洲移民国家</h3>
+          <div class="tagline text-center">
+            <img src="https://i.loli.net/2017/08/25/59a033877ab1b.png" alt="" width="60%">
+          </div>
         </div>
 
         <!-- <p  class="titspan text-center">
@@ -414,7 +467,9 @@
       <div class="row">
 
         <div class="col-md-12">
-          <h3 class="tagline text-center">大洋洲移民国家</h3>
+          <div class="tagline text-center">
+            <img src="https://i.loli.net/2017/08/25/59a033878a0ac.png" alt="" width="60%">
+          </div>
         </div>
 
         <!-- <p  class="titspan text-center">
@@ -501,7 +556,9 @@
       <div class="row">
 
         <div class="col-md-12">
-          <h3 class="tagline text-center">护照／其他移民国家</h3>
+          <div class="tagline text-center">
+            <img src="https://i.loli.net/2017/08/25/59a033879b405.png" alt="" width="60%">
+          </div>
         </div>
 
         <!-- <p  class="titspan text-center">
@@ -584,7 +641,9 @@
   <div class="row landing-page-eva">
     <div class="container">
       <div class="col-md-12">
-        <h3 class="tagline">成功案例 / Successful Case</h1>
+        <div class="tagline text-center">
+          <img src="https://i.loli.net/2017/08/25/59a033879a481.png" alt="" width="60%">
+        </div>
           <div class="col-xs-12 col-sm-12 col-md-6 landing-page-eva-style">
             <div class="col-xs-12 col-sm-12 col-md-3 text-center">
               <div class="" style="width:110px; display: inline-block;">
