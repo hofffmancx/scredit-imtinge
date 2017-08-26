@@ -13,10 +13,13 @@
 //= require jquery
 //= require jquery_ujs
 
-
+//= require bootstrap/alert
+//= require bootstrap/dropdown
 //= require bootstrap-sprockets
 //= require bootstrap/collapse
+
 //= require ckeditor/init
+
 //= require_tree .
 
 
@@ -59,9 +62,10 @@ function browserRedirect() {
         $(".fade-carousel .slides .slide-1").css("height","360px");
         $(".fade-carousel .slides .slide-2").css("height","360px");
         $(".fade-carousel .slides .slide-3").css("height","360px");
-
-    }
-    else {
+        $(".slide-1").css("backgroundImage","url(https://ww1.sinaimg.cn/large/006tKfTcgy1fhuxx13m39j30mf09zach.jpg)");
+        $(".slide-2").css("backgroundImage","url(https://ww1.sinaimg.cn/large/006tKfTcgy1fhuxsi8534j30lm0a00un.jpg)");
+        $(".slide-3").css("backgroundImage","url(https://ww3.sinaimg.cn/large/006tNc79gy1fhrx7nucg2j30qo0am78p.jpg)");
+    } else {
         //pc;
         //alert("pctest");
         // $(".navbar-rwd").removeClass("navbar-rwd");
@@ -71,7 +75,9 @@ function browserRedirect() {
         $(".slide-1").css("height","616px");
         $(".slide-2").css("height","616px");
         $(".slide-3").css("height","616px");
-
+        $(".slide-1").css("backgroundImage","url(https://ww3.sinaimg.cn/large/006tKfTcgy1fhqrkzul02j31hc0itahv.jpg)");
+        $(".slide-2").css("backgroundImage","url(https://ww2.sinaimg.cn/large/006tKfTcgy1fhqreo57adj30q40c3tbd.jpg)");
+        $(".slide-3").css("backgroundImage","url(https://ww3.sinaimg.cn/large/006tNc79gy1fhrx7nucg2j30qo0am78p.jpg)");
     }
 }
 $(document).ready(function(){
