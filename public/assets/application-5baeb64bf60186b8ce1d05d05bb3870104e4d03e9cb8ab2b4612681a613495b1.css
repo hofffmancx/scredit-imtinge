@@ -33,7 +33,29 @@
 /* line 2, /Users/apple/railsproject/sdxin/app/assets/stylesheets/account/orders.scss */
 .account-box {
   margin: 30px auto;
-  padding-left: 70px;
+  padding-left: 20px;
+}
+/* line 4, /Users/apple/railsproject/sdxin/app/assets/stylesheets/articlealls.scss */
+.articleall-block {
+  margin-bottom: 10px;
+  overflow: hidden;
+}
+
+/* line 10, /Users/apple/railsproject/sdxin/app/assets/stylesheets/articlealls.scss */
+.articleall-block-border {
+  margin-bottom: 10px;
+  position: relative;
+  height: 50px;
+  border-bottom: 1px solid #ddd;
+}
+
+/* line 18, /Users/apple/railsproject/sdxin/app/assets/stylesheets/articlealls.scss */
+.articleall-block-title {
+  font-size: 2.0em;
+  position: absolute;
+  height: 50px;
+  overflow: hidden;
+  border-bottom: 2px blue solid;
 }
 /* line 3, /Users/apple/railsproject/sdxin/app/assets/stylesheets/articles.scss */
 .article-all {
@@ -49,47 +71,47 @@
   overflow: hidden;
   display: block;
 }
-/* line 13, /Users/apple/railsproject/sdxin/app/assets/stylesheets/articles.scss */
+/* line 18, /Users/apple/railsproject/sdxin/app/assets/stylesheets/articles.scss */
 .article-index-title a {
   color: #666;
   transition: 0.5s;
 }
-/* line 17, /Users/apple/railsproject/sdxin/app/assets/stylesheets/articles.scss */
+/* line 22, /Users/apple/railsproject/sdxin/app/assets/stylesheets/articles.scss */
 .article-index-title a:hover {
   color: #7f8c8d;
   transition: 0.5s;
   text-decoration: none;
 }
 
-/* line 24, /Users/apple/railsproject/sdxin/app/assets/stylesheets/articles.scss */
+/* line 29, /Users/apple/railsproject/sdxin/app/assets/stylesheets/articles.scss */
 .article-user {
   color: #999;
   margin-top: 70px;
 }
 
-/* line 32, /Users/apple/railsproject/sdxin/app/assets/stylesheets/articles.scss */
+/* line 37, /Users/apple/railsproject/sdxin/app/assets/stylesheets/articles.scss */
 .article-show {
   margin: 30px auto;
 }
 
-/* line 36, /Users/apple/railsproject/sdxin/app/assets/stylesheets/articles.scss */
+/* line 41, /Users/apple/railsproject/sdxin/app/assets/stylesheets/articles.scss */
 .article-show-box {
   margin-bottom: 60px;
 }
 
-/* line 41, /Users/apple/railsproject/sdxin/app/assets/stylesheets/articles.scss */
+/* line 46, /Users/apple/railsproject/sdxin/app/assets/stylesheets/articles.scss */
 .article-title h1 {
   font-size: 2em;
   font-weight: normal;
 }
 
-/* line 47, /Users/apple/railsproject/sdxin/app/assets/stylesheets/articles.scss */
+/* line 52, /Users/apple/railsproject/sdxin/app/assets/stylesheets/articles.scss */
 .article-author {
   margin: 40px auto 60px;
   color: #7f8c8d;
 }
 
-/* line 53, /Users/apple/railsproject/sdxin/app/assets/stylesheets/articles.scss */
+/* line 58, /Users/apple/railsproject/sdxin/app/assets/stylesheets/articles.scss */
 .article-summary p {
   font-size: 0.8em;
   font-weight: normal;
@@ -97,73 +119,73 @@
   line-height: 1.8em;
 }
 
-/* line 61, /Users/apple/railsproject/sdxin/app/assets/stylesheets/articles.scss */
+/* line 66, /Users/apple/railsproject/sdxin/app/assets/stylesheets/articles.scss */
 .article-image {
   margin: 50px auto 30px;
 }
 
-/* line 65, /Users/apple/railsproject/sdxin/app/assets/stylesheets/articles.scss */
+/* line 70, /Users/apple/railsproject/sdxin/app/assets/stylesheets/articles.scss */
 .article-description {
   margin: 30px auto;
   font-size: 1.2em;
   line-height: 1.8em;
   text-align: justify;
 }
-/* line 70, /Users/apple/railsproject/sdxin/app/assets/stylesheets/articles.scss */
+/* line 75, /Users/apple/railsproject/sdxin/app/assets/stylesheets/articles.scss */
 .article-description img {
   max-width: 100%;
   height: auto;
   border-radius: 6px;
 }
 
-/* line 78, /Users/apple/railsproject/sdxin/app/assets/stylesheets/articles.scss */
+/* line 83, /Users/apple/railsproject/sdxin/app/assets/stylesheets/articles.scss */
 .article-review-box {
   font-size: 1.2em;
   line-height: 1.8em;
   list-style: none;
 }
 
-/* line 84, /Users/apple/railsproject/sdxin/app/assets/stylesheets/articles.scss */
+/* line 89, /Users/apple/railsproject/sdxin/app/assets/stylesheets/articles.scss */
 .article-reviews {
   padding: 0 20px;
   text-align: justify;
 }
 
-/* line 89, /Users/apple/railsproject/sdxin/app/assets/stylesheets/articles.scss */
+/* line 94, /Users/apple/railsproject/sdxin/app/assets/stylesheets/articles.scss */
 .article-review-username {
   color: #7f8c8d;
   font-size: 0.8em;
 }
 
-/* line 96, /Users/apple/railsproject/sdxin/app/assets/stylesheets/articles.scss */
+/* line 101, /Users/apple/railsproject/sdxin/app/assets/stylesheets/articles.scss */
 .article-collection {
   margin: 80px auto;
 }
 
-/* line 100, /Users/apple/railsproject/sdxin/app/assets/stylesheets/articles.scss */
+/* line 105, /Users/apple/railsproject/sdxin/app/assets/stylesheets/articles.scss */
 .article-collection-btn {
   padding: 10px;
 }
 
-/* line 107, /Users/apple/railsproject/sdxin/app/assets/stylesheets/articles.scss */
+/* line 112, /Users/apple/railsproject/sdxin/app/assets/stylesheets/articles.scss */
 .article-side-author {
   margin: 25px auto;
   border: 1px #e3e3e3 solid;
   border-radius: 6px;
 }
 
-/* line 113, /Users/apple/railsproject/sdxin/app/assets/stylesheets/articles.scss */
+/* line 118, /Users/apple/railsproject/sdxin/app/assets/stylesheets/articles.scss */
 .article-avatar {
   margin: 20px auto 10px;
 }
 
-/* line 117, /Users/apple/railsproject/sdxin/app/assets/stylesheets/articles.scss */
+/* line 122, /Users/apple/railsproject/sdxin/app/assets/stylesheets/articles.scss */
 .article-username {
   color: #7f8c8d;
   font-size: 1.2em;
 }
 
-/* line 122, /Users/apple/railsproject/sdxin/app/assets/stylesheets/articles.scss */
+/* line 127, /Users/apple/railsproject/sdxin/app/assets/stylesheets/articles.scss */
 .article-author-summary {
   margin: 20px 20px;
   font-size: 1em;
@@ -173,24 +195,75 @@
   text-align: justify;
 }
 
-/* line 131, /Users/apple/railsproject/sdxin/app/assets/stylesheets/articles.scss */
+/* line 136, /Users/apple/railsproject/sdxin/app/assets/stylesheets/articles.scss */
 .article-author-title-list {
-  margin: 20px 20px;
+  margin: 20px 0px;
+  padding: 0px 10px;
   color: #7f8c8d;
   font-size: 1.2em;
   line-height: 1.8em;
   list-style: none;
 }
 
-/* line 139, /Users/apple/railsproject/sdxin/app/assets/stylesheets/articles.scss */
+/* line 145, /Users/apple/railsproject/sdxin/app/assets/stylesheets/articles.scss */
 .article-author-title-list-time {
   font-size: 0.6em;
   color: #7f8c8d;
 }
 
-/* line 144, /Users/apple/railsproject/sdxin/app/assets/stylesheets/articles.scss */
+/* line 150, /Users/apple/railsproject/sdxin/app/assets/stylesheets/articles.scss */
 .article-show-hot {
   height: 65px;
+}
+
+/* line 154, /Users/apple/railsproject/sdxin/app/assets/stylesheets/articles.scss */
+.article-author-title-list .article-show-hot .col-xs-4,
+.article-author-title-list .article-show-hot .col-xs-8 {
+  padding-right: 7px;
+}
+
+/* line 161, /Users/apple/railsproject/sdxin/app/assets/stylesheets/articles.scss */
+.article-show-sidbar-title {
+  position: absolute;
+  height: 40px;
+  overflow: hidden;
+  border-bottom: 2px blue solid;
+  color: #666;
+}
+
+/* line 169, /Users/apple/railsproject/sdxin/app/assets/stylesheets/articles.scss */
+.article-show-sidbar-border {
+  position: relative;
+  height: 50px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #ddd;
+}
+
+/* line 177, /Users/apple/railsproject/sdxin/app/assets/stylesheets/articles.scss */
+.article-show-sidbar-activity {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: black;
+  margin: 0px 10px;
+  padding: 10px 15px;
+  color: white;
+  background: rgba(2, 2, 2, 0.6);
+  font-weight: 400;
+  font-size: 0.6em;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* line 193, /Users/apple/railsproject/sdxin/app/assets/stylesheets/articles.scss */
+.article-show-sidbar-text {
+  font-size: 14px;
+  height: 40px;
+  line-height: 20px;
+  overflow: hidden;
+  display: block;
 }
 /* line 2, /Users/apple/railsproject/sdxin/app/assets/stylesheets/carts.scss */
 .shoping-cart {
@@ -242,156 +315,6 @@
 /* line 47, /Users/apple/railsproject/sdxin/app/assets/stylesheets/carts.scss */
 .order-form-group {
   margin: 30px auto 60px;
-}
-/* line 2, /Users/apple/railsproject/sdxin/app/assets/stylesheets/clubs.scss */
-.club-box {
-  margin: 30px auto;
-  font-size: 1.2em;
-}
-
-/* line 9, /Users/apple/railsproject/sdxin/app/assets/stylesheets/clubs.scss */
-.club-index-box-main {
-  background-color: #f5f5f5;
-  margin: 20px auto 0;
-  padding: 15px 30px;
-}
-
-/* line 16, /Users/apple/railsproject/sdxin/app/assets/stylesheets/clubs.scss */
-.club-index-up-btn {
-  margin: 20px auto 0;
-}
-
-/* line 21, /Users/apple/railsproject/sdxin/app/assets/stylesheets/clubs.scss */
-.club-user-avatar {
-  float: left;
-}
-
-/* line 25, /Users/apple/railsproject/sdxin/app/assets/stylesheets/clubs.scss */
-.club-user-name {
-  margin-left: 15px;
-  float: left;
-}
-/* line 28, /Users/apple/railsproject/sdxin/app/assets/stylesheets/clubs.scss */
-.club-user-name p {
-  font-size: 0.7em;
-  color: #999;
-}
-/* line 31, /Users/apple/railsproject/sdxin/app/assets/stylesheets/clubs.scss */
-.club-user-name p strong {
-  font-size: 1.5em;
-  color: #7f8c8d;
-}
-
-/* line 38, /Users/apple/railsproject/sdxin/app/assets/stylesheets/clubs.scss */
-.club-title {
-  margin: -20px 10px 0;
-}
-/* line 40, /Users/apple/railsproject/sdxin/app/assets/stylesheets/clubs.scss */
-.club-title a {
-  font-size: 0.6em;
-  color: #7f8c8d;
-}
-
-/* line 46, /Users/apple/railsproject/sdxin/app/assets/stylesheets/clubs.scss */
-.club-description {
-  margin: auto 10px;
-  line-height: 1.8em;
-  text-align: justify;
-}
-/* line 50, /Users/apple/railsproject/sdxin/app/assets/stylesheets/clubs.scss */
-.club-description img {
-  max-width: 100%;
-  height: auto;
-  border-radius: 6px;
-}
-
-/* line 57, /Users/apple/railsproject/sdxin/app/assets/stylesheets/clubs.scss */
-.club-index-box-review {
-  background-color: #E5E5E5;
-  padding: 15px 30px;
-}
-
-/* line 62, /Users/apple/railsproject/sdxin/app/assets/stylesheets/clubs.scss */
-.club-review-user-avatar {
-  margin-left: 30px;
-  float: left;
-}
-
-/* line 71, /Users/apple/railsproject/sdxin/app/assets/stylesheets/clubs.scss */
-.club-index-box-side {
-  margin: 20px auto 0;
-}
-
-/* line 75, /Users/apple/railsproject/sdxin/app/assets/stylesheets/clubs.scss */
-.club-index-box-side-user {
-  padding: 15px 30px;
-  border: 1px #e3e3e3 solid;
-  border-radius: 6px;
-}
-
-/* line 81, /Users/apple/railsproject/sdxin/app/assets/stylesheets/clubs.scss */
-.club-index-box-side-avatar {
-  margin: 20px auto;
-}
-
-/* line 85, /Users/apple/railsproject/sdxin/app/assets/stylesheets/clubs.scss */
-.club-index-box-side-adv {
-  margin: 10px auto;
-}
-/* line 87, /Users/apple/railsproject/sdxin/app/assets/stylesheets/clubs.scss */
-.club-index-box-side-adv img {
-  max-width: 100%;
-  height: auto;
-}
-
-/* line 92, /Users/apple/railsproject/sdxin/app/assets/stylesheets/clubs.scss */
-.club-index-box-side-list {
-  margin-top: 30px;
-  color: #7f8c8d;
-  font-size: 1.2em;
-  line-height: 1.8em;
-}
-
-/* line 99, /Users/apple/railsproject/sdxin/app/assets/stylesheets/clubs.scss */
-.club-index-box-side-list-hot {
-  font-size: 0.8em;
-  color: #7f8c8d;
-}
-
-/* line 106, /Users/apple/railsproject/sdxin/app/assets/stylesheets/clubs.scss */
-.club-show-box {
-  font-size: 1.2em;
-  background-color: #f5f5f5;
-  margin: 20px auto 0;
-  padding: 0 140px;
-}
-
-/* line 114, /Users/apple/railsproject/sdxin/app/assets/stylesheets/clubs.scss */
-.club-show-box-review {
-  background-color: #E5E5E5;
-  padding: 15px 170px;
-  margin: auto -140px;
-}
-
-/* line 122, /Users/apple/railsproject/sdxin/app/assets/stylesheets/clubs.scss */
-.club-user-summary {
-  margin: 20px auto 40px;
-  color: #7f8c8d;
-  line-height: 1.8em;
-}
-
-/* line 128, /Users/apple/railsproject/sdxin/app/assets/stylesheets/clubs.scss */
-.club-user-box {
-  border: 1px solid #e3e3e3;
-  border-top: none;
-  padding: 2em 1.2em;
-  letter-spacing: 0.1em;
-  line-height: 1.6em;
-}
-/* line 134, /Users/apple/railsproject/sdxin/app/assets/stylesheets/clubs.scss */
-.club-user-box img {
-  max-width: 100%;
-  height: auto;
 }
 /* line 2, /Users/apple/railsproject/sdxin/app/assets/stylesheets/courses.scss */
 .course-list-style {
@@ -471,43 +394,55 @@
 .product-description {
   margin: 1.5em auto 2em;
   line-height: 1.6em;
+  height: 9.6em;
+  overflow: hidden;
+  display: block;
 }
 
-/* line 21, /Users/apple/railsproject/sdxin/app/assets/stylesheets/products.scss */
+/* line 23, /Users/apple/railsproject/sdxin/app/assets/stylesheets/products.scss */
+.project-description {
+  margin: 1.5em auto 2em;
+  line-height: 1.6em;
+  height: 6.4em;
+  overflow: hidden;
+  display: block;
+}
+
+/* line 32, /Users/apple/railsproject/sdxin/app/assets/stylesheets/products.scss */
 .product-price-bgcolor {
   background-color: #f5f5f5;
   padding: 1.5em 1em;
   margin-bottom: 1em;
 }
 
-/* line 26, /Users/apple/railsproject/sdxin/app/assets/stylesheets/products.scss */
+/* line 37, /Users/apple/railsproject/sdxin/app/assets/stylesheets/products.scss */
 .product-price {
   font-size: 3em;
   color: #7f8c8d;
   font-weight: lighter;
 }
 
-/* line 33, /Users/apple/railsproject/sdxin/app/assets/stylesheets/products.scss */
+/* line 44, /Users/apple/railsproject/sdxin/app/assets/stylesheets/products.scss */
 .product-quantity {
   margin: 1.5em auto;
 }
 
-/* line 38, /Users/apple/railsproject/sdxin/app/assets/stylesheets/products.scss */
+/* line 49, /Users/apple/railsproject/sdxin/app/assets/stylesheets/products.scss */
 .add-to-cart-buttom {
   margin: 3em auto 1em;
 }
 
-/* line 43, /Users/apple/railsproject/sdxin/app/assets/stylesheets/products.scss */
+/* line 54, /Users/apple/railsproject/sdxin/app/assets/stylesheets/products.scss */
 .product-collection {
   line-height: 3em;
 }
 
-/* line 48, /Users/apple/railsproject/sdxin/app/assets/stylesheets/products.scss */
+/* line 59, /Users/apple/railsproject/sdxin/app/assets/stylesheets/products.scss */
 .product-particulars {
   margin: 1.1em 0 3em;
 }
 
-/* line 51, /Users/apple/railsproject/sdxin/app/assets/stylesheets/products.scss */
+/* line 62, /Users/apple/railsproject/sdxin/app/assets/stylesheets/products.scss */
 .product-particulars-box {
   border: 1px solid #e3e3e3;
   border-top: none;
@@ -516,55 +451,55 @@
   text-align: center;
   line-height: 1.6em;
 }
-/* line 58, /Users/apple/railsproject/sdxin/app/assets/stylesheets/products.scss */
+/* line 69, /Users/apple/railsproject/sdxin/app/assets/stylesheets/products.scss */
 .product-particulars-box img {
   max-width: 100%;
   height: auto;
 }
 
-/* line 64, /Users/apple/railsproject/sdxin/app/assets/stylesheets/products.scss */
+/* line 75, /Users/apple/railsproject/sdxin/app/assets/stylesheets/products.scss */
 .review-comment-form {
   text-align: left;
   padding: 2em 2em;
 }
 
-/* line 68, /Users/apple/railsproject/sdxin/app/assets/stylesheets/products.scss */
+/* line 79, /Users/apple/railsproject/sdxin/app/assets/stylesheets/products.scss */
 .review-comment-button {
   text-align: left;
   padding: 0 2em;
   margin-top: -2em;
 }
 
-/* line 73, /Users/apple/railsproject/sdxin/app/assets/stylesheets/products.scss */
+/* line 84, /Users/apple/railsproject/sdxin/app/assets/stylesheets/products.scss */
 .reviews {
   text-align: left;
 }
-/* line 75, /Users/apple/railsproject/sdxin/app/assets/stylesheets/products.scss */
+/* line 86, /Users/apple/railsproject/sdxin/app/assets/stylesheets/products.scss */
 .reviews li {
   list-style: none;
 }
 
-/* line 79, /Users/apple/railsproject/sdxin/app/assets/stylesheets/products.scss */
+/* line 90, /Users/apple/railsproject/sdxin/app/assets/stylesheets/products.scss */
 .review-user-email {
   font-weight: bold;
 }
 
-/* line 82, /Users/apple/railsproject/sdxin/app/assets/stylesheets/products.scss */
+/* line 93, /Users/apple/railsproject/sdxin/app/assets/stylesheets/products.scss */
 .review-comment {
   margin: 1em auto;
 }
 
-/* line 85, /Users/apple/railsproject/sdxin/app/assets/stylesheets/products.scss */
+/* line 96, /Users/apple/railsproject/sdxin/app/assets/stylesheets/products.scss */
 .review-hr {
   padding: 0 3em;
 }
 
-/* line 88, /Users/apple/railsproject/sdxin/app/assets/stylesheets/products.scss */
+/* line 99, /Users/apple/railsproject/sdxin/app/assets/stylesheets/products.scss */
 .product-review-user-avatar {
   float: left;
 }
 
-/* line 93, /Users/apple/railsproject/sdxin/app/assets/stylesheets/products.scss */
+/* line 104, /Users/apple/railsproject/sdxin/app/assets/stylesheets/products.scss */
 .product-recommend {
   background-color: #f5f5f5;
   border-radius: 4px;
@@ -574,34 +509,34 @@
   text-align: justify;
 }
 
-/* line 103, /Users/apple/railsproject/sdxin/app/assets/stylesheets/products.scss */
+/* line 114, /Users/apple/railsproject/sdxin/app/assets/stylesheets/products.scss */
 .course-box {
   margin: 20px auto;
 }
 
-/* line 106, /Users/apple/railsproject/sdxin/app/assets/stylesheets/products.scss */
+/* line 117, /Users/apple/railsproject/sdxin/app/assets/stylesheets/products.scss */
 .course-particulars {
   margin-top: 40px;
   letter-spacing: 0.1em;
   line-height: 1.6em;
 }
-/* line 110, /Users/apple/railsproject/sdxin/app/assets/stylesheets/products.scss */
+/* line 121, /Users/apple/railsproject/sdxin/app/assets/stylesheets/products.scss */
 .course-particulars img {
   max-width: 100%;
   height: auto;
 }
 
-/* line 116, /Users/apple/railsproject/sdxin/app/assets/stylesheets/products.scss */
+/* line 127, /Users/apple/railsproject/sdxin/app/assets/stylesheets/products.scss */
 .course-author-img {
   margin: 30px auto;
 }
 
-/* line 119, /Users/apple/railsproject/sdxin/app/assets/stylesheets/products.scss */
+/* line 130, /Users/apple/railsproject/sdxin/app/assets/stylesheets/products.scss */
 .course-author-name {
   margin: 20px auto;
 }
 
-/* line 124, /Users/apple/railsproject/sdxin/app/assets/stylesheets/products.scss */
+/* line 135, /Users/apple/railsproject/sdxin/app/assets/stylesheets/products.scss */
 .course-price {
   margin: 20px auto;
   background-color: #f5f5f5;
@@ -609,6 +544,74 @@
   color: #7f8c8d;
   font-weight: lighter;
   margin-bottom: 1em;
+}
+
+/* line 144, /Users/apple/railsproject/sdxin/app/assets/stylesheets/products.scss */
+.project-list-title {
+  position: relative;
+  background-color: #eee;
+  padding: 10px 14px 26px 14px;
+  font-size: 16px;
+  line-height: 20px;
+  height: 20px;
+  overflow: hidden;
+  display: block;
+}
+
+/* line 149, /Users/apple/railsproject/sdxin/app/assets/stylesheets/products.scss */
+.project-list-subtits {
+  color: #7f8c8d;
+  background-color: #eee;
+  padding-left: 14px;
+  padding-right: 14px;
+  padding-bottom: 10px;
+  font-size: 14px;
+  line-height: 18px;
+  height: 36px;
+  overflow: hidden;
+  display: block;
+}
+
+/* line 153, /Users/apple/railsproject/sdxin/app/assets/stylesheets/products.scss */
+.project-list-titile-ico {
+  position: absolute;
+  right: 14px;
+  top: 10px;
+  bottom: 26px;
+  height: 20px;
+  width: 5px;
+  background-color: #178df2;
+}
+
+/* line 157, /Users/apple/railsproject/sdxin/app/assets/stylesheets/products.scss */
+.project-list-position {
+  padding-left: 14px;
+  line-height: 40px;
+  background-color: #f3f7fb;
+  font-size: 14px;
+}
+
+/* line 162, /Users/apple/railsproject/sdxin/app/assets/stylesheets/products.scss */
+.project-list-bar {
+  margin: 10px 0;
+  height: 40px;
+  background-color: #f1f1f1;
+  margin: 0 15px;
+  font-size: 14px;
+  position: relative;
+}
+
+/* line 166, /Users/apple/railsproject/sdxin/app/assets/stylesheets/products.scss */
+.project-list-bar-title {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  line-height: 40px;
+  width: 84px;
+  background-color: #178df2;
+  font-size: 14px;
+  color: white;
 }
 @charset "UTF-8";
 /*
@@ -756,6 +759,19 @@
   .hero h3 {
     font-size: 1.2em;
   }
+}
+/*---- 首页服务特色图片宽度 --------*/
+/* line 137, /Users/apple/railsproject/sdxin/app/assets/stylesheets/welcome.scss */
+.index-service-imag {
+  width: 280px;
+  display: inline-block;
+}
+
+/*---- 首页美国教育图片宽度 --------*/
+/* line 145, /Users/apple/railsproject/sdxin/app/assets/stylesheets/welcome.scss */
+.index-edu-imag {
+  width: 140px;
+  display: inline-block;
 }
 @charset "UTF-8";
 /*
@@ -2538,7 +2554,7 @@ img {
 /* line 81, /Users/apple/.rvm/gems/ruby-2.3.1/gems/bootstrap-sass-3.3.7/assets/stylesheets/bootstrap/_scaffolding.scss */
 .img-responsive {
   display: block;
-  width: 100%;
+  max-width: 100%;
   height: auto;
 }
 
@@ -13471,7 +13487,6 @@ body {
   display: flex;
   flex-direction: column;
   font-family: 'Noto Sans SC', sans-serif;
-  padding-top: 50px;
   color: #666;
   font-size: 1.2em;
 }
@@ -13505,35 +13520,126 @@ body a:hover {
 }
 
 /* line 65, /Users/apple/railsproject/sdxin/app/assets/stylesheets/application.scss */
+.navbar {
+  margin-bottom: 0px;
+}
+
+/* line 68, /Users/apple/railsproject/sdxin/app/assets/stylesheets/application.scss */
+.navbar-header .navbar-brand {
+  height: auto;
+}
+
+/* line 72, /Users/apple/railsproject/sdxin/app/assets/stylesheets/application.scss */
+.navbar-header .navbar-toggle {
+  margin-top: 18px;
+}
+
+/* line 76, /Users/apple/railsproject/sdxin/app/assets/stylesheets/application.scss */
+.navbar-style .navbar-nav > li > a {
+  line-height: 30px;
+}
+
+/* line 80, /Users/apple/railsproject/sdxin/app/assets/stylesheets/application.scss */
 .navbar-style {
-  background: #f5f5f5;
+  background: #323242;
   border-color: transparent;
 }
 
-/* line 69, /Users/apple/railsproject/sdxin/app/assets/stylesheets/application.scss */
+/* line 85, /Users/apple/railsproject/sdxin/app/assets/stylesheets/application.scss */
 .navbar-brand {
   letter-spacing: 0.1em;
   font-weight: lighter;
 }
 
-/* line 73, /Users/apple/railsproject/sdxin/app/assets/stylesheets/application.scss */
+/* line 90, /Users/apple/railsproject/sdxin/app/assets/stylesheets/application.scss */
+.navbar-brand > img {
+  display: inline-block;
+  margin-right: 10px;
+  height: 48px;
+}
+
+/* line 97, /Users/apple/railsproject/sdxin/app/assets/stylesheets/application.scss */
 .li-style {
   color: #666;
   font-size: 0.8em;
 }
-/* line 76, /Users/apple/railsproject/sdxin/app/assets/stylesheets/application.scss */
+/* line 100, /Users/apple/railsproject/sdxin/app/assets/stylesheets/application.scss */
 .li-style a {
   color: #666;
   transition: 0.5s;
 }
-/* line 80, /Users/apple/railsproject/sdxin/app/assets/stylesheets/application.scss */
+/* line 104, /Users/apple/railsproject/sdxin/app/assets/stylesheets/application.scss */
 .li-style a:hover {
   color: #7f8c8d;
   transition: 0.5s;
   text-decoration: none;
 }
 
-/* line 88, /Users/apple/railsproject/sdxin/app/assets/stylesheets/application.scss */
+/* line 111, /Users/apple/railsproject/sdxin/app/assets/stylesheets/application.scss */
+.navbar-default .navbar-nav > li > a {
+  color: #ffffff;
+}
+
+/* line 115, /Users/apple/railsproject/sdxin/app/assets/stylesheets/application.scss */
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus {
+  color: #ffffff;
+  background-color: #216efe;
+}
+
+/* line 120, /Users/apple/railsproject/sdxin/app/assets/stylesheets/application.scss */
+.navbar-default .navbar-nav > .active > a,
+.navbar-default .navbar-nav > .active > a:hover,
+.navbar-default .navbar-nav > .active > a:focus {
+  color: #FF6F00;
+  background-color: #216efe;
+}
+
+/* line 127, /Users/apple/railsproject/sdxin/app/assets/stylesheets/application.scss */
+.navbar-default .navbar-nav > .open > a,
+.navbar-default .navbar-nav > .open > a:focus,
+.navbar-default .navbar-nav > .open > a:hover {
+  background-color: #216efe;
+  color: #ffffff;
+}
+
+/* line 134, /Users/apple/railsproject/sdxin/app/assets/stylesheets/application.scss */
+.navbar-default .dropdown-menu {
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
+
+/* line 138, /Users/apple/railsproject/sdxin/app/assets/stylesheets/application.scss */
+.navbar-default .dropdown-menu > li > a {
+  padding: 10px 20px;
+  font-size: 14px;
+}
+
+/* line 143, /Users/apple/railsproject/sdxin/app/assets/stylesheets/application.scss */
+.navbar-default .dropdown-menu > li > a:hover, .dropdown-menu > li > a:focus {
+  text-decoration: none;
+  color: #ffffff;
+  background-color: #216efe;
+}
+
+/* line 149, /Users/apple/railsproject/sdxin/app/assets/stylesheets/application.scss */
+.wdt100 {
+  width: 150px;
+}
+
+/* line 153, /Users/apple/railsproject/sdxin/app/assets/stylesheets/application.scss */
+.topheader .col-md-6 {
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+/* line 158, /Users/apple/railsproject/sdxin/app/assets/stylesheets/application.scss */
+.topheader .col-md-4 {
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+/* line 164, /Users/apple/railsproject/sdxin/app/assets/stylesheets/application.scss */
 #custom-search-input {
   padding: 1px;
   border: solid 1px #E4E4E4;
@@ -13541,13 +13647,13 @@ body a:hover {
   background-color: #fff;
 }
 
-/* line 95, /Users/apple/railsproject/sdxin/app/assets/stylesheets/application.scss */
+/* line 171, /Users/apple/railsproject/sdxin/app/assets/stylesheets/application.scss */
 #custom-search-input input {
   border: 0;
   box-shadow: none;
 }
 
-/* line 100, /Users/apple/railsproject/sdxin/app/assets/stylesheets/application.scss */
+/* line 176, /Users/apple/railsproject/sdxin/app/assets/stylesheets/application.scss */
 #custom-search-input button {
   margin: 2px 0;
   background: none;
@@ -13558,20 +13664,20 @@ body a:hover {
   border-left: solid 1px #ccc;
 }
 
-/* line 110, /Users/apple/railsproject/sdxin/app/assets/stylesheets/application.scss */
+/* line 186, /Users/apple/railsproject/sdxin/app/assets/stylesheets/application.scss */
 #custom-search-input button:hover {
   border: 0;
   box-shadow: none;
   border-left: solid 1px #ccc;
 }
 
-/* line 116, /Users/apple/railsproject/sdxin/app/assets/stylesheets/application.scss */
+/* line 192, /Users/apple/railsproject/sdxin/app/assets/stylesheets/application.scss */
 #custom-search-input .glyphicon-search {
   font-size: 15px;
 }
 
-/* line 121, /Users/apple/railsproject/sdxin/app/assets/stylesheets/application.scss */
-.landing-page-mid {
+/* line 197, /Users/apple/railsproject/sdxin/app/assets/stylesheets/application.scss */
+.landing-page-topic {
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
@@ -13579,17 +13685,25 @@ body a:hover {
   padding-bottom: 30px;
 }
 
-/* line 130, /Users/apple/railsproject/sdxin/app/assets/stylesheets/application.scss */
-.landing-page-mid .tagline {
+/* line 206, /Users/apple/railsproject/sdxin/app/assets/stylesheets/application.scss */
+.landing-page-topic .tagline {
   text-align: center;
   color: #666;
-  font-size: 1.6em;
+  font-size: 2em;
   margin-top: 2.8em;
-  margin-bottom: 2em;
 }
 
-/* line 138, /Users/apple/railsproject/sdxin/app/assets/stylesheets/application.scss */
-.landing-page-mid .tagp {
+/* line 215, /Users/apple/railsproject/sdxin/app/assets/stylesheets/application.scss */
+.landing-page-topic .subtits {
+  text-align: center;
+  color: #666;
+  font-size: 16px;
+  margin-top: 25px;
+  margin-bottom: 40px;
+}
+
+/* line 223, /Users/apple/railsproject/sdxin/app/assets/stylesheets/application.scss */
+.landing-page-topic .tagp {
   text-align: center;
   color: #666;
   font-size: 1.3em;
@@ -13597,7 +13711,42 @@ body a:hover {
   letter-spacing: 0.18em;
 }
 
-/* line 148, /Users/apple/railsproject/sdxin/app/assets/stylesheets/application.scss */
+/* line 233, /Users/apple/railsproject/sdxin/app/assets/stylesheets/application.scss */
+.landing-page-topic .col-xs-6.col-sm-6.col-md-3 {
+  position: relative;
+  min-height: 1px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+/* line 243, /Users/apple/railsproject/sdxin/app/assets/stylesheets/application.scss */
+.landing-page-mid {
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  padding-bottom: 30px;
+}
+
+/* line 252, /Users/apple/railsproject/sdxin/app/assets/stylesheets/application.scss */
+.landing-page-mid .tagline {
+  text-align: center;
+  color: #666;
+  font-size: 2em;
+  margin-top: 2.8em;
+  margin-bottom: 1em;
+}
+
+/* line 260, /Users/apple/railsproject/sdxin/app/assets/stylesheets/application.scss */
+.landing-page-mid .tagp {
+  text-align: center;
+  color: #666;
+  font-size: 1.3em;
+  line-height: 2.5em;
+  letter-spacing: 0.18em;
+  margin-bottom: 3em;
+}
+
+/* line 271, /Users/apple/railsproject/sdxin/app/assets/stylesheets/application.scss */
 .landing-page-mid .col-xs-6.col-sm-6.col-md-3 {
   position: relative;
   min-height: 1px;
@@ -13605,38 +13754,33 @@ body a:hover {
   padding-right: 5px;
 }
 
-/* line 157, /Users/apple/railsproject/sdxin/app/assets/stylesheets/application.scss */
-.landing-page-svadg {
-  background-color: #f1f1f1;
-}
-
-/* line 161, /Users/apple/railsproject/sdxin/app/assets/stylesheets/application.scss */
+/* line 284, /Users/apple/railsproject/sdxin/app/assets/stylesheets/application.scss */
 .landing-page-svadg .tagline {
   text-align: center;
   color: #666;
-  font-size: 1.6em;
+  font-size: 2em;
   margin-top: 2.8em;
   margin-bottom: 2em;
 }
 
-/* line 170, /Users/apple/railsproject/sdxin/app/assets/stylesheets/application.scss */
+/* line 293, /Users/apple/railsproject/sdxin/app/assets/stylesheets/application.scss */
 .landing-page-svadg .subtits {
   text-align: center;
-  color: #999;
+  color: black;
   letter-spacing: 0.1em;
   font-size: 1.3em;
-  margin-top: 0.5em;
+  margin-top: 1.5em;
 }
 
-/* line 179, /Users/apple/railsproject/sdxin/app/assets/stylesheets/application.scss */
+/* line 302, /Users/apple/railsproject/sdxin/app/assets/stylesheets/application.scss */
 .landing-page-svadg .subspan {
   text-align: center;
   color: #7f8c8d;
   letter-spacing: 0.1em;
-  margin-bottom: 3.8em;
+  margin: 1em 0 6.8em;
 }
 
-/* line 188, /Users/apple/railsproject/sdxin/app/assets/stylesheets/application.scss */
+/* line 311, /Users/apple/railsproject/sdxin/app/assets/stylesheets/application.scss */
 .landing-page-svadg .titspan {
   text-align: center;
   color: #666;
@@ -13645,31 +13789,30 @@ body a:hover {
   letter-spacing: 0.18em;
 }
 
-/* line 197, /Users/apple/railsproject/sdxin/app/assets/stylesheets/application.scss */
+/* line 320, /Users/apple/railsproject/sdxin/app/assets/stylesheets/application.scss */
 .landing-page-svc {
   padding-bottom: 30px;
+  background-color: #f1f1f1;
 }
 
-/* line 201, /Users/apple/railsproject/sdxin/app/assets/stylesheets/application.scss */
+/* line 325, /Users/apple/railsproject/sdxin/app/assets/stylesheets/application.scss */
 .landing-page-svc .tagline {
   text-align: center;
   color: #666;
-  font-size: 1.6em;
+  font-size: 2em;
   margin-top: 2.8em;
-  margin-bottom: 2em;
 }
 
-/* line 210, /Users/apple/railsproject/sdxin/app/assets/stylesheets/application.scss */
+/* line 334, /Users/apple/railsproject/sdxin/app/assets/stylesheets/application.scss */
 .landing-page-svc .subtits {
   text-align: center;
-  color: #7f8c8d;
-  letter-spacing: 0.1em;
+  color: black;
   font-size: 1.3em;
-  margin-top: 0.5em;
+  margin-top: 1.8em;
   margin-bottom: 3.8em;
 }
 
-/* line 219, /Users/apple/railsproject/sdxin/app/assets/stylesheets/application.scss */
+/* line 343, /Users/apple/railsproject/sdxin/app/assets/stylesheets/application.scss */
 .landing-page-svc .subspan {
   text-align: center;
   color: #7f8c8d;
@@ -13679,7 +13822,7 @@ body a:hover {
   /* margin-bottom: 3.8em; */
 }
 
-/* line 228, /Users/apple/railsproject/sdxin/app/assets/stylesheets/application.scss */
+/* line 352, /Users/apple/railsproject/sdxin/app/assets/stylesheets/application.scss */
 .landing-page-svc .titspan {
   text-align: center;
   color: #666;
@@ -13688,168 +13831,164 @@ body a:hover {
   letter-spacing: 0.18em;
 }
 
-/* line 236, /Users/apple/railsproject/sdxin/app/assets/stylesheets/application.scss */
+/* line 360, /Users/apple/railsproject/sdxin/app/assets/stylesheets/application.scss */
 .landing-page-svc .tagp {
   text-align: center;
   color: #666;
   font-size: 1.3em;
   line-height: 2.5em;
-  letter-spacing: 0.18em;
+  margin-bottom: 3em;
 }
 
-/* line 246, /Users/apple/railsproject/sdxin/app/assets/stylesheets/application.scss */
+/* line 371, /Users/apple/railsproject/sdxin/app/assets/stylesheets/application.scss */
 .topspan {
   margin-top: 2em;
 }
 
-/* line 249, /Users/apple/railsproject/sdxin/app/assets/stylesheets/application.scss */
+/* line 374, /Users/apple/railsproject/sdxin/app/assets/stylesheets/application.scss */
 .titspan {
   font-weight: 400;
 }
 
-/* line 252, /Users/apple/railsproject/sdxin/app/assets/stylesheets/application.scss */
+/* line 377, /Users/apple/railsproject/sdxin/app/assets/stylesheets/application.scss */
 .morespan {
   margin: 2em auto;
 }
 
-/* line 257, /Users/apple/railsproject/sdxin/app/assets/stylesheets/application.scss */
+/* line 382, /Users/apple/railsproject/sdxin/app/assets/stylesheets/application.scss */
 .product-course-box-1 {
   background-color: #7f8c8d;
   padding: 30px 30px;
   color: #fff;
   text-align: center;
 }
-/* line 262, /Users/apple/railsproject/sdxin/app/assets/stylesheets/application.scss */
+/* line 387, /Users/apple/railsproject/sdxin/app/assets/stylesheets/application.scss */
 .product-course-box-1 a {
   color: #fff;
 }
-/* line 265, /Users/apple/railsproject/sdxin/app/assets/stylesheets/application.scss */
+/* line 390, /Users/apple/railsproject/sdxin/app/assets/stylesheets/application.scss */
 .product-course-box-1 a:hover {
   color: #f5f5f5;
 }
 
-/* line 269, /Users/apple/railsproject/sdxin/app/assets/stylesheets/application.scss */
+/* line 394, /Users/apple/railsproject/sdxin/app/assets/stylesheets/application.scss */
 .product-course-box-2 {
   background-color: #8d827f;
   padding: 30px 30px;
   color: #fff;
   text-align: center;
 }
-/* line 274, /Users/apple/railsproject/sdxin/app/assets/stylesheets/application.scss */
+/* line 399, /Users/apple/railsproject/sdxin/app/assets/stylesheets/application.scss */
 .product-course-box-2 a {
   color: #fff;
 }
-/* line 277, /Users/apple/railsproject/sdxin/app/assets/stylesheets/application.scss */
+/* line 402, /Users/apple/railsproject/sdxin/app/assets/stylesheets/application.scss */
 .product-course-box-2 a:hover {
   color: #f5f5f5;
 }
 
-/* line 281, /Users/apple/railsproject/sdxin/app/assets/stylesheets/application.scss */
+/* line 406, /Users/apple/railsproject/sdxin/app/assets/stylesheets/application.scss */
 .product-course-box-3 {
   background-color: #8d7f85;
   padding: 30px 30px;
   color: #fff;
   text-align: center;
 }
-/* line 286, /Users/apple/railsproject/sdxin/app/assets/stylesheets/application.scss */
+/* line 411, /Users/apple/railsproject/sdxin/app/assets/stylesheets/application.scss */
 .product-course-box-3 a {
   color: #fff;
 }
-/* line 289, /Users/apple/railsproject/sdxin/app/assets/stylesheets/application.scss */
+/* line 414, /Users/apple/railsproject/sdxin/app/assets/stylesheets/application.scss */
 .product-course-box-3 a:hover {
   color: #f5f5f5;
 }
 
-/* line 295, /Users/apple/railsproject/sdxin/app/assets/stylesheets/application.scss */
+/* line 420, /Users/apple/railsproject/sdxin/app/assets/stylesheets/application.scss */
 .product-list-style {
-  margin: 3em auto 2em;
+  margin: 1.5em auto 1em;
 }
 
-/* line 298, /Users/apple/railsproject/sdxin/app/assets/stylesheets/application.scss */
+/* line 423, /Users/apple/railsproject/sdxin/app/assets/stylesheets/application.scss */
 .product-list-style-img {
   margin-bottom: 1.2em;
 }
 
-/* line 301, /Users/apple/railsproject/sdxin/app/assets/stylesheets/application.scss */
+/* line 429, /Users/apple/railsproject/sdxin/app/assets/stylesheets/application.scss */
 .all-product-box {
   margin-bottom: 3em;
 }
 
-/* line 306, /Users/apple/railsproject/sdxin/app/assets/stylesheets/application.scss */
+/* line 434, /Users/apple/railsproject/sdxin/app/assets/stylesheets/application.scss */
 .landing-page-eva {
   background-color: #f5f5f5;
   padding-bottom: 6em;
 }
 
-/* line 310, /Users/apple/railsproject/sdxin/app/assets/stylesheets/application.scss */
+/* line 438, /Users/apple/railsproject/sdxin/app/assets/stylesheets/application.scss */
 .landing-page-eva .tagline {
   text-align: center;
   color: #666;
-  font-size: 1.6em;
+  font-size: 2em;
   margin-top: 2.8em;
-  margin-bottom: 2em;
+  margin-bottom: 3em;
 }
 
-/* line 318, /Users/apple/railsproject/sdxin/app/assets/stylesheets/application.scss */
+/* line 446, /Users/apple/railsproject/sdxin/app/assets/stylesheets/application.scss */
 .landing-page-eva-style {
   text-align: justify;
   line-height: 2em;
 }
 
-/* line 326, /Users/apple/railsproject/sdxin/app/assets/stylesheets/application.scss */
+/* line 454, /Users/apple/railsproject/sdxin/app/assets/stylesheets/application.scss */
 .landing-page-adv {
-  padding-top: 20px;
-  padding-bottom: 2em;
+  padding: 40px 0px;
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
-  background-image: url("https://ww1.sinaimg.cn/large/006tKfTcgy1fhqrylypu6j30rs0ijdi5.jpg");
+  background-image: url("https://i.loli.net/2017/08/25/59a048aded301.png");
   color: #fff;
-  filter: alpha(opacity=80);
-  -moz-opacity: 0.8;
-  -khtml-opacity: 0.8;
-  opacity: 0.8;
 }
 
-/* line 336, /Users/apple/railsproject/sdxin/app/assets/stylesheets/application.scss */
+/* line 464, /Users/apple/railsproject/sdxin/app/assets/stylesheets/application.scss */
 .landing-page-adv h4 {
   margin-top: 30px;
   text-align: center;
   font-size: 1.3em;
 }
 
-/* line 341, /Users/apple/railsproject/sdxin/app/assets/stylesheets/application.scss */
+/* line 469, /Users/apple/railsproject/sdxin/app/assets/stylesheets/application.scss */
 .landing-page-adv h5 {
   text-align: center;
   font-size: 1.8em;
 }
 
-/* line 349, /Users/apple/railsproject/sdxin/app/assets/stylesheets/application.scss */
+/* line 477, /Users/apple/railsproject/sdxin/app/assets/stylesheets/application.scss */
 .footer-style {
-  background-color: #f5f5f5;
+  background-color: #21282c;
+  color: white;
 }
 
-/* line 352, /Users/apple/railsproject/sdxin/app/assets/stylesheets/application.scss */
+/* line 482, /Users/apple/railsproject/sdxin/app/assets/stylesheets/application.scss */
 .footer-style h5 {
   margin-top: 2em;
   font-size: 1.6em;
 }
 
-/* line 356, /Users/apple/railsproject/sdxin/app/assets/stylesheets/application.scss */
+/* line 486, /Users/apple/railsproject/sdxin/app/assets/stylesheets/application.scss */
 .footer-style-p {
   text-align: justify;
   line-height: 2em;
   letter-spacing: 0.1em;
 }
 
-/* line 364, /Users/apple/railsproject/sdxin/app/assets/stylesheets/application.scss */
+/* line 494, /Users/apple/railsproject/sdxin/app/assets/stylesheets/application.scss */
 .search-info-title {
   font-weight: lighter;
   color: #7f8c8d;
   text-align: center;
 }
 
-/* line 372, /Users/apple/railsproject/sdxin/app/assets/stylesheets/application.scss */
+/* line 502, /Users/apple/railsproject/sdxin/app/assets/stylesheets/application.scss */
 .log-page-bg {
   height: 900px;
   background-size: cover;
@@ -13858,23 +13997,79 @@ body a:hover {
   background-image: url(https://ooo.0o0.ooo/2017/05/21/592135630adc6.jpg);
 }
 
-/* line 379, /Users/apple/railsproject/sdxin/app/assets/stylesheets/application.scss */
+/* line 509, /Users/apple/railsproject/sdxin/app/assets/stylesheets/application.scss */
 .log-page {
   margin-top: 60px;
 }
 
-/* line 385, /Users/apple/railsproject/sdxin/app/assets/stylesheets/application.scss */
+/* line 515, /Users/apple/railsproject/sdxin/app/assets/stylesheets/application.scss */
 .nav-left-style {
   background-color: #f5f5f5;
   margin: 30px auto;
   height: 500px;
 }
 
-/* line 392, /Users/apple/railsproject/sdxin/app/assets/stylesheets/application.scss */
+/* line 522, /Users/apple/railsproject/sdxin/app/assets/stylesheets/application.scss */
 .navbar-rwd {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
   width: 80%;
   height: 2.0em;
+}
+
+/* line 530, /Users/apple/railsproject/sdxin/app/assets/stylesheets/application.scss */
+.img-width {
+  width: 100%;
+}
+
+/* line 536, /Users/apple/railsproject/sdxin/app/assets/stylesheets/application.scss */
+.decorative_picture {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+/* line 546, /Users/apple/railsproject/sdxin/app/assets/stylesheets/application.scss */
+.activity-index-title {
+  font-size: 20px;
+}
+
+/* line 551, /Users/apple/railsproject/sdxin/app/assets/stylesheets/application.scss */
+.activity-author-title-list {
+  margin-top: 15px;
+}
+
+/* line 558, /Users/apple/railsproject/sdxin/app/assets/stylesheets/application.scss */
+.activity-index-sidebar-littlepicture {
+  padding-left: 0;
+  margin-bottom: 20px;
+  margin-left: -15px;
+  font-size: 1px;
+}
+
+/* line 566, /Users/apple/railsproject/sdxin/app/assets/stylesheets/application.scss */
+.little-picture-title {
+  font-size: 1px;
+}
+
+/* line 570, /Users/apple/railsproject/sdxin/app/assets/stylesheets/application.scss */
+.activity-subtitle {
+  font-size: 12px;
+  color: #999;
+  padding: 5px 0px;
+}
+
+/* line 576, /Users/apple/railsproject/sdxin/app/assets/stylesheets/application.scss */
+.linkcolor {
+  color: #666;
+}
+
+/* line 580, /Users/apple/railsproject/sdxin/app/assets/stylesheets/application.scss */
+.linkspan {
+  padding: 0 5px;
+}
+
+/* line 584, /Users/apple/railsproject/sdxin/app/assets/stylesheets/application.scss */
+.navbar-style .navbar-nav > li > a {
+  font-size: 14px;
 }
