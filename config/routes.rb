@@ -73,6 +73,10 @@ Rails.application.routes.draw do
 
     end
 
+    resources :companyhonors do       #企业荣誉后台
+
+    end
+
   end
 
   resources :products do      #前台product
@@ -146,6 +150,10 @@ Rails.application.routes.draw do
   end
 
   resources :companyprofiles do       #公司简介前台
+
+  end
+
+  resources :companyhonors do       #企业荣誉前台
 
   end
 
