@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170803040031) do
+ActiveRecord::Schema.define(version: 20170826032749) do
 
   create_table "activities", force: :cascade do |t|
     t.string   "image"
@@ -90,41 +90,31 @@ ActiveRecord::Schema.define(version: 20170803040031) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "club_collections", force: :cascade do |t|
-    t.integer  "club_id"
-    t.integer  "user_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "club_reviews", force: :cascade do |t|
-    t.string   "comment"
-    t.integer  "club_id"
-    t.integer  "user_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "club_votes", force: :cascade do |t|
-    t.integer  "club_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.integer  "user_id"
-  end
-
-  create_table "clubs", force: :cascade do |t|
-    t.string   "title"
-    t.text     "description"
-    t.integer  "user_id"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
-  end
-
   create_table "collections", force: :cascade do |t|
     t.integer  "product_id"
     t.integer  "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "companycultures", force: :cascade do |t|
+    t.text     "description"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
+
+  create_table "companyhonors", force: :cascade do |t|
+    t.text     "description"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
+
+  create_table "companyprofiles", force: :cascade do |t|
+    t.string   "title"
+    t.text     "description"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+    t.integer  "user_id"
   end
 
   create_table "country_categories", force: :cascade do |t|
@@ -167,6 +157,12 @@ ActiveRecord::Schema.define(version: 20170803040031) do
     t.string   "author_img"
     t.string   "author_title"
     t.text     "author_description"
+  end
+
+  create_table "eliteteams", force: :cascade do |t|
+    t.text     "description"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
   end
 
   create_table "messages", force: :cascade do |t|

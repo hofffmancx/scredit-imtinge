@@ -1,0 +1,46 @@
+<div class="account-box">
+
+  <h3 class="text-center">公司简介（Company Profile）</h3>
+
+  <!-- "增加文章"按钮 -->
+  <br>
+  <div>
+    <%= link_to("增加", new_admin_companyprofile_path, class: "btn btn-sm btn-default pull-right") %>
+  </div>
+
+
+  <!-- 所有文章列表 -->
+  <table class="table table-hover table-bordered table-responsive">
+    <thead>
+      <tr>
+        <td>ID</td>
+
+        <td>标题</td>
+        <td>更新时间</td>
+        <td>编辑</td>
+
+
+
+      </tr>
+    </thead>
+    <tbody>
+      <% @companyprofiles.each do |companyprofile| %>
+        <tr>
+
+          <td><%= link_to(companyprofile.id, companyprofiles_path) %></td>
+
+          <td><%= link_to(companyprofile.title, companyprofiles_path) %></td>
+
+          <td><%= companyprofile.updated_at %></td>
+          <td>
+            <%= link_to("Edit", edit_admin_companyprofile_path(companyprofile)) %> |
+            <%= link_to("destroy", admin_companyprofile_path(companyprofile), method: :delete, data: { confirm: "你确定要删除吗？"}) %>
+          </td>
+
+
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+
+</div>

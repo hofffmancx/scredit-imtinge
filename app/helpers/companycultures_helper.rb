@@ -1,0 +1,2 @@
+module CompanyculturesHelper
+end
