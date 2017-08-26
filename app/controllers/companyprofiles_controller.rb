@@ -11,7 +11,7 @@ class CompanyprofilesController < ApplicationController
 
   end
 
-  
+
 
 
 
@@ -20,6 +20,6 @@ class CompanyprofilesController < ApplicationController
   private
 
   def companyprofile_params
-    params.require(:companyprofile).permit( :title, :description, :user_id)
+    params.require(:companyprofile).permit( :title, :description)
   end
 end

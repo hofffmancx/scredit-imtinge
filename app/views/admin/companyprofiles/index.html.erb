@@ -26,8 +26,8 @@
     <tbody>
       <% @companyprofiles.each do |companyprofile| %>
         <tr>
-          <td><%= companyprofile.id %></td>
 
+          <td><%= link_to(companyprofile.id, companyprofiles_path) %></td>
 
           <td><%= link_to(companyprofile.title, companyprofiles_path) %></td>
 

@@ -1,0 +1,46 @@
+<div class="account-box">
+
+  <h3 class="text-center">精英团队（Elite Team）</h3>
+
+  <!-- "增加文章"按钮 -->
+  <br>
+  <div>
+    <%= link_to("增加", new_admin_eliteteam_path, class: "btn btn-sm btn-default pull-right") %>
+  </div>
+
+
+  <!-- 所有文章列表 -->
+  <table class="table table-hover table-bordered table-responsive">
+    <thead>
+      <tr>
+        <td>ID</td>
+
+
+        <td>更新时间</td>
+        <td>编辑</td>
+
+
+
+      </tr>
+    </thead>
+    <tbody>
+      <% @eliteteams.each do |eliteteam| %>
+        <tr>
+          <td><%= link_to(eliteteam.id, eliteteams_path) %></td>
+
+
+
+
+          <td><%= eliteteam.updated_at %></td>
+          <td>
+            <%= link_to("Edit", edit_admin_eliteteam_path(eliteteam)) %> |
+            <%= link_to("destroy", admin_eliteteam_path(eliteteam), method: :delete, data: { confirm: "你确定要删除吗？"}) %>
+          </td>
+
+
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+
+</div>

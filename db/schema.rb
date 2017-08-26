@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170826025949) do
+ActiveRecord::Schema.define(version: 20170826032749) do
 
   create_table "activities", force: :cascade do |t|
     t.string   "image"
@@ -157,6 +157,12 @@ ActiveRecord::Schema.define(version: 20170826025949) do
     t.string   "author_img"
     t.string   "author_title"
     t.text     "author_description"
+  end
+
+  create_table "eliteteams", force: :cascade do |t|
+    t.text     "description"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
   end
 
   create_table "messages", force: :cascade do |t|

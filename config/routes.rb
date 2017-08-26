@@ -81,6 +81,10 @@ Rails.application.routes.draw do
 
     end
 
+    resources :eliteteams do           #精英团队后台
+
+    end
+
   end
 
   resources :products do      #前台product
@@ -162,6 +166,10 @@ Rails.application.routes.draw do
   end
 
   resources :companycultures do       #企业文化前台
+
+  end
+
+  resources :eliteteams do           #精英团队前台
 
   end
 
