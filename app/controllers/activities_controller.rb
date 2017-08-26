@@ -7,11 +7,45 @@ class ActivitiesController < ApplicationController
 
   def index
     @activities = Activity.where(:is_hidden => false).order("created_at DESC")
+
+        if Article.count <10
+          @articles = Article.all.order("created_at DESC")
+        else
+          @articles = Article.all.order("created_at DESC").limit(10)
+        end
   end
 
   def show
     @activity = Activity.find(params[:id])
     @user = @activity.user
+
+
+    if Activity.count <3
+      @activities = Activity.where(:is_hidden => false).order("created_at DESC")
+    else
+      @activities = Activity.where(:is_hidden => false).order("created_at DESC").limit(3)
+    end
+
+    if Project.count <10
+      @projects = Project.all.order("created_at DESC")
+    else
+      @projects = Project.all.order("created_at DESC").limit(10)
+    end
+
+
+    if Article.count <10
+      @articles = Article.all.order("created_at DESC")
+    else
+      @articles = Article.all.order("created_at DESC").limit(10)
+    end
+
+    if Product.count <10
+      @products = Product.all.order("created_at DESC")
+    else
+      @products = Product.all.order("created_at DESC").limit(10)
+    end
+
+
     @useractivities = @activity.user.activities.order("created_at DESC").paginate(:page => params[:page], :per_page => 5)
     @activity_reviews = ActivityReview.where(activity_id: @activity.id).order("created_at DESC")
     @activity_review = ActivityReview.new

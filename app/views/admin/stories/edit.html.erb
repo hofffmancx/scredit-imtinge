@@ -1,0 +1,23 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-8">
+      <h2 class="text-center">编辑案例</h2>
+
+      <hr>
+      <%= simple_form_for [:admin, @story] do |f| %>
+        <div class="form-group">
+          <%= f.input :title, :label => "标题" %>
+          <%= select_tag(:product_id, options_for_select(@story_categories), :prompt => "类别") %>
+          <%= f.input :image, as: :file, :label => "封面(要求：600px*400px)" %>
+          <%= f.input :summary, :label => "摘要" %>
+          <%= f.input :description, as: :wysihtml5, :label => "内容" %>
+          <%= f.input :is_hidden, :label => "隐藏(审核不通过)" %>
+          <hr>
+
+        </div>
+        <%= f.submit "提交", class: "btn btn-sm btn-default", data: {disable_with: "Submiting..."} %>
+      <% end %>
+
+    </div>
+  </div>
+</div>

@@ -1,0 +1,66 @@
+<div class="account-box">
+
+  <h3 class="text-center">成功案例列表（Story List）</h3>
+
+  <!-- "增加文章"按钮 -->
+  <br>
+  <div>
+    <%= link_to("新增案例", new_admin_story_path, class: "btn btn-sm btn-default pull-right") %>
+  </div>
+
+
+  <!-- 所有文章列表 -->
+  <table class="table table-hover table-bordered table-responsive">
+    <thead>
+      <tr>
+        <td>ID</td>
+        <td>所属分类</td>
+        <td>案例封面</td>
+        <td>标题</td>
+        <td>更新时间</td>
+        <td>操作</td>
+        <td>排序</td>
+        <td>状态</td>
+      </tr>
+    </thead>
+    <tbody>
+      <% @stories.each do |story| %>
+        <tr>
+          <td><%= story.id %></td>
+          <!-- <td><%= story.product_id %></td> -->
+          <td><%= Product.find(story.product_id).title %></td>
+          <td>
+            <%= link_to story_path(story) do%>
+              <% if story.image.present? %>
+                <%= image_tag(story.image.avatar.url, class: "thumbnail") %>
+              <% else %>
+                <%= image_tag("http://placehold.it/100x100&text=No Pic", class:"thumbnail") %>
+              <% end %>
+            <% end %>
+          </td>
+          <td><%= link_to(story.title, story_path(story)) %></td>
+
+          <td><%= story.updated_at %></td>
+          <td>
+            <%= link_to("Edit", edit_admin_story_path(story)) %> |
+            <%= link_to("destroy", admin_story_path(story), method: :delete, data: { confirm: "你确定要删除吗？"}) %>
+          </td>
+          <td>
+            <%= link_to "向上", move_up_admin_story_path(story), method: :patch %> |
+            <%= link_to "向下", move_down_admin_story_path(story), method: :patch %>
+          </td>
+          <td>
+            <% if story.is_hidden %>
+              <%= link_to publish_admin_story_path(story), method: :post, class: "btn btn-xs btn-success" do %>
+              <i class="fa fa-eye"></i><% end %>
+            <% else %>
+              <%= link_to hide_admin_story_path(story), method: :post, class: "btn btn-xs btn-warning" do %>
+              <i class="fa fa-eye-slash"></i><% end %>
+            <% end %>
+          </td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+
+</div>

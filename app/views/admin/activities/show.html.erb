@@ -1,0 +1,54 @@
+<div class="row">
+  <div class="decorative_picture col-md-12" >
+    <%= image_tag("https://i.loli.net/2017/08/01/59800a81e044f.png", class: "img-responsive center-block") %>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+
+    <div class="article-show">
+
+      <div class="col-md-8 article-show-box">
+
+        <!-- 标题 -->
+        <div class="article-title">
+          <h1><%= @activity.title %></h1>
+        </div>
+
+
+        <!-- 摘要 -->
+        <div class="article-summary">
+          <p>
+            <blockquote>
+                <%= simple_format(@activity.summary) %>
+            </blockquote>
+          </p>
+        </div>
+
+        <!-- 主图 -->
+        <div class="article-image">
+          <%= image_tag(@activity.image.activityimg.url, class: "img-rounded img-responsive center-block") %>
+        </div>
+        <hr>
+
+        <!-- 内容 -->
+        <div class="article-description">
+          <%= simple_format(@activity.description) %>
+        </div>
+
+
+
+      </div>
+
+
+
+      <!-- 有侧边栏 -->
+      <div class="col-md-4">
+
+      </div>
+
+    </div>
+
+  </div>
+</div>

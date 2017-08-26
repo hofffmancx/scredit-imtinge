@@ -5,7 +5,17 @@ class ProductsController < ApplicationController
 
   # --CRUD--
   def index
-    @products = Product.where(:category => ["欧洲移民", "其他国家", "护照国家"]).all.order("position ASC").paginate(:page => params[:page], :per_page => 20)
+
+    @country_categories = CountryCategory.all
+
+    if params[:category].blank?
+        @products = Product.order("created_at DESC")
+
+    else
+         @country_category_id = CountryCategory.find_by(title: params[:category]).id
+         @products = Product.where(:country_category_id => @country_category_id)
+
+    end
   end
 
 
@@ -14,6 +24,8 @@ class ProductsController < ApplicationController
     @reviews = Review.where(product_id: @product.id).order("created_at DESC")
     @review = Review.new
     @projects = @product.projects
+    @stories = Story.where(:product_id => @product.id)
+    
   end
 
   def add_to_cart
@@ -28,19 +40,6 @@ class ProductsController < ApplicationController
   end
 
 
-  # ---category分类---
-
-  def accept
-    @products = Product.where(:category => "欧洲移民").all.order("position ASC").paginate(:page => params[:page], :per_page => 20)
-  end
-
-  def decoration
-    @products = Product.where(:category => "护照国家").all.order("position ASC").paginate(:page => params[:page], :per_page => 20)
-  end
-
-  def course
-    @products = Product.where(:category => "其他国家").all.order("position ASC").paginate(:page => params[:page], :per_page => 20)
-  end
 
 
   # ---collection 收藏商品---
@@ -86,6 +85,10 @@ class ProductsController < ApplicationController
 
   def search_params
     Product.ransack({:title_or_description_or_particulars_cont => @query_string}).result(distinct: true)
+  end
+
+  def product_params
+    params.require(:product).permit(:image, :title, :description,:country_category_id)
   end
 
 

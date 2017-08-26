@@ -10,7 +10,9 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170802025727) do
+
+ActiveRecord::Schema.define(version: 20170826032749) do
+
 
   create_table "activities", force: :cascade do |t|
     t.string   "image"
@@ -73,6 +75,7 @@ ActiveRecord::Schema.define(version: 20170802025727) do
     t.boolean  "is_hidden",           default: true
     t.text     "summary"
     t.integer  "article_category_id"
+    t.integer  "weight",              default: 0
   end
 
   create_table "banners", force: :cascade do |t|
@@ -134,6 +137,32 @@ ActiveRecord::Schema.define(version: 20170802025727) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "companycultures", force: :cascade do |t|
+    t.text     "description"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
+
+  create_table "companyhonors", force: :cascade do |t|
+    t.text     "description"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
+
+  create_table "companyprofiles", force: :cascade do |t|
+    t.string   "title"
+    t.text     "description"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+    t.integer  "user_id"
+  end
+
+  create_table "country_categories", force: :cascade do |t|
+    t.string   "title"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "course_lists", force: :cascade do |t|
     t.integer  "course_order_id"
     t.string   "course_name"
@@ -168,6 +197,12 @@ ActiveRecord::Schema.define(version: 20170802025727) do
     t.string   "author_img"
     t.string   "author_title"
     t.text     "author_description"
+  end
+
+  create_table "eliteteams", force: :cascade do |t|
+    t.text     "description"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
   end
 
   create_table "messages", force: :cascade do |t|
@@ -211,14 +246,15 @@ ActiveRecord::Schema.define(version: 20170802025727) do
     t.text     "description"
     t.integer  "price"
     t.integer  "quantity"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.datetime "created_at",          null: false
+    t.datetime "updated_at",          null: false
     t.string   "image"
     t.text     "particulars"
     t.integer  "position"
     t.string   "category"
     t.string   "yieldly"
     t.string   "courseimg"
+    t.integer  "country_category_id"
   end
 
   create_table "projects", force: :cascade do |t|
@@ -228,6 +264,11 @@ ActiveRecord::Schema.define(version: 20170802025727) do
     t.integer  "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string   "image"
+    t.text     "details"
+    t.text     "advantage"
+    t.text     "observe"
+    t.text     "apply"
   end
 
   create_table "reviews", force: :cascade do |t|
@@ -236,6 +277,19 @@ ActiveRecord::Schema.define(version: 20170802025727) do
     t.integer  "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "stories", force: :cascade do |t|
+    t.string   "image"
+    t.string   "title"
+    t.text     "description"
+    t.integer  "user_id"
+    t.text     "summary"
+    t.boolean  "is_hidden",         default: true
+    t.datetime "created_at",                       null: false
+    t.datetime "updated_at",                       null: false
+    t.integer  "story_category_id"
+    t.integer  "product_id"
   end
 
   create_table "users", force: :cascade do |t|

@@ -15,6 +15,17 @@
 .product-description {
   margin: 1.5em auto 2em;
   line-height: 1.6em;
+  height: 9.6em;
+  overflow: hidden;
+  display: block;
+}
+
+.project-description {
+  margin: 1.5em auto 2em;
+  line-height: 1.6em;
+  height: 6.4em;
+  overflow: hidden;
+  display: block;
 }
 
 // 商品价格样式
@@ -128,4 +139,30 @@
   color: #7f8c8d;
   font-weight: lighter;
   margin-bottom: 1em;
+}
+
+.project-list-title{
+  position:relative;background-color:#eee;padding:10px 14px 26px 14px;font-size:16px;line-height:20px;height:20px;overflow:hidden;display:block;
+
+}
+
+.project-list-subtits{
+color:#7f8c8d;background-color:#eee;padding-left:14px;padding-right: 14px;padding-bottom:10px;font-size:14px;line-height:18px;height:36px;overflow:hidden;display:block;
+}
+
+.project-list-titile-ico{
+  position:absolute;right:14px;top:10px;bottom:26px;height:20px;width:5px;background-color:#178df2;
+}
+
+.project-list-position{
+  padding-left:14px;line-height:40px;background-color:#f3f7fb;font-size:14px;
+
+}
+
+.project-list-bar {
+  margin:10px 0;height:40px;background-color:#f1f1f1;margin:0 15px;font-size:14px; position:relative;
+}
+
+.project-list-bar-title {
+  position:absolute;left:0;top:0;bottom:0;line-height:40px;width:84px;background-color:#178df2;font-size:14px;color:white;
 }

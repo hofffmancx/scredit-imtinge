@@ -1,21 +1,31 @@
 Rails.application.routes.draw do
 
+  get "about/index"
+
+  root 'welcome#index'
+
+
   devise_for :users
-  resources :articlealls
+  resources :articlealls  # 资讯聚合页
   resources :messages
+  resources :stories
 
 
   namespace :admin do
+
     resources :banners
     resources :messages do
+
       member do
         post :is_read
       end
     end
     resources :article_categories
-    resources :projects
+    resources :country_categories
+
     resources :products do
        #后台上架网址 admin/products
+      resources :projects
       member do
         patch :move_up         #商品位置移动
         patch :move_down       #商品位置移动
@@ -44,6 +54,15 @@ Rails.application.routes.draw do
       end
     end
 
+    resources :stories do       #成功案例后台
+      member do
+        patch :move_up           #文章位置移动
+        patch :move_down         #文章位置移动
+        post :publish
+        post :hide
+      end
+    end
+
     resources :activities do       #热门活动后台
       member do
         patch :move_up           #文章位置移动
@@ -52,6 +71,23 @@ Rails.application.routes.draw do
         post :hide
       end
     end
+
+    resources :companyprofiles do       #公司简介后台
+
+    end
+
+    resources :companyhonors do       #企业荣誉后台
+
+    end
+
+    resources :companycultures do       #企业文化后台
+
+    end
+
+    resources :eliteteams do           #精英团队后台
+
+    end
+
   end
 
   resources :products do      #前台product
@@ -62,9 +98,7 @@ Rails.application.routes.draw do
     end
     collection do
       get :search             #搜索功能
-      get :accept             #分类 收纳品
-      get :decoration         #分类 装饰品
-      get :course             #分类 课程
+
     end
     resources :reviews
     resources :projects       #国家下的具体移民项目
@@ -126,21 +160,21 @@ Rails.application.routes.draw do
     end
   end
 
-  resources :clubs do            #社群功能
-    resources :club_reviews
-    member do
-      post :upvote               #帖子投票功能
-      post :join                #社群帖子加入收藏
-      post :quit                #社群帖子取消收藏
-    end
-    collection do
-      get :clubuser
-    end
+  resources :companyprofiles do       #公司简介前台
+
   end
 
-  get "about/index"
+  resources :companyhonors do       #企业荣誉前台
 
-  root 'welcome#index'
+  end
+
+  resources :companycultures do       #企业文化前台
+
+  end
+
+  resources :eliteteams do           #精英团队前台
+
+  end
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

@@ -1,0 +1,77 @@
+<div class="product-show">
+
+  <!-- 主图 -->
+  <div class="col-md-7">
+    <% if @product.image.present? %>
+      <%= image_tag(@product.image.medium.url, class: "thumbnail img-width") %>
+    <% else %>
+      <%= image_tag("http://placehold.it/00x400&text=No Pic", class: "thumbnail img-responsive") %>
+    <% end %>
+  </div>
+
+  <!-- 商品信息 -->
+  <div class="col-md-5">
+    <!-- 商品标题 -->
+    <h2 class="product-title"><%= @product.title %></h2>
+    <!-- 商品简述 -->
+    <div class="product-description">
+      <p>
+        <%= simple_format(@product.description) %>
+      </p>
+    </div>
+  </div>
+     <%= link_to("新增项目", new_admin_product_project_path(@product), class: "btn btn-sm btn-success") %>
+
+
+
+<!-- 项目列表区 -->
+<hr>
+
+<div class="container all-product-box">
+  <div class="row">
+
+    <hr>
+
+    <table class="table table-hover table-bordered table-responsive">
+      <thead>
+        <tr>
+          <td>ID</td>
+          <td></td>
+          <td>项目名称</td>
+          <!-- <td>项目描述</td> -->
+          <td width="100">操作</td>
+          <td>创建时间</td>
+        </tr>
+      </thead>
+      <tbody>
+        <% @projects.each do |project| %>
+          <tr>
+            <td><%= project.id %></td>
+            <td>
+              <%= link_to admin_product_project_path(@product,project) do%>
+                <% if project.image.present? %>
+                  <%= image_tag(project.image.thumb.url, class: "thumbnail") %>
+                <% else %>
+                  <%= image_tag("http://placehold.it/100x100&text=No Pic", class:"thumbnail") %>
+                <% end %>
+              <% end %>
+            </td>
+            <td><%= link_to(project.title, product_project_path(@product,project)) %></td>
+            <!-- <td><%= simple_format(project.content)%></td> -->
+            <td>
+             <%= link_to("Edit", edit_admin_product_project_path(@product,project)) %> |
+             <%= link_to("destroy", admin_product_project_path(@product,project), method: :delete, data: { confirm: "你确定要删除吗？"}) %>
+            </td>
+            <td><%= project.created_at %></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+
+
+<!-- 项目列表区 结束 -->
+
+</div>

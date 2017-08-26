@@ -10,7 +10,8 @@ class Admin::ActivitiesController < ApplicationController
   end
 
   def show
-    @Activity = Activity.find(params[:id])
+    @activity = Activity.find(params[:id])
+
   end
 
   def new

@@ -1,17 +1,24 @@
-<div class="container">
+<!-- 装饰图片 -->
+<div class="row">
+<div class="decorative_picture col-md-12" >
+  <%= image_tag("https://i.loli.net/2017/08/01/59800a81e044f.png", class: "img-responsive center-block") %>
+</div>
+</div>
+<!-- 装饰图片end-->
+
+<!-- 主体内容部分-->
+<div class="container" style="margin-top:30px;">
   <div class="row">
 
-    <div class="" style="font-size:2.0em;">
-    尚德信企业资讯
-    </div>
-    <hr>
+    <div class="col-md-8" style="font-size:2.0em;">
+
     <% @activities.each do |activity| %>
-      <div class="article-all col-md-6 container">
+      <div class="activity-all col-md-12 container">
         <div class="article-box row">
 
             <div class="">
               <!-- 文章列表图片 -->
-              <div class="col-md-5 all_image_css">
+              <div class="col-md-6 all_image_css">
                 <% if activity.image.present? %>
                   <%= link_to image_tag(activity.image.activityimg.url, class: "product-list-style-img img-responsive"), activity_path(activity) %>
                 <% else %>
@@ -20,22 +27,132 @@
               </div>
 
               <!-- 文章列表标题、作者、日期 -->
-              <div class="col-md-7">
-                <%= link_to(activity.title, activity_path(activity), class: "article-index-title") %>
-                <div class="article-user row">
-                  <div class="col-md-6">
-                    <span> <%= activity.user.display_name %></span>
+              <div class="col-md-6">
+                <div class="">
+                  <%= link_to(activity.title, activity_path(activity), class: "activity-index-title") %>
+                </div>
+
+                <div class="">
+                  <div class="activity-subtitle">
+                       <i class="fa fa-user-o" style="width:20px;"></i>主办方：尚德信
                   </div>
-                  <div class="col-md-6">
+                  <div class="activity-subtitle">
+                      <i class="fa fa-map-marker" style="width:20px;"></i>武汉市汉口新华路纽宾凯国际酒店2503室
+                  </div>
+                  <!-- <div class="col-md-6">
                     <span> <%= activity.created_at.strftime("%Y-%m-%d %H:%M:%S") %></span>
-                  </div>
+                  </div> -->
                 </div>
               </div>
 
             </div>
 
         </div>
-        <hr>
+
       </div>
 
+
+
+
+
     <% end %>
+
+
+
+  </div>
+
+
+  <!-- 有侧边栏 -->
+  <div class="col-md-4">
+
+  <!-- 热门活动 -->
+
+
+    <div class="activity-author-title-list">
+
+      <div class="">
+        <%= image_tag("https://i.loli.net/2017/08/01/598046f44aa8d.png", class: "img-responsive center-block") %>
+      </div>
+
+    </div>
+
+    <div class=" article-author-title-list">
+      <div class="article-show-sidbar-border">
+        <h4 class="article-show-sidbar-title">最新资讯</h4>
+      </div>
+      <% @articles.each do |article_hot| %>
+        <!-- <hr> -->
+        <div class="row article-show-hot">
+          <div class="col-xs-4 all_image_css">
+            <% if article_hot.image.present? %>
+              <%= link_to image_tag(article_hot.image.thumb.url, class: "img-responsive center-block"), article_path(article_hot) %>
+            <% else %>
+              <%= link_to image_tag("http://placehold.it/80x80&text=No Pic", class: "img-circle img-responsive center-block"), article_path(article_hot) %>
+            <% end %>
+          </div>
+          <div class="col-xs-8 ">
+              <p class="article-show-sidbar-text"><%= link_to(article_hot.title, article_path(article_hot)) %></p>
+              <p> 2017-7-22 已结束</p>
+          </div>
+        </div>
+        <hr>
+      <% end %>
+
+    </div>
+    <!-- <div class="col-md-12" style="font-size:2.0em;">
+
+    <% @activities.each do |activity| %>
+      <div class="article-all col-md-12 container">
+        <div class="article-box row">
+
+            <div class=""> -->
+              <!-- 文章列表图片 -->
+              <!-- <div class="col-md-5 all_image_css">
+                <% if activity.image.present? %>
+                  <%= link_to image_tag(activity.image.activityimg.url, class: "product-list-style-img img-responsive"), activity_path(activity) %>
+                <% else %>
+                  <%= link_to image_tag("http://placehold.it/600x400&text=No Pic", class: "product-list-style-img img-responsive"), activity_path(activity)%>
+                <% end %>
+              </div> -->
+
+              <!-- 文章列表标题、作者、日期 -->
+              <!-- <div class="col-md-7">
+                <%= link_to(activity.title, activity_path(activity), class: "activity-index-title") %>
+                <div class="article-user row">
+                  <div class="col-md-12"> -->
+                    <!-- <span> <%= activity.user.display_name %></span> -->
+                  <!-- </div> -->
+                  <!-- <div class="col-md-6">
+                    <span> <%= activity.created_at.strftime("%Y-%m-%d %H:%M:%S") %></span>
+                  </div> -->
+                <!-- </div>
+              </div>
+
+            </div>
+
+        </div>
+
+      </div>
+    <% end %>
+  </div> -->
+
+  </div>
+  <!-- 侧边栏emd -->
+
+
+
+  </div>
+
+
+
+</div>
+<!-- 主体内容部分end-->
+
+
+
+
+<!-- <% @activities.each do |activity| %>
+  <%= activity.title %>
+  <%= activity.user.email %>
+  <%= activity.summary %>
+<% end %> -->

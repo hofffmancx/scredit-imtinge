@@ -11,7 +11,9 @@ class Product < ApplicationRecord
   has_many :collections                            #收藏商品关系
   has_many :members, through: :collections, source: :user
 
-  has_many :projects 
+  has_many :projects
+  has_many :stories
+  belongs_to :country_category
 
 
 end

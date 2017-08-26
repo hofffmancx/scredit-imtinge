@@ -1,0 +1,137 @@
+<div class="row">
+  <div class="decorative_picture col-md-12" >
+    <%= image_tag("https://i.loli.net/2017/08/01/59800a81e044f.png", class: "img-responsive center-block") %>
+  </div>
+</div>
+<div class="container">
+  <div class="row">
+
+    <div class="article-show">
+
+      <div class="col-md-8 article-show-box">
+
+        <!-- 标题 -->
+        <div class="article-title">
+          <h1><%= @story.title %></h1>
+        </div>
+
+        <!-- 作者、发布时间 -->
+        <div class="article-author">
+          <span> <%= @story.user.display_name %></span> ·
+          <span> <%= @story.created_at.strftime("%Y-%m-%d %H:%M:%S") %></span>
+        </div>
+
+        <!-- 摘要 -->
+        <div class="article-summary">
+          <p>
+            <blockquote>
+                <%= simple_format(@story.summary) %>
+            </blockquote>
+          </p>
+        </div>
+
+        <!-- 主图 -->
+        <div class="article-image">
+          <%= image_tag(@story.image.articleimg.url, class: "img-rounded img-responsive center-block") %>
+        </div>
+        <hr>
+
+        <!-- 内容 -->
+        <div class="article-description">
+          <%= simple_format(@story.description) %>
+        </div>
+
+
+      </div>
+
+      <!-- 有侧边栏 -->
+      <div class="col-md-4">
+
+        <div class="article-author-title-list " style="border:1px solid #ddd">
+          <div class="article-show-sidbar-border">
+            <h4 class="article-show-sidbar-title">热门活动</h4>
+          </div>
+          <% @activities.each do |activity| %>
+
+            <div class="article-author-title-list" style="position:relative;">
+              <!-- <div class="all_image_css"> -->
+                <% if activity.image.present? %>
+                  <%= link_to image_tag(activity.image.thumb.url, class: "img-width"), activity_path(activity) %>
+                <% else %>
+                  <%= link_to image_tag("http://placehold.it/80x80&text=No Pic", class: "img-width center-block"), activity_path(activity) %>
+                <% end %>
+                <div class="" style="position:absolute;bottom:0;left:0;right:0;background:black;margin: 0px 10px;padding: 10px 15px;color:white;
+                  background:rgba(2,2,2,0.6);font-weight:400;font-size:0.6em;
+                  white-space: nowrap;overflow: hidden;text-overflow: ellipsis;
+                  ">
+                  <%= activity.title %>
+                </div>
+              <!-- </div> -->
+              <!-- <div class="col-xs-8">
+                  <p><%= link_to(activity.title, activity_path(activity)) %></p>
+              </div> -->
+            </div>
+            <hr>
+          <% end %>
+
+        </div>
+
+        <!-- 最新文章 -->
+        <div class=" article-author-title-list">
+          <div class="article-show-sidbar-border">
+            <h4 class="article-show-sidbar-title">最新资讯</h4>
+          </div>
+          <% @articles.each do |article_hot| %>
+
+            <div class="row article-show-hot">
+              <div class="col-xs-4 all_image_css">
+                <% if article_hot.image.present? %>
+                  <%= link_to image_tag(article_hot.image.thumb.url, class: "img-rounded img-responsive center-block"), article_path(article_hot) %>
+                <% else %>
+                  <%= link_to image_tag("http://placehold.it/80x80&text=No Pic", class: "img-circle img-responsive center-block"), article_path(article_hot) %>
+                <% end %>
+              </div>
+              <div class="col-xs-8 article-show-sidbar-text">
+                  <p><%= link_to(article_hot.title, article_path(article_hot)) %></p>
+              </div>
+            </div>
+            <hr>
+          <% end %>
+        
+        </div>
+
+        <!-- 热门项目 -->
+
+        <div class=" article-author-title-list">
+          <div class="article-show-sidbar-border">
+            <h4 class="article-show-sidbar-title">热门项目</h4>
+          </div>
+          <% @products.each do |article_hot| %>
+
+            <div class="row article-show-hot">
+              <div class="col-xs-4 all_image_css">
+                <% if article_hot.image.present? %>
+                  <%= link_to image_tag(article_hot.image.thumb.url, class: "img-rounded img-responsive center-block"), product_path(article_hot) %>
+                <% else %>
+                  <%= link_to image_tag("http://placehold.it/80x80&text=No Pic", class: "img-responsive center-block"), product_path(article_hot) %>
+                <% end %>
+              </div>
+              <div class="col-xs-8 article-show-sidbar-text">
+                  <p><%= link_to(article_hot.title, product_path(article_hot)) %></p>
+              </div>
+            </div>
+            <hr>
+          <% end %>
+
+        </div>
+
+        <!-- 联系尚德信 -->
+        <div class=" article-author-title-list">
+          <%= image_tag("https://ww3.sinaimg.cn/large/006tKfTcgy1fhveca97b4j30i60datc7.jpg", class: "img-responsive center-block") %>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</div>

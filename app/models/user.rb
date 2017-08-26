@@ -8,7 +8,7 @@ class User < ApplicationRecord
   has_many :reviews, dependent: :destroy              #商品留言关系，dependent: :destroy表述联级删除
   has_many :article_reviews, dependent: :destroy      #文章留言关系
   has_many :activity_reviews, dependent: :destroy      #热门活动留言关系
-  has_many :club_reviews, dependent: :destroy         #社群留言关系
+
   has_many :project  #国家下具体的项目
 
   # ---收藏商品功能三方关系代码块---
@@ -64,36 +64,7 @@ class User < ApplicationRecord
   end
 
 
-  # ---收藏社群帖子功能三方关系代码块---
 
-  has_many :club_collections                               #收藏商品关系
-  has_many :participated_clubs, through: :club_collections, source: :club
-
-  def is_club_member_of?(club)
-    participated_clubs.include?(club)
-  end
-
-  def join_club_collection!(club)
-    participated_clubs << club
-  end
-
-  def quit_club_collection!(club)
-    participated_clubs.delete(club)
-  end
-
-
-  # ---社群帖子点赞三方关系代码块---
-
-  has_many :club_votes                                    #社群帖子点赞关系
-  has_many :participated_club_votes, through: :club_votes, source: :club
-
-  def is_club_vote_member_of?(club)
-    participated_club_votes.include?(club)
-  end
-
-  def join_club_vote!(club)
-    participated_club_votes << club
-  end
 
 
   # ---与order订单关系---
@@ -110,10 +81,10 @@ class User < ApplicationRecord
 
   has_many :activities
 
+  
 
-  # ---与club订单关系---
 
-  has_many :clubs
+
 
 
   # ---is_admin判断式---

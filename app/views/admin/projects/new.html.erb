@@ -1,0 +1,80 @@
+<!-- <h2 class="text-center">新增项目</h2>
+
+<div class="col-md-4 col-md-offset-4">
+  <%= simple_form_for [@product,@project] do |f| %>
+  <div class="form-group">
+    <%= f.input :title, input_html: { class: "form-control"} %>
+    <%= f.input :content, input_html: { class: "form-control"} %>
+    <%= f.input :image, as: :file, :label => "项目主图" %>
+      <%= f.input :details, as: :wysihtml5, :label => "项目详情" %>
+  </div>
+  <div class="form-actions">
+    <%= f.submit "Submit", disable_with: "Submiting...", class: "btn btn-primary"%>
+  </div>
+  <% end %>
+</div> -->
+
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-8">
+      <h2 class="text-center">新增项目</h2>
+
+      <hr>
+      <%= simple_form_for [@product,@project] do |f| %>
+        <div class="form-group">
+          <%= f.input :title, :label => "项目名称" %>
+          <%= f.input :content, :label => "简述" %>
+          <%= f.input :image, as: :file, :label => "项目主图" %>
+
+
+        <div class="product-particulars">
+          <div class="row">
+            <ul class="nav nav-tabs nav-justified">
+              <li class="active">
+                <a href="#tab_default_1" data-toggle="tab">项目介绍</a>
+              </li>
+              <li>
+                <a href="#tab_default_2" data-toggle="tab">项目优势</a>
+              </li>
+              <li>
+                <a href="#tab_default_3" data-toggle="tab">项目考察</a>
+              </li>
+              <li>
+                <a href="#tab_default_4" data-toggle="tab">申请流程</a>
+              </li>
+
+            </ul>
+          </div>
+
+          <div class="tab-content">
+
+            <!-- 商品详情区域 -->
+            <div class="product-particulars-box row tab-pane active" id="tab_default_1">
+              <%= f.input :details, as: :wysihtml5, :label => "项目介绍" %>
+            </div>
+
+            <div class="product-particulars-box row tab-pane " id="tab_default_2">
+                <%= f.input :advantage, as: :wysihtml5, :label => "项目优势" %>
+            </div>
+
+            <div class="product-particulars-box row tab-pane " id="tab_default_3">
+                <%= f.input :observe, as: :wysihtml5, :label => "项目考察" %>
+            </div>
+
+            <div class="product-particulars-box row tab-pane " id="tab_default_4">
+              <%= f.input :apply, as: :wysihtml5, :label => "申请流程" %>
+            </div>
+
+          </div>
+        </div>
+
+        <hr>
+
+      </div>
+        <%= f.submit "提交", class: "btn btn-sm btn-default", data: {disable_with: "Submiting..."} %>
+      <% end %>
+
+    </div>
+  </div>
+</div>

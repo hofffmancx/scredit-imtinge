@@ -1,0 +1,2 @@
+class Companyhonor < ApplicationRecord
+end

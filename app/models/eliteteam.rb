@@ -1,0 +1,2 @@
+class Eliteteam < ApplicationRecord
+end

@@ -6,9 +6,37 @@ class ProjectsController < ApplicationController
 
 
 
-   def show
+  def show
      @product = Product.find(params[:product_id])
      @project = Project.find(params[:id])
+
+     @stories = Story.where(:product_id=>@product.id)
+     if @stories.blank?
+       @stories = Story.all.order("created_at DESC").limit(5)
+     end
+
+     if Product.count <10
+       @products = Product.all.order("created_at DESC")
+     else
+       @products = Product.all.order("created_at DESC").limit(10)
+     end
+
+
+
+     if Activity.count <10
+       @activities = Activity.all.order("created_at DESC")
+     else
+       @activities = Activity.all.order("created_at DESC").limit(10)
+     end
+
+
+     if Article.count <10
+       @articles = Article.all.order("created_at DESC")
+     else
+       @articles = Article.all.order("created_at DESC").limit(10)
+     end
+
+
    end
 
   def create
@@ -24,9 +52,26 @@ class ProjectsController < ApplicationController
     end
   end
 
+  def edit
+    @product = Product.find(params[:product_id])  # 通过project数据表里的product_id,找到product的ID。也就是先找到爹是谁。 project.product_id == product.id
+    @project = Project.find(params[:id]) # 把新建的数据的content传给实体变量@project
+  end
+
+  def update
+    @product = Product.find(params[:product_id])
+    @project = Project.find(params[:id])
+
+    if @project.update(project_params)
+      redirect_to admin_products_path,notice: "项目编辑成功！"
+    else
+      render :edit
+    end
+  end
+
+
   private
 
   def project_params
-    params.require(:project).permit(:title, :content)
+    params.require(:project).permit(:title, :content,:details,:image,:advantage,:observe,:apply)
   end
 end

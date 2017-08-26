@@ -1,0 +1,52 @@
+<div class="account-box">
+
+  <h3 class="text-center">项目列表（Project List）</h3>
+
+  <!-- "增加商品"按钮 -->
+  <br>
+  <div>
+    <%= link_to("增加项目", new_admin_product_project_path, class: "btn btn-sm btn-default pull-right") %>
+  </div>
+
+
+  <!-- 所有商品列表 -->
+  <table class="table table-hover table-bordered table-responsive">
+    <thead>
+      <tr>
+        <td>ID</td>
+        <td>封面</td>
+        <td>项目名称</td>
+        <td>描述</td>
+
+        <td width="100">操作</td>
+        <td>创建时间</td>
+      </tr>
+    </thead>
+    <tbody>
+      <% @projects.each do |project| %>
+        <tr>
+          <td><%= project.id %></td>
+          <td>
+            <!-- <%= link_to product_project_path(project) do%>
+              <% if product.image.present? %>
+                <%= image_tag(product.image.thumb.url, class: "thumbnail") %>
+              <% else %> -->
+                <%= image_tag("http://placehold.it/200x200&text=No Pic", class:"thumbnail") %>
+              <!-- <% end %> -->
+            <% end %>
+          </td>
+          <td><%= link_to(project.title, product_project_path(project)) %></td>
+          <td><%= simple_format(product.description) %></td>
+
+          <td>
+            <%= link_to("Edit", edit_admin_product_project_path(project)) %> |
+            <%= link_to("destroy", admin_product_project_path(product), method: :delete, data: { confirm: "你确定要删除吗？"}) %>
+
+          </td>
+          <td><%= project.created_at %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+
+</div>

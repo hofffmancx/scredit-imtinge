@@ -22,6 +22,9 @@ class Admin::ArticlesController < ApplicationController
     @article = Article.new(article_params)
     @article.user = current_user
     @article.article_category_id = params[:article_category_id]
+    #@article.weight = params[:id]
+
+
 
     if @article.save
       redirect_to admin_articles_path
@@ -38,6 +41,8 @@ class Admin::ArticlesController < ApplicationController
   def update
     @article = Article.find(params[:id])
     @article.article_category_id = params[:article_category_id]
+    #@article.weight = params[:id]
+
 
     if @article.update(article_params)
       redirect_to admin_articles_path
@@ -95,7 +100,7 @@ class Admin::ArticlesController < ApplicationController
   # ---private---
 
   def article_params
-    params.require(:article).permit(:image, :title, :description,:summary, :user_id, :is_hidden,:article_category_id)
+    params.require(:article).permit(:image, :title, :description,:summary, :user_id, :is_hidden,:article_category_id,:weight)
   end
 
 end

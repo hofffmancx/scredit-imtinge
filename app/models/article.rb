@@ -15,6 +15,7 @@ class Article < ApplicationRecord
 
 
   # ---后台隐藏或公开按钮---
+  origin_id = 1
 
   def publish!
     self.is_hidden = false
@@ -24,5 +25,9 @@ class Article < ApplicationRecord
   def hide!
     self.is_hidden = true
     self.save
+  end
+
+  def move_lower
+     
   end
 end

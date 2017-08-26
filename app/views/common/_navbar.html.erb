@@ -1,8 +1,49 @@
-<nav class="navbar navbar-default navbar-fixed-top navbar-style" role="navigation">
-  <div class="container">
+
+
+<nav class="navbar navbar-default" role="navigation">
+  <div class="topheader" style="background-color:#ffffff;padding:20px 0px;">
+    <div class="container">
+      <div class="col-xs-6  col-md-6" >
+        <a href="/"  class="" style="font-size: 2.0em;" >
+
+          <!-- 移民行业的教育领导者 -->
+          <img src="https://i.loli.net/2017/08/25/59a0394f445df.png" alt="" style="display: inline-block;
+             margin-right: 10px; height: 60px;">
+        </a>
+      </div>
+      <div class="col-xs-6 col-md-6">
+        <div class="col-md-4" style="padding:18px 0px; text-align:right;">
+          <img src="https://i.loli.net/2017/08/25/59a037638f813.png" alt="">
+        </div>
+
+        <div class="col-md-4" style="padding:18px 0px; text-align:right;" >
+          <img src="https://i.loli.net/2017/08/25/59a037639ffc9.png" alt="">
+        </div>
+
+        <div class="col-md-4"  style="padding:18px 0px;text-align:center;">
+          <img src="https://i.loli.net/2017/08/25/59a03763a1dc9.png" alt="">
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="navbar-style">
+    <div class="container">
       <!--logo-->
       <div class="navbar-header">
-        <a href="/" target="_blank" class="navbar-brand navbar-rwd" style="font-size: 2.0em;">移民行业的教育领导者</a>
+        <div class="header-logo-phone">
+          <a href="/"  class="navbar-brand" style="font-size: 2.0em;">
+
+            <!-- 移民行业的教育领导者 -->
+            <img src="https://i.loli.net/2017/08/04/5984026a8ce95.png" alt="">
+          </a>
+        </div>
+
+        <!-- <div class="header-logo-pc">
+          <a href="/"  class="navbar-brand" style="font-size: 1.5em;">
+            尚德信首页
+          </a>
+        </div> -->
+
 
           <!-- 响应式导航 -->
           <button type="button" class="navbar-toggle" data-toggle="collapse"
@@ -13,28 +54,58 @@
             <span class="icon-bar"></span>
           </button>
       </div>
-
-
       <!-- links -->
-      <div class="navbar-collapse navbar-ex1-collapse collapse navbar-right" aria-expanded="false">
+      <div class="navbar-collapse navbar-ex1-collapse collapse " aria-expanded="false">
+        <ul class="nav navbar-nav navbar-left">
+          <li class="wdt100 text-center">
+            <%= link_to("尚德信首页", root_path) %>
+          </li>
+          <li class="dropdown text-center"  style="width:200px;">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+              移民服务
+              <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu">
+              <!-- <li><%= link_to("美国移民", product_path(1), target: "_blank",class: "li-style") %></li> -->
+              <%  CountryCategory.all.each do |category|%>
+                <li><%= link_to  category.title, products_path(category: category.title), target: "_blank",class: "li-style"  %></li>
+              <% end %>
 
-        <ul class="nav navbar-nav navbar-right">
+            </ul>
+          </li>
+        </ul>
+        <!-- 关于尚德信 -->
+       <ul class="nav navbar-nav navbar-left">
+         <li class="dropdown">
+           <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+             关于尚德信
+             <b class="caret"></b>
+           </a>
+           <ul class="dropdown-menu">
 
-          <li>
+             <li><%= link_to("公司简介", companyprofiles_path, target: "_blank") %></li>
+             <li><%= link_to("企业荣誉", companyhonors_path, target: "_blank") %></li>
+             <li><%= link_to("企业文化", companycultures_path, target: "_blank") %></li>
+             <li><%= link_to("精英团队", eliteteams_path, target: "_blank") %></li>
+           </ul>
+         </li>
+       </ul>
+       <!-- 关于尚德信end -->
+        <ul class="nav navbar-nav navbar-left">
+
+          <li class="wdt100 text-center">
             <%= link_to("热门活动", activities_path, target: "_blank") %>
           </li>
-          <li>
-            <%= link_to("资讯", articlealls_path, target: "_blank") %>
+          <li class="wdt100 text-center">
+            <%= link_to("尚德信资讯", articlealls_path, target: "_blank") %>
           </li>
-          <li>
-            <%= link_to("关于尚德信", about_index_path, target: "_blank") %>
-          </li>
-          <li>
-            <%= link_to("联系我们", new_message_path, target: "_blank") %>
+          <li class="wdt100 text-center">
+            <%= link_to("联系我们", new_message_path) %>
           </li>
 
           <% if !current_user %>
             <li><%= link_to("注册", new_user_registration_path) %> </li>
+
             <li><%= link_to(content_tag(:i, " 登入", class: "fa fa-sign-in"), new_user_session_path) %></li>
           <% else %>
             <li class="dropdown">
@@ -52,26 +123,11 @@
             </li>
           <% end %>
 
-
         </ul>
 
-        <ul class="nav navbar-nav navbar-right">
-          <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-              移民服务
-              <b class="caret"></b>
-            </a>
-            <ul class="dropdown-menu">
-              <li><%= link_to("美国移民", product_path(1), target: "_blank",class: "li-style") %></li>
-              <li><%= link_to("欧洲移民", accept_products_path, target: "_blank",class: "li-style") %></li>
-              <li><%= link_to("护照国家", decoration_products_path, target: "_blank",class: "li-style") %></li>
-              <li><%= link_to("其他国家", course_products_path,target: "_blank",class: "li-style") %></li>
-            </ul>
-          </li>
-        </ul>
-
-
-
+      </div>
     </div>
+
   </div>
+
 </nav>
