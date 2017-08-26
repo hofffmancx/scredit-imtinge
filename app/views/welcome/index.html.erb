@@ -695,8 +695,16 @@
             <p style="color:#e1424b;font-size:20px;">免费咨询</p>
             <p style="color:#2f2927;font-size:14px;">留下您的联系方式，移民顾问将与您联系</p>
           </div>
-          <div class="">
-
+          <div class="text-center" style="margin-left:20%;margin-right:20%;">
+            <%= simple_form_for [@message] do |f| %>
+              <div class="form-group ">
+                <%= f.input :name,style: "height:60px;",inline_label: '您的称呼', label: false%>
+              </div>
+              <div class="form-group">
+                <%= f.input :telphone,style: "height:60px;" ,inline_label: '手机号码', label: false%>
+              </div>
+              <%= f.submit "预约咨询顾问", class: "btn btn-sm btn-default",style:"background-color: #e1424b;width: 274px; height: 60px;color:#f1f1f1;font-size:18px;", data: {disable_with: "Submiting..."} %>
+            <% end %>
           </div>
 
         </div>
