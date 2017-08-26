@@ -145,3 +145,18 @@
   width:140px;
   display: inline-block;
 }
+
+//dzl 视频播放按钮的触发图标
+.video-btn i {
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 45px;
+    margin-right: 8px;
+}
+
+// dzl 视频播放器的背景颜色调成黑色
+.dzl-body {
+  padding: auto;
+  margin: auto;
+  background-color: black;
+}
