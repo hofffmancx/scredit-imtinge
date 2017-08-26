@@ -1,0 +1,18 @@
+<% @banners.each do |banner| %>
+  <div id="bannerindex" class="row">
+    <div class="banner">
+      <h1><%= link_to banner.name ,edit_admin_banner_path(banner) %></h1>
+    </div>
+    <div class="smallpic">
+      <% if banner.pic.present? %>
+        <%= image_tag(banner.pic, class: "img-responsive img-center frontpage-img") %>
+      <% else %>
+        <%= image_tag("http://placehold.it/200x200&text=No Pic", class:"thumbnail") %>
+      <% end %>
+    </div>
+    <div class="">
+      <h3>配图文字：</h3>
+       <%= raw banner.title %>
+    </div>
+  </div>
+<% end %>

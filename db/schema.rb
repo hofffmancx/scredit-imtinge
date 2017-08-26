@@ -10,7 +10,9 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+
 ActiveRecord::Schema.define(version: 20170826032749) do
+
 
   create_table "activities", force: :cascade do |t|
     t.string   "image"
@@ -74,6 +76,14 @@ ActiveRecord::Schema.define(version: 20170826032749) do
     t.text     "summary"
     t.integer  "article_category_id"
     t.integer  "weight",              default: 0
+  end
+
+  create_table "banners", force: :cascade do |t|
+    t.string   "name"
+    t.string   "title"
+    t.string   "pic"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "cart_items", force: :cascade do |t|

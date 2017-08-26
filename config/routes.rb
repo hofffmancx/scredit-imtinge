@@ -12,7 +12,10 @@ Rails.application.routes.draw do
 
 
   namespace :admin do
-    resources :messages do  # 客户反馈
+
+    resources :banners
+    resources :messages do
+
       member do
         post :is_read
       end

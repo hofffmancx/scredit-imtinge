@@ -130,6 +130,21 @@ end
 
 
 
+  Banner.create!(
+    name: "轮播图片1",
+    title: "请到后台修改"
+  )
+
+  Banner.create!(
+    name: "轮播图片2",
+    title: "请到后台修改"
+  )
+
+  Banner.create!(
+    name: "轮播图片3",
+    title: "请到后台修改"
+  )
+
 #种子样例
 # Product.create!(title: "小型琴叶榕",
 #    description: "高度约60cm（含盆）",

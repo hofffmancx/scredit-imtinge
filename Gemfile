@@ -19,7 +19,9 @@ gem 'coffee-rails', '~> 4.2'
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
+
 # gem 'turbolinks', '~> 5'
+
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.5'
 # Use Redis adapter to run Action Cable in production
@@ -52,7 +54,7 @@ gem 'will_paginate-bootstrap'
 gem 'ransack'
 
 # 文本编辑器支持gem
-gem 'bootstrap-wysihtml5-rails'
+gem 'ckeditor'
 
 
 # Use Capistrano for deployment

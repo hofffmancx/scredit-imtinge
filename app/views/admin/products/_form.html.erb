@@ -3,9 +3,19 @@
     <%= f.input :title, :label => "国家名称" %>
     <%= f.input :description, :label => "简述" %>
 
+    <%= f.input :quantity, :label => "库存" %>
+    <%= f.input :price, :label => "价格" %>
+    <%= f.input :yieldly, :label => "生产地" %>
+    <%= f.input :category, as: :radio_buttons, collection: [['收纳品', '收纳品'], ['装饰品', '装饰品'], ['课程', '课程']],required: '收纳品', :label => "商品类型" %>
+    <%= f.input :image, as: :file, :label => "商品主图" %>
+    <%= f.input :courseimg, as: :file, :label => "课程banner图（只需新增或编辑课程时上传）" %>
+    <%= f.input :particulars, as: :ckeditor, :label => "商品详情" %>
+
+
     <%= select_tag(:country_category_id, options_for_select(@country_categories), :prompt => "国家类别") %>
 
     <%= f.input :image, as: :file, :label => "封面" %>
+
 
 
     <hr>
