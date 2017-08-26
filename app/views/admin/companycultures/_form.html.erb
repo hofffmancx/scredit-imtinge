@@ -1,0 +1,11 @@
+<%= simple_form_for [:admin, @companyculture] do |f| %>
+  <div class="form-group">
+
+
+    <%= f.input :description, as: :wysihtml5, :label => "内容" %>
+
+    <hr>
+
+  </div>
+  <%= f.submit "提交", class: "btn btn-sm btn-default", data: {disable_with: "Submiting..."} %>
+<% end %>

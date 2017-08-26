@@ -77,6 +77,10 @@ Rails.application.routes.draw do
 
     end
 
+    resources :companycultures do       #企业文化后台
+
+    end
+
   end
 
   resources :products do      #前台product
@@ -154,6 +158,10 @@ Rails.application.routes.draw do
   end
 
   resources :companyhonors do       #企业荣誉前台
+
+  end
+
+  resources :companycultures do       #企业文化前台
 
   end
 
