@@ -68,6 +68,11 @@ Rails.application.routes.draw do
         post :hide
       end
     end
+
+    resources :companyprofiles do       #公司简介后台
+
+    end
+
   end
 
   resources :products do      #前台product
@@ -138,6 +143,10 @@ Rails.application.routes.draw do
       post :join              #加入收藏
       post :quit              #取消收藏
     end
+  end
+
+  resources :companyprofiles do       #公司简介前台
+
   end
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html

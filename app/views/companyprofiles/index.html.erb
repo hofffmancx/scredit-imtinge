@@ -1,0 +1,57 @@
+<!-- 装饰图片 -->
+<div class="row">
+<div class="decorative_picture col-md-12" >
+  <%= image_tag("https://i.loli.net/2017/08/01/59800a81e044f.png", class: "img-responsive center-block") %>
+</div>
+</div>
+<!-- 装饰图片end-->
+
+<!-- 主体内容部分-->
+<div class="container" style="margin-top:30px;">
+  <div class="row">
+
+    <div class="col-md-12" style="font-size:2.0em;">
+
+    <% @companyprofiles.each do |companyprofile| %>
+      <div class="activity-all col-md-12 container">
+        <div class="article-box row">
+
+            <div class="">
+
+
+              <!-- 文章列表标题、作者、日期 -->
+              <div class="col-md-12">
+                <div class="">
+                  <%= link_to(companyprofile.title, "#", class: "activity-index-title") %>
+                </div>
+                <div class="">
+                  <%= raw companyprofile.description %>
+                </div>
+              </div>
+
+            </div>
+
+        </div>
+
+      </div>
+
+
+
+
+
+    <% end %>
+
+
+
+  </div>
+
+
+
+
+
+  </div>
+
+
+
+</div>
+<!-- 主体内容部分end-->
