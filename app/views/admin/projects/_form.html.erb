@@ -1,0 +1,96 @@
+<%= simple_form_for [@product,@project] do |f| %>
+  <div class="form-group">
+    <%= f.input :title, :label => "项目名称" %>
+    <%= f.input :content, :label => "简述", input_html: { style: 'height:400px;max-height:500px;' } %>
+    <%= f.input :image, as: :file, :label => "项目主图" %>
+
+
+  <div class="product-particulars">
+    <div class="row">
+      <ul class="nav nav-tabs nav-justified">
+        <li class="active">
+          <a href="#tab_default_1" data-toggle="tab">项目介绍</a>
+        </li>
+        <li>
+          <a href="#tab_default_2" data-toggle="tab">项目优势</a>
+        </li>
+        <li>
+          <a href="#tab_default_3" data-toggle="tab">项目考察</a>
+        </li>
+        <li>
+          <a href="#tab_default_4" data-toggle="tab">申请流程</a>
+        </li>
+
+      </ul>
+    </div>
+
+    <div class="tab-content">
+
+      <!-- 商品详情区域 -->
+      <div class="product-particulars-box row tab-pane active" id="tab_default_1">
+        <%= f.input :details, :label => "项目介绍", input_html: { style: 'height:400px;max-height:500px;' } %>
+      </div>
+
+      <div class="product-particulars-box row tab-pane " id="tab_default_2">
+          <%= f.input :advantage, :label => "项目优势", input_html: { style: 'height:400px;max-height:500px;' } %>
+      </div>
+
+      <div class="product-particulars-box row tab-pane " id="tab_default_3">
+          <%= f.input :observe, :label => "项目考察", input_html: { style: 'height:400px;max-height:500px;' } %>
+      </div>
+
+      <div class="product-particulars-box row tab-pane " id="tab_default_4">
+        <%= f.input :apply, :label => "申请流程", input_html: { style: 'height:400px;max-height:500px;' } %>
+      </div>
+
+    </div>
+  </div>
+
+  <hr>
+
+</div>
+  <%= f.submit "提交", class: "btn btn-sm btn-default", data: {disable_with: "Submiting..."} %>
+<% end %>
+<script>
+  var editor1 = new wangEditor('project_content')
+  var editor2 = new wangEditor('project_details')
+  var editor3 = new wangEditor('project_advantage')
+  var editor4 = new wangEditor('project_observe')
+  var editor5 = new wangEditor('project_apply')
+
+  editor1.config.menus = editor2.config.menus = editor3.config.menus = editor4.config.menus = editor5.config.menus = [
+        'bold',
+        'underline',
+        'italic',
+        'strikethrough',
+        'forecolor',
+        '|',
+        'quote',
+        'fontfamily',
+        'fontsize',
+        'head',
+        'unorderlist',
+        'orderlist',
+        'alignleft',
+        'aligncenter',
+        'alignright',
+        '|',
+        'link',
+        'unlink',
+        'table',
+        '|',
+        'img',
+        'video',
+    ]
+
+  editor1.config.uploadImgFileName = editor2.config.uploadImgFileName = editor3.config.uploadImgFileName = editor4.config.uploadImgFileName = editor5.config.uploadImgFileName = 'imgFile'
+
+  editor1.config.uploadImgUrl = editor2.config.uploadImgUrl = editor3.config.uploadImgUrl = editor4.config.uploadImgUrl = editor5.config.uploadImgUrl = '/upload'
+
+  editor1.create()
+  editor2.create()
+  editor3.create()
+  editor4.create()
+  editor5.create()
+
+</script>

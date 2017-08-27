@@ -18,7 +18,7 @@
 //= require bootstrap-sprockets
 //= require bootstrap/collapse
 
-//= require ckeditor/init
+//= require wangEditor
 
 //= require_tree .
 

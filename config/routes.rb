@@ -1,6 +1,10 @@
 Rails.application.routes.draw do
 
+  get 'pictures/upload'
+
   get "about/index"
+
+  post '/upload', to: 'pictures#upload', as: 'upload'
 
   root 'welcome#index'
 
