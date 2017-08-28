@@ -6,7 +6,7 @@
     <%= f.input :title, input_html: { class: "form-control"} %>
     <%= f.input :content, input_html: { class: "form-control"} %>
     <%= f.input :image, as: :file, :label => "项目主图" %>
-      <%= f.input :details, as: :wysihtml5, :label => "项目详情" %>
+      <%= f.input :details, as: :ckeditor, :label => "项目详情" %>
   </div>
   <div class="form-actions">
     <%= f.submit "Submit", disable_with: "Submiting...", class: "btn btn-primary"%>
@@ -51,19 +51,19 @@
 
             <!-- 商品详情区域 -->
             <div class="product-particulars-box row tab-pane active" id="tab_default_1">
-              <%= f.input :details, as: :wysihtml5, :label => "项目介绍" %>
+              <%= f.input :details, as: :ckeditor, :label => "项目介绍" %>
             </div>
 
             <div class="product-particulars-box row tab-pane " id="tab_default_2">
-                <%= f.input :advantage, as: :wysihtml5, :label => "项目优势" %>
+                <%= f.input :advantage, as: :ckeditor, :label => "项目优势" %>
             </div>
 
             <div class="product-particulars-box row tab-pane " id="tab_default_3">
-                <%= f.input :observe, as: :wysihtml5, :label => "项目考察" %>
+                <%= f.input :observe, as: :ckeditor, :label => "项目考察" %>
             </div>
 
             <div class="product-particulars-box row tab-pane " id="tab_default_4">
-              <%= f.input :apply, as: :wysihtml5, :label => "申请流程" %>
+              <%= f.input :apply, as: :ckeditor, :label => "申请流程" %>
             </div>
 
           </div>

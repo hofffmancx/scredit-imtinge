@@ -98,36 +98,6 @@ ActiveRecord::Schema.define(version: 20170826032749) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "club_collections", force: :cascade do |t|
-    t.integer  "club_id"
-    t.integer  "user_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "club_reviews", force: :cascade do |t|
-    t.string   "comment"
-    t.integer  "club_id"
-    t.integer  "user_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "club_votes", force: :cascade do |t|
-    t.integer  "club_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.integer  "user_id"
-  end
-
-  create_table "clubs", force: :cascade do |t|
-    t.string   "title"
-    t.text     "description"
-    t.integer  "user_id"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
-  end
-
   create_table "collections", force: :cascade do |t|
     t.integer  "product_id"
     t.integer  "user_id"
