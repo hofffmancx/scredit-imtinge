@@ -9,7 +9,7 @@
     <%= f.input :category, as: :radio_buttons, collection: [['收纳品', '收纳品'], ['装饰品', '装饰品'], ['课程', '课程']],required: '收纳品', :label => "商品类型" %>
     <%= f.input :image, as: :file, :label => "商品主图" %>
     <%= f.input :courseimg, as: :file, :label => "课程banner图（只需新增或编辑课程时上传）" %>
-    <%= f.input :particulars, as: :ckeditor, :label => "商品详情" %>
+    <%= f.input :particulars, :label => "商品详情", input_html: { style: 'height:400px;max-height:500px;' } %>
 
 
     <%= select_tag(:country_category_id, options_for_select(@country_categories), :prompt => "国家类别") %>
@@ -23,3 +23,33 @@
   </div>
   <%= f.submit "提交", class: "btn btn-sm btn-default", data: {disable_with: "Submiting..."} %>
 <% end %>
+<script>
+  var editor = new wangEditor('product_particulars')
+  editor.config.menus = [
+        'bold',
+        'underline',
+        'italic',
+        'strikethrough',
+        'forecolor',
+        '|',
+        'quote',
+        'fontfamily',
+        'fontsize',
+        'head',
+        'unorderlist',
+        'orderlist',
+        'alignleft',
+        'aligncenter',
+        'alignright',
+        '|',
+        'link',
+        'unlink',
+        'table',
+        '|',
+        'img',
+        'video',
+    ];
+  editor.config.uploadImgFileName = 'imgFile'
+  editor.config.uploadImgUrl = '/upload'
+  editor.create()
+</script>

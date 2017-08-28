@@ -54,7 +54,7 @@ gem 'will_paginate-bootstrap'
 gem 'ransack'
 
 # 文本编辑器支持gem
-gem 'ckeditor'
+# gem 'ckeditor'
 
 
 # Use Capistrano for deployment
